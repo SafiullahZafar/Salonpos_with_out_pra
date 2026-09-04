@@ -3,203 +3,61 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#3B0764">
     <title>Select Branch — Veloura Salon</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <style>
-        :root {
-            color-scheme: light;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #fff;
-            color: #111827;
-            margin: 0;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .container {
-            width: min(920px, 100%);
-            padding: 0;
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 28px;
-        }
-
-        .header .eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(109,40,217, 0.22);
-            color: #4C1D95;
-            font-weight: 700;
-            font-size: 0.78rem;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            padding: 8px 12px;
-            border-radius: 999px;
-            margin-bottom: 12px;
-        }
-
-        .header h1 {
-            font-size: clamp(1.6rem, 3vw, 2.3rem);
-            font-weight: 800;
-            color: #111827;
-            margin: 0 0 8px;
-        }
-
-        .header p {
-            color: #64748b;
-            font-size: clamp(0.95rem, 2vw, 1.05rem);
-            margin: 0 auto;
-            max-width: 560px;
-            line-height: 1.6;
-        }
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 18px;
-        }
-
-        .card-form {
-            display: flex;
-        }
-
-        .card {
-            width: 100%;
-            background: white;
-            border-radius: 22px;
-            padding: 24px 20px;
-            text-align: left;
-            cursor: pointer;
-            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
-            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-            border: 1px solid #f1f5f9;
-            position: relative;
-            overflow: hidden;
-            min-height: 200px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .card:hover,
-        .card:focus-within {
-            transform: translateY(-4px);
-            box-shadow: 0 18px 38px rgba(15, 23, 42, 0.12);
-            border-color: #6D28D9;
-        }
-
-        .card::before {
-            content: '';
-            position: absolute;
-            inset: 0 0 auto 0;
-            height: 5px;
-            background: linear-gradient(90deg, #EDE9FE, #6D28D9);
-        }
-
-        .icon-wrap {
-            width: 56px;
-            height: 56px;
-            background: #EDE9FE;
-            color: #4C1D95;
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 16px;
-        }
-
-        .icon-wrap svg {
-            width: 28px;
-            height: 28px;
-        }
-
-        .card h2 {
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin: 0 0 8px;
-            color: #111827;
-        }
-
-        .card p {
-            color: #64748b;
-            margin: 0;
-            font-size: 0.92rem;
-            line-height: 1.6;
-        }
-
-        .card .meta {
-            margin-top: 14px;
-            color: #4C1D95;
-            font-size: 0.82rem;
-            font-weight: 700;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-        }
-
-        @media (max-width: 768px) {
-            body {
-                padding: 16px;
-                align-items: flex-start;
-            }
-
-            .container {
-                padding-top: 10px;
-            }
-
-            .header {
-                margin-bottom: 22px;
-            }
-
-            .cards {
-                grid-template-columns: 1fr;
-                gap: 14px;
-            }
-
-            .card {
-                min-height: 170px;
-                padding: 20px 18px;
-            }
-        }
+        :root{--purple:#6D28D9;--deep:#3B0764;--violet:#8B5CF6;--soft:#F5F3FF;--line:#E7E1EC;--ink:#211828;--muted:#776E7E;color-scheme:light}
+        *{box-sizing:border-box}
+        html,body{min-height:100%;margin:0;background:#fff!important}
+        body{min-height:100vh;color:var(--ink);font-family:'Inter',sans-serif}
+        button{font:inherit}
+        .gateway{display:grid;grid-template-columns:minmax(330px,42%) minmax(0,58%);min-height:100vh;background:#fff}
+        .welcome-panel{position:relative;isolation:isolate;display:flex;flex-direction:column;justify-content:space-between;min-height:100vh;padding:48px clamp(32px,5vw,74px);overflow:hidden;color:#fff;background:linear-gradient(150deg,#2E064E 0%,#4C1D95 47%,#6D28D9 100%)}
+        .welcome-panel::before,.welcome-panel::after{content:'';position:absolute;z-index:-1;border:1px solid rgba(255,255,255,.13);border-radius:50%}
+        .welcome-panel::before{width:430px;height:430px;right:-225px;top:-170px}.welcome-panel::after{width:300px;height:300px;left:-160px;bottom:-115px}
+        .brand{display:flex;align-items:center;gap:13px}.brand-mark{width:48px;height:48px;display:grid;place-items:center;background:#fff;color:var(--deep);border-radius:14px;font-weight:850;letter-spacing:-.04em;box-shadow:0 10px 28px rgba(19,3,33,.2)}.brand-name{font-size:1.05rem;font-weight:850}.brand-note{display:block;margin-top:3px;color:#D8CBE6;font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+        .welcome-copy{max-width:470px;margin:70px 0}.welcome-eyebrow{display:flex;align-items:center;gap:8px;margin-bottom:17px;color:#DDD6FE;font-size:.66rem;font-weight:850;letter-spacing:.13em;text-transform:uppercase}.welcome-eyebrow::before{content:'';width:24px;height:1px;background:#C4B5FD}.welcome-copy h1{margin:0 0 17px;font-size:clamp(2.25rem,4.5vw,4rem);line-height:.98;letter-spacing:-.065em}.welcome-copy p{max-width:390px;margin:0;color:#E9D5FF;font-size:.88rem;line-height:1.75}
+        .session-card{position:relative;display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:center;padding:15px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.15);border-radius:14px;backdrop-filter:blur(10px)}.user-avatar{width:39px;height:39px;display:grid;place-items:center;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.2);border-radius:11px;font-size:.8rem;font-weight:850}.session-card strong{display:block;font-size:.75rem}.session-card span{display:block;margin-top:3px;color:#D8CBE6;font-size:.62rem}
+        .branch-panel{display:flex;min-width:0;flex-direction:column;justify-content:center;min-height:100vh;padding:46px clamp(32px,6vw,92px);background:#fff}
+        .branch-header{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;padding-bottom:22px;border-bottom:1px solid var(--line)}.branch-kicker{color:var(--purple);font-size:.65rem;font-weight:850;letter-spacing:.13em;text-transform:uppercase}.branch-header h2{margin:7px 0 0;color:var(--ink);font-size:clamp(1.75rem,3vw,2.55rem);letter-spacing:-.055em}.branch-count{flex:0 0 auto;padding:7px 10px;color:var(--deep);background:var(--soft);border:1px solid #DDD6FE;border-radius:999px;font-size:.65rem;font-weight:800}
+        .instruction{display:flex;align-items:center;gap:8px;margin:17px 0;color:var(--muted);font-size:.72rem}.instruction svg{color:var(--purple)}
+        .branch-list{display:grid;gap:11px}.branch-form{margin:0}.branch-card{position:relative;width:100%;display:grid;grid-template-columns:52px minmax(0,1fr) auto;align-items:center;gap:15px;min-height:88px;padding:15px 17px;text-align:left;color:inherit;background:#fff;border:1px solid var(--line);border-radius:14px;cursor:pointer;transition:transform .18s,border-color .18s,box-shadow .18s}.branch-card:hover,.branch-card:focus-visible{transform:translateX(5px);border-color:#A78BFA;box-shadow:0 10px 28px rgba(59,7,100,.09);outline:none}.branch-icon{width:52px;height:52px;display:grid;place-items:center;color:var(--deep);background:var(--soft);border:1px solid #DDD6FE;border-radius:13px}.branch-number{margin-bottom:4px;color:#938B99;font-size:.57rem;font-weight:850;letter-spacing:.1em;text-transform:uppercase}.branch-name{overflow:hidden;color:#291F30;font-size:.92rem;font-weight:850;text-overflow:ellipsis;white-space:nowrap}.branch-address{overflow:hidden;margin-top:4px;color:#817987;font-size:.68rem;text-overflow:ellipsis;white-space:nowrap}.open-action{display:flex;align-items:center;gap:7px;color:var(--purple);font-size:.67rem;font-weight:850}.open-action svg{transition:transform .18s}.branch-card:hover .open-action svg{transform:translateX(3px)}
+        .empty-state{padding:42px 24px;text-align:center;color:var(--muted);background:#fff;border:1px dashed #CFC6D5;border-radius:14px}.empty-icon{width:52px;height:52px;display:grid;place-items:center;margin:0 auto 12px;color:var(--purple);background:var(--soft);border-radius:15px}.empty-state strong{display:block;color:var(--deep);font-size:.88rem}.empty-state span{display:block;margin-top:6px;font-size:.7rem}
+        .panel-footer{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-top:22px;padding-top:18px;border-top:1px solid var(--line);color:#9A929F;font-size:.61rem}.panel-footer strong{color:#6D28D9}.secure-note{display:flex;align-items:center;gap:6px}
+        @media(max-width:850px){.gateway{grid-template-columns:1fr}.welcome-panel{min-height:auto;padding:30px 24px}.welcome-copy{margin:45px 0}.welcome-copy h1{font-size:2.6rem}.session-card{max-width:430px}.branch-panel{min-height:auto;padding:38px 22px}.branch-card:hover{transform:translateY(-2px)}}
+        @media(max-width:520px){.welcome-copy{margin:38px 0}.branch-header{align-items:flex-start;flex-direction:column}.branch-card{grid-template-columns:46px minmax(0,1fr);padding:14px}.branch-icon{width:46px;height:46px}.open-action{grid-column:2}.panel-footer{align-items:flex-start;flex-direction:column}}
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="eyebrow">Veloura POS</div>
-            <h1>Welcome, {{ auth()->user()->name }}</h1>
-            <p>Select the branch you want to work in, then you’ll be taken straight to your dashboard.</p>
-        </div>
+<main class="gateway">
+    <section class="welcome-panel">
+        <div class="brand"><div class="brand-mark">VS</div><div><div class="brand-name">Veloura Salon</div><span class="brand-note">Operations workspace</span></div></div>
+        <div class="welcome-copy"><div class="welcome-eyebrow">Your workday starts here</div><h1>Choose your salon workspace.</h1><p>Each branch keeps its own appointments, clients, inventory and financial activity organised. Select where you are working today.</p></div>
+        <div class="session-card"><div class="user-avatar">{{ strtoupper(substr(auth()->user()->name,0,1)) }}</div><div><strong>{{ auth()->user()->name }}</strong><span>Signed in securely · Ready to select a branch</span></div></div>
+    </section>
 
-        <div class="cards">
-            @foreach($branches as $branch)
-            <form action="{{ route('admin.branch.switch_from_select') }}" method="POST" class="card-form">
-                @csrf
-                <input type="hidden" name="branch_id" value="{{ $branch->id }}">
-                <button type="submit" class="card" style="border:0; appearance:none;">
-                    <div class="icon-wrap">
-                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
-                        </svg>
-                    </div>
-                    <h2>{{ $branch->name }}</h2>
-                    <p>{{ $branch->address ?? 'Branch location will appear here.' }}</p>
-                    <div class="meta">Open branch</div>
+    <section class="branch-panel">
+        <header class="branch-header"><div><div class="branch-kicker">Available workspaces</div><h2>Select a branch</h2></div><span class="branch-count">{{ $branches->count() }} {{ \Illuminate\Support\Str::plural('location',$branches->count()) }}</span></header>
+        <div class="instruction"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>Your selection controls the data shown throughout the dashboard.</div>
+        <div class="branch-list">
+            @forelse($branches as $branch)
+            <form action="{{ route('admin.branch.switch_from_select') }}" method="POST" class="branch-form">@csrf<input type="hidden" name="branch_id" value="{{ $branch->id }}">
+                <button type="submit" class="branch-card">
+                    <span class="branch-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 21h18M5 21V5l7-3 7 3v16M9 9h1m4 0h1M9 13h1m4 0h1M9 17h6"/></svg></span>
+                    <span style="min-width:0"><span class="branch-number">Branch {{ str_pad($loop->iteration,2,'0',STR_PAD_LEFT) }}</span><span class="branch-name">{{ $branch->name }}</span><span class="branch-address">{{ $branch->address ?: 'Location details available inside the workspace' }}</span></span>
+                    <span class="open-action">Enter workspace <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></span>
                 </button>
             </form>
-            @endforeach
+            @empty
+            <div class="empty-state"><div class="empty-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 21h18M5 21V5l7-3 7 3v16"/></svg></div><strong>No active branches available</strong><span>Ask an administrator to activate a branch before continuing.</span></div>
+            @endforelse
         </div>
-    </div>
+        <footer class="panel-footer"><span class="secure-note"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg>Secure branch access</span><span>Powered by <strong>PixoraSoftTech</strong></span></footer>
+    </section>
+</main>
 </body>
 </html>
