@@ -9,14 +9,14 @@
 .filters{display:flex;gap:12px;margin-bottom:20px;flex-wrap:wrap;background:#fff;padding:16px;border-radius:12px;border:1px solid #e2e8f0;align-items:flex-end;}
 .filter-group{display:flex;flex-direction:column;gap:4px;}
 .filter-label{font-size:.8rem;font-weight:600;color:#64748b;text-transform:uppercase;}
-.filter-input{padding:8px 12px;border:1px solid #e2e8f0;border-radius:8px;font-size:.9rem;font-family:'Outfit',sans-serif;outline:none;}
-.filter-input:focus{border-color:#F7DF79;box-shadow:0 0 0 3px rgba(247,223,121,0.2);}
+.filter-input{padding:8px 12px;border:1px solid #e2e8f0;border-radius:8px;font-size:.9rem;font-family:'Inter',sans-serif;outline:none;}
+.filter-input:focus{border-color:#6D28D9;box-shadow:0 0 0 3px rgba(109,40,217,0.2);}
 
-.btn-primary{background:#18181b;color:#fff;border:none;padding:9px 18px;border-radius:10px;font-weight:600;cursor:pointer;font-family:'Outfit',sans-serif;}
+.btn-primary{background:#18181b;color:#fff;border:none;padding:9px 18px;border-radius:10px;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;}
 .btn-primary:hover{background:#27272a;}
 
 .btn-export-csv {
-    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    background: linear-gradient(135deg, #7C3AED 0%, #6D28D9 100%);
     color: #ffffff;
     border: none;
     border-radius: 10px;
@@ -34,7 +34,7 @@
 .btn-export-csv:hover { transform: translateY(-2px); box-shadow: 0 6px 14px rgba(59, 130, 246, 0.4); color: #ffffff; }
 
 .btn-export-xls {
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    background: linear-gradient(135deg, #8B5CF6 0%, #4C1D95 100%);
     color: #ffffff;
     border: none;
     border-radius: 10px;
@@ -58,10 +58,10 @@
 .table tr:last-child td{border-bottom:none;}
 .name-cell{font-weight:600;color:#1e293b;}
 .badge{padding:4px 8px;border-radius:99px;font-size:0.75rem;font-weight:600;}
-.badge-present{background:#dcfce7;color:#166534;}
-.badge-absent{background:#fee2e2;color:#991b1b;}
-.badge-late{background:#fef3c7;color:#92400e;}
-.badge-leave{background:#e0e7ff;color:#3730a3;}
+.badge-present{background:#EDE9FE;color:#4C1D95;}
+.badge-absent{background:#EDE9FE;color:#3B0764;}
+.badge-late{background:#EDE9FE;color:#4C1D95;}
+.badge-leave{background:#DDD6FE;color:#3730a3;}
 </style>
 
 <div class="page-header">

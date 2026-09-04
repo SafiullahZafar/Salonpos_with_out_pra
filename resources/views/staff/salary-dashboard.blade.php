@@ -12,9 +12,9 @@
 .salary-row td:first-child { border-left: 1px solid transparent; border-radius: 12px 0 0 12px; }
 .salary-row td:last-child { border-right: 1px solid transparent; border-radius: 0 12px 12px 0; }
 
-.amt-badge { background: #fffdf0; border: 1px solid #F7DF79; color: #a07800; padding: 4px 10px; border-radius: 99px; font-weight: 700; font-size: 0.8rem; }
-.perf-badge { background: #f0f9ff; border: 1px solid #bae6fd; color: #0369a1; padding: 4px 10px; border-radius: 99px; font-weight: 700; font-size: 0.8rem; }
-    .rating-stars { color: #fbbf24; }
+.amt-badge { background: #F5F3FF; border: 1px solid #6D28D9; color: #4C1D95; padding: 4px 10px; border-radius: 99px; font-weight: 700; font-size: 0.8rem; }
+.perf-badge { background: #F5F3FF; border: 1px solid #DDD6FE; color: #4C1D95; padding: 4px 10px; border-radius: 99px; font-weight: 700; font-size: 0.8rem; }
+    .rating-stars { color: #8B5CF6; }
 
     /* Modal Styles */
     .modal-overlay {
@@ -119,7 +119,7 @@
                             <div style="font-weight:700; color:#1e293b;">{{ $s->name }}</div>
                             <div style="font-size:0.7rem; color:#64748b; display:flex; align-items:center; gap:6px; margin-top:2px;">
                                 <span>{{ $s->position }}</span>
-                                <span style="background:#e0f2fe; color:#0369a1; padding:1px 6px; border-radius:4px; font-weight:700; font-size:0.6rem;">{{ $s->days_since_last_payment }}d passed</span>
+                                <span style="background:#EDE9FE; color:#4C1D95; padding:1px 6px; border-radius:4px; font-weight:700; font-size:0.6rem;">{{ $s->days_since_last_payment }}d passed</span>
                             </div>
                         </div>
                     </div>
@@ -127,7 +127,7 @@
                 <td>
                     <div class="rating-stars">
                         @for($i=1; $i<=5; $i++)
-                            <span style="{{ $i <= $s->average_rating ? 'color:#fbbf24' : 'color:#e2e8f0' }}">★</span>
+                            <span style="{{ $i <= $s->average_rating ? 'color:#8B5CF6' : 'color:#e2e8f0' }}">â˜…</span>
                         @endfor
                         <span style="font-size:0.75rem; color:#64748b; margin-left:4px;">({{ $s->average_rating }})</span>
                     </div>
@@ -142,11 +142,11 @@
                 <td><span class="amt-badge">+ PKR {{ number_format($s->total_earned_commission, 2) }}</span></td>
                 <td>
                     <div style="font-size:0.75rem;">
-                        <div style="color:#a16207;">Adv: <span style="font-weight:700;">PKR {{ number_format($s->current_cycle_advances, 2) }}</span></div>
-                        <div style="color:#b91c1c;">Ded: <span style="font-weight:700;">PKR {{ number_format($s->current_cycle_deductions, 2) }}</span></div>
+                        <div style="color:#6D28D9;">Adv: <span style="font-weight:700;">PKR {{ number_format($s->current_cycle_advances, 2) }}</span></div>
+                        <div style="color:#4C1D95;">Ded: <span style="font-weight:700;">PKR {{ number_format($s->current_cycle_deductions, 2) }}</span></div>
                     </div>
                 </td>
-                <td><span style="font-weight:800; color:#16a34a; font-size:1rem;">PKR {{ number_format($s->net_salary_payable, 2) }}</span></td>
+                <td><span style="font-weight:800; color:#6D28D9; font-size:1rem;">PKR {{ number_format($s->net_salary_payable, 2) }}</span></td>
                 <td>
                     <a href="{{ route('staff.salary-performance', $s) }}" class="perf-badge" style="text-decoration:none;">View Full Stats</a>
                 </td>

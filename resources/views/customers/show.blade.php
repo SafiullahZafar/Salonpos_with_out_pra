@@ -2,7 +2,7 @@
 @section('title', $customer->name)
 @section('content')
 <style>
-:root{--y1:#F7DF79;--y2:#FBEFBC;--yd:#c9a800;--ydark:#a07800;--ybg:#fffdf0;}
+:root{--y1:#6D28D9;--y2:#EDE9FE;--yd:#6D28D9;--ydark:#4C1D95;--ybg:#F5F3FF;}
 .show-wrap{max-width:1020px;margin:0 auto;}
 
 /* ── Header ── */
@@ -12,11 +12,11 @@
 .hdr-actions{display:flex;gap:8px;}
 .btn-edit{padding:8px 16px;background:var(--y2);color:var(--ydark);border:1.5px solid var(--y1);border-radius:9px;text-decoration:none;font-weight:700;font-size:.82rem;display:inline-flex;align-items:center;gap:5px;transition:.15s;}
 .btn-edit:hover{background:var(--y1);}
-.btn-del{padding:8px 16px;background:#fef2f2;color:#dc2626;border:1.5px solid #fecaca;border-radius:9px;font-weight:700;font-size:.82rem;cursor:pointer;font-family:'Outfit',sans-serif;display:inline-flex;align-items:center;gap:5px;transition:.15s;}
-.btn-del:hover{background:#fee2e2;}
+.btn-del{padding:8px 16px;background:#F5F3FF;color:#4C1D95;border:1.5px solid #DDD6FE;border-radius:9px;font-weight:700;font-size:.82rem;cursor:pointer;font-family:'Inter',sans-serif;display:inline-flex;align-items:center;gap:5px;transition:.15s;}
+.btn-del:hover{background:#EDE9FE;}
 
 /* ── Hero card ── */
-.hero-card{background:#fff;border:1.5px solid #f0e8a0;border-radius:18px;overflow:hidden;margin-bottom:18px;box-shadow:0 2px 12px rgba(0,0,0,.05);}
+.hero-card{background:#fff;border:1.5px solid #DDD6FE;border-radius:18px;overflow:hidden;margin-bottom:18px;box-shadow:0 2px 12px rgba(0,0,0,.05);}
 .hero-banner{height:140px;background:linear-gradient(135deg,var(--y2) 0%,var(--y1) 100%);position:relative;overflow:hidden;}
 .hero-banner::after{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a800' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");}
 .hero-banner-img{width:100%;height:100%;object-fit:cover;cursor:zoom-in;transition:transform .3s;}
@@ -31,12 +31,12 @@
 .hero-meta{display:flex;gap:18px;flex-wrap:wrap;align-items:center;}
 .hero-meta-item{display:flex;align-items:center;gap:6px;font-size:.85rem;color:#64748b;font-weight:500;}
 .social-header-list{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;}
-.social-tag{padding:4px 12px;background:var(--ybg);border:1.5px solid #f0e8a0;border-radius:99px;font-size:.75rem;font-weight:700;color:var(--ydark);}
+.social-tag{padding:4px 12px;background:var(--ybg);border:1.5px solid #DDD6FE;border-radius:99px;font-size:.75rem;font-weight:700;color:var(--ydark);}
 
 /* ── Stats row ── */
 .stats-row{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:18px;}
-.stat-card{background:#fff;border:1.5px solid #f0e8a0;border-radius:13px;padding:14px 16px;box-shadow:0 1px 4px rgba(0,0,0,.04);transition:.2s;}
-.stat-card:hover{border-color:var(--y1);box-shadow:0 3px 12px rgba(247,223,121,.2);}
+.stat-card{background:#fff;border:1.5px solid #DDD6FE;border-radius:13px;padding:14px 16px;box-shadow:0 1px 4px rgba(0,0,0,.04);transition:.2s;}
+.stat-card:hover{border-color:var(--y1);box-shadow:0 3px 12px rgba(109,40,217,.2);}
 .stat-icon{width:34px;height:34px;border-radius:9px;background:var(--y2);display:flex;align-items:center;justify-content:center;color:var(--ydark);margin-bottom:10px;}
 .stat-val{font-size:1.3rem;font-weight:800;color:#18181b;line-height:1;margin-bottom:3px;}
 .stat-lbl{font-size:.65rem;font-weight:700;color:#a1a1aa;text-transform:uppercase;letter-spacing:.08em;}
@@ -45,7 +45,7 @@
 .content-grid{display:grid;grid-template-columns:1fr 340px;gap:16px;}
 
 /* ── Panel ── */
-.panel{background:#fff;border:1.5px solid #f0e8a0;border-radius:14px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.04);margin-bottom:14px;}
+.panel{background:#fff;border:1.5px solid #DDD6FE;border-radius:14px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.04);margin-bottom:14px;}
 .panel-head{padding:14px 18px;border-bottom:1px solid #f4f4f5;display:flex;align-items:center;justify-content:space-between;}
 .panel-title{font-size:.85rem;font-weight:800;color:#18181b;display:flex;align-items:center;gap:7px;}
 .panel-icon{width:26px;height:26px;border-radius:7px;background:var(--y2);display:flex;align-items:center;justify-content:center;color:var(--ydark);}
@@ -74,19 +74,19 @@
 .invoice-table-head,.invoice-row{display:grid;grid-template-columns:1.1fr .8fr 1.3fr 1.05fr .8fr;gap:14px;align-items:center;}
 .invoice-table-head{padding:10px 0 8px;border-bottom:1px solid #e4e4e7;color:#a1a1aa;font-size:.62rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;}
 .invoice-row{padding:13px 0;border-bottom:1px solid #f4f4f5;transition:background .15s;}
-.invoice-row:last-child{border-bottom:none;}.invoice-row:hover{background:#fffdf0;}
+.invoice-row:last-child{border-bottom:none;}.invoice-row:hover{background:#F5F3FF;}
 .invoice-no{font-size:.8rem;font-weight:800;color:#18181b;}.invoice-cell{font-size:.75rem;color:#64748b;min-width:0;}.invoice-service{font-weight:700;color:#3f3f46;white-space:normal;}.invoice-amount{text-align:right;font-weight:800;color:var(--ydark);}
 .invoice-row .act-icon{display:none;}.invoice-row .act-info{display:contents;}.invoice-row .act-name{font-size:.8rem;font-weight:800;color:#18181b;white-space:normal;}.invoice-row .act-meta{font-size:.75rem;margin:0;white-space:normal!important;overflow:visible!important;max-width:none!important;}.invoice-row .act-right{text-align:right;}.invoice-row .act-time{display:none;}
 
 .status-pill{display:inline-flex;align-items:center;gap:3px;padding:2px 8px;border-radius:99px;font-size:.65rem;font-weight:700;}
 .sp-confirmed{background:var(--y2);color:var(--ydark);}
 .sp-completed{background:#f3e8ff;color:#7c3aed;}
-.sp-cancelled{background:#fee2e2;color:#b91c1c;}
-.sp-scheduled{background:#dbeafe;color:#1d4ed8;}
+.sp-cancelled{background:#EDE9FE;color:#4C1D95;}
+.sp-scheduled{background:#EDE9FE;color:#4C1D95;}
 
 /* ── Social tags ── */
 .social-list{display:flex;flex-wrap:wrap;gap:7px;padding:14px 0;}
-.social-tag{padding:4px 12px;background:var(--ybg);border:1px solid #f0e8a0;border-radius:99px;font-size:.75rem;font-weight:700;color:var(--ydark);}
+.social-tag{padding:4px 12px;background:var(--ybg);border:1px solid #DDD6FE;border-radius:99px;font-size:.75rem;font-weight:700;color:var(--ydark);}
 
 /* ── Notes ── */
 .notes-box{padding:14px 0;font-size:.85rem;color:#52525b;line-height:1.6;}
@@ -96,18 +96,19 @@
 /* ── Modals ── */
 .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;z-index:999;padding:20px;}
 .modal-box{background:#fff;border-radius:18px;width:100%;max-width:380px;padding:26px;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,.2);}
-.modal-icon{width:50px;height:50px;background:#fef2f2;color:#dc2626;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;}
+.modal-icon{width:50px;height:50px;background:#F5F3FF;color:#4C1D95;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;}
 .modal-title{font-size:1.05rem;font-weight:800;color:#18181b;margin-bottom:6px;}
 .modal-text{font-size:.82rem;color:#71717a;line-height:1.6;margin-bottom:20px;}
 .modal-footer{display:flex;gap:10px;}
-.btn-m{flex:1;padding:10px;border-radius:9px;font-size:.85rem;font-weight:700;cursor:pointer;transition:.2s;border:none;font-family:'Outfit',sans-serif;}
+.btn-m{flex:1;padding:10px;border-radius:9px;font-size:.85rem;font-weight:700;cursor:pointer;transition:.2s;border:none;font-family:'Inter',sans-serif;}
 .btn-m-cancel{background:#f4f4f5;color:#52525b;}
 .btn-m-cancel:hover{background:#e4e4e7;}
-.btn-m-confirm{background:#dc2626;color:#fff;}
-.btn-m-confirm:hover{background:#b91c1c;transform:translateY(-1px);}
+.btn-m-confirm{background:#4C1D95;color:#fff;}
+.btn-m-confirm:hover{background:#4C1D95;transform:translateY(-1px);}
 
 .img-modal{position:fixed;inset:0;background:rgba(0,0,0,.88);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;z-index:2000;padding:20px;cursor:zoom-out;}
 .img-modal-content{max-width:88%;max-height:88vh;border-radius:16px;box-shadow:0 25px 60px rgba(0,0,0,.5);object-fit:contain;}
+
 </style>
 
 <div class="show-wrap">
@@ -185,19 +186,19 @@
 
     {{-- Pending Balance Alert Banner --}}
     @if($pendingBal > 0)
-    <div style="background:#fef2f2;border:1.5px solid #fca5a5;border-radius:14px;padding:16px 20px;margin-bottom:18px;display:flex;align-items:center;justify-content:space-between;gap:16px;">
+    <div style="background:#F5F3FF;border:1.5px solid #A78BFA;border-radius:14px;padding:16px 20px;margin-bottom:18px;display:flex;align-items:center;justify-content:space-between;gap:16px;">
         <div style="display:flex;align-items:center;gap:12px;">
-            <div style="width:42px;height:42px;border-radius:10px;background:#fee2e2;color:#ef4444;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <div style="width:42px;height:42px;border-radius:10px;background:#EDE9FE;color:#6D28D9;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
                 <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
             </div>
             <div>
-                <div style="font-size:.9rem;font-weight:800;color:#b91c1c;">Outstanding Pending Balance</div>
-                <div style="font-size:.75rem;color:#dc2626;margin-top:2px;">This customer has an unpaid balance from a previous credit bill.</div>
+                <div style="font-size:.9rem;font-weight:800;color:#4C1D95;">Outstanding Pending Balance</div>
+                <div style="font-size:.75rem;color:#4C1D95;margin-top:2px;">This customer has an unpaid balance from a previous credit bill.</div>
             </div>
         </div>
         <div style="text-align:right;flex-shrink:0;">
-            <div style="font-size:1.6rem;font-weight:900;color:#b91c1c;">PKR {{ number_format($pendingBal, 2) }}</div>
-            <div style="font-size:.7rem;color:#ef4444;font-weight:700;text-transform:uppercase;letter-spacing:.05em;">Amount Due</div>
+            <div style="font-size:1.6rem;font-weight:900;color:#4C1D95;">PKR {{ number_format($pendingBal, 2) }}</div>
+            <div style="font-size:.7rem;color:#6D28D9;font-weight:700;text-transform:uppercase;letter-spacing:.05em;">Amount Due</div>
         </div>
     </div>
     @endif
@@ -218,10 +219,10 @@
             <div class="stat-val" style="font-size:1rem;">PKR {{ number_format($customer->invoices()->sum('payable_amount'),0) }}</div>
             <div class="stat-lbl">Total Billed</div>
         </div>
-        <div class="stat-card" style="{{ $pendingBal > 0 ? 'border-color:#fca5a5;background:#fef2f2;' : '' }}">
-            <div class="stat-icon" style="{{ $pendingBal > 0 ? 'background:#fee2e2;color:#ef4444;' : '' }}"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg></div>
-            <div class="stat-val" style="font-size:1rem;color:{{ $pendingBal > 0 ? '#b91c1c' : '#16a34a' }};">{{ $pendingBal > 0 ? 'PKR '.number_format($pendingBal,0) : 'Cleared' }}</div>
-            <div class="stat-lbl" style="{{ $pendingBal > 0 ? 'color:#ef4444;' : '' }}">Pending Balance</div>
+        <div class="stat-card" style="{{ $pendingBal > 0 ? 'border-color:#A78BFA;background:#F5F3FF;' : '' }}">
+            <div class="stat-icon" style="{{ $pendingBal > 0 ? 'background:#EDE9FE;color:#6D28D9;' : '' }}"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg></div>
+            <div class="stat-val" style="font-size:1rem;color:{{ $pendingBal > 0 ? '#4C1D95' : '#6D28D9' }};">{{ $pendingBal > 0 ? 'PKR '.number_format($pendingBal,0) : 'Cleared' }}</div>
+            <div class="stat-lbl" style="{{ $pendingBal > 0 ? 'color:#6D28D9;' : '' }}">Pending Balance</div>
         </div>
         <div class="stat-card">
             <div class="stat-icon"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
@@ -293,9 +294,9 @@
                         <div class="act-right">
                             <div class="act-val">PKR {{ number_format($inv->payable_amount,0) }}</div>
                             @if(floatval($inv->pending_amount) > 0)
-                                <div style="font-size:.65rem;background:#fee2e2;color:#b91c1c;padding:1px 6px;border-radius:99px;font-weight:700;margin-top:3px;">Pending: PKR {{ number_format($inv->pending_amount,0) }}</div>
+                                <div style="font-size:.65rem;background:#EDE9FE;color:#4C1D95;padding:1px 6px;border-radius:99px;font-weight:700;margin-top:3px;">Pending: PKR {{ number_format($inv->pending_amount,0) }}</div>
                             @else
-                                <div style="font-size:.65rem;background:#dcfce7;color:#16a34a;padding:1px 6px;border-radius:99px;font-weight:700;margin-top:3px;">✓ Paid</div>
+                                <div style="font-size:.65rem;background:#EDE9FE;color:#6D28D9;padding:1px 6px;border-radius:99px;font-weight:700;margin-top:3px;">✓ Paid</div>
                             @endif
                         </div>
                     </a>
@@ -325,7 +326,7 @@
                     <div class="info-row"><span class="info-lbl">Prepaid Credit</span><span class="info-val" style="color:var(--ydark);font-weight:800;">PKR {{ number_format($customer->prepaid_credit ?? 0,2) }}</span></div>
                     <div class="info-row">
                         <span class="info-lbl">Pending Balance</span>
-                        <span class="info-val" style="color:{{ $pendingBal > 0 ? '#b91c1c' : '#16a34a' }};font-weight:900;font-size:1rem;">
+                        <span class="info-val" style="color:{{ $pendingBal > 0 ? '#4C1D95' : '#6D28D9' }};font-weight:900;font-size:1rem;">
                             {{ $pendingBal > 0 ? 'PKR '.number_format($pendingBal, 2) : 'PKR 0.00 ✓' }}
                         </span>
                     </div>

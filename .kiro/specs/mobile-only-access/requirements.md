@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This feature restricts access to the **Login page** and **Dashboard page** of the Crimpers Salon POS application exclusively to **mobile/small-screen** devices (viewport width ≤ 768 px). On larger screens (tablets and desktops), those two pages must be inaccessible, showing a "not supported" message instead. Additionally, while on a small-screen device, any dashboard navigation links or buttons that would route to other pages must be visually disabled and non-functional, and any attempt by a small-screen user to navigate to any route other than the login or dashboard must be intercepted and redirected back to the dashboard.
+This feature restricts access to the **Login page** and **Dashboard page** of the Veloura Salon POS application exclusively to **mobile/small-screen** devices (viewport width ≤ 768 px). On larger screens (tablets and desktops), those two pages must be inaccessible, showing a "not supported" message instead. Additionally, while on a small-screen device, any dashboard navigation links or buttons that would route to other pages must be visually disabled and non-functional, and any attempt by a small-screen user to navigate to any route other than the login or dashboard must be intercepted and redirected back to the dashboard.
 
 All other pages of the application remain desktop-only and are unaffected by this feature.
 

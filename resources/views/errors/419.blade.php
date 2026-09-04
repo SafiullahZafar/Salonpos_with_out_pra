@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Session Expired - SalonPOS</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
@@ -13,30 +13,27 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #09090b;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-image: 
-                radial-gradient(circle at 15% 50%, rgba(212, 175, 55, 0.08), transparent 25%),
-                radial-gradient(circle at 85% 30%, rgba(212, 175, 55, 0.05), transparent 25%);
+            background-color: #fff;
+            font-family: 'Inter', sans-serif;
         }
 
         .expired-card {
-            background: #18181b;
-            border: 1px solid rgba(212, 175, 55, 0.15);
+            background: #fff;
+            border: 1px solid #DDD6FE;
             border-radius: 20px;
             padding: 48px 40px;
             width: 100%;
             max-width: 420px;
             text-align: center;
-            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.5);
+            box-shadow: 0 20px 40px -10px rgba(59,7,100,.18);
         }
 
         .icon-container {
             width: 72px;
             height: 72px;
             border-radius: 50%;
-            background: rgba(212, 175, 55, 0.1);
-            color: #d4af37;
+            background: #EDE9FE;
+            color: #7C3AED;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -44,7 +41,7 @@
         }
 
         .title {
-            color: #fff;
+            color: #3B0764;
             font-size: 1.5rem;
             font-weight: 700;
             margin: 0 0 12px;
@@ -52,7 +49,7 @@
         }
 
         .description {
-            color: #a1a1aa;
+            color: #64748b;
             font-size: 0.95rem;
             line-height: 1.5;
             margin: 0 0 32px;
@@ -65,8 +62,8 @@
             gap: 10px;
             width: 100%;
             padding: 14px;
-            background: linear-gradient(135deg, #d4af37 0%, #aa8c2c 100%);
-            color: #000;
+            background: linear-gradient(135deg, #7C3AED 0%, #4C1D95 100%);
+            color: #fff;
             font-weight: 700;
             font-size: 1rem;
             border: none;

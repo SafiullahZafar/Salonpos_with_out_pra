@@ -2,7 +2,7 @@
 @section('title', 'Edit Supplier')
 @section('content')
 <style>
-:root{--y1:#F7DF79;--y2:#FBEFBC;--yd:#c9a800;--ydark:#a07800;--ybg:#fffdf0;}
+:root{--y1:#6D28D9;--y2:#EDE9FE;--yd:#6D28D9;--ydark:#4C1D95;--ybg:#F5F3FF;}
 .form-wrap{max-width:720px;margin:0 auto;}
 .form-header{display:flex;align-items:center;gap:12px;margin-bottom:22px;}
 .back-btn{width:36px;height:36px;border-radius:9px;border:1.5px solid #e4e4e7;background:#fff;display:flex;align-items:center;justify-content:center;color:#71717a;text-decoration:none;transition:.2s;flex-shrink:0;}
@@ -10,44 +10,44 @@
 .pg-title{font-size:1.4rem;font-weight:800;color:#18181b;letter-spacing:-.02em;margin-bottom:3px;}
 .pg-sub{font-size:.85rem;color:#71717a;}
 
-.form-card{background:#fff;border:1.5px solid #f0e8a0;border-radius:18px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.05);}
+.form-card{background:#fff;border:1.5px solid #DDD6FE;border-radius:18px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.05);}
 .form-section{padding:22px 26px;border-bottom:1px solid #f4f4f5;}
 .section-title{font-size:.72rem;font-weight:700;color:#a1a1aa;text-transform:uppercase;letter-spacing:.1em;margin-bottom:16px;display:flex;align-items:center;gap:7px;}
 .section-icon{width:22px;height:22px;border-radius:6px;background:var(--y2);display:flex;align-items:center;justify-content:center;color:var(--ydark);}
 .f-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;}
 .f-row{margin-bottom:14px;}
 .f-label{display:block;font-size:.78rem;font-weight:600;color:#374151;margin-bottom:7px;}
-.f-input{width:100%;padding:10px 13px;border:1.5px solid #f0e8a0;border-radius:10px;font-size:.875rem;font-family:'Outfit',sans-serif;color:#18181b;background:var(--ybg);outline:none;transition:.2s;box-sizing:border-box;}
-.f-input:focus{border-color:var(--y1);background:#fff;box-shadow:0 0 0 3px rgba(247,223,121,.15);}
+.f-input{width:100%;padding:10px 13px;border:1.5px solid #DDD6FE;border-radius:10px;font-size:.875rem;font-family:'Inter',sans-serif;color:#18181b;background:var(--ybg);outline:none;transition:.2s;box-sizing:border-box;}
+.f-input:focus{border-color:var(--y1);background:#fff;box-shadow:0 0 0 3px rgba(109,40,217,.15);}
 textarea.f-input{resize:vertical;min-height:90px;}
 .check-row{display:flex;align-items:center;gap:8px;cursor:pointer;}
 .check-row input[type=checkbox]{width:15px;height:15px;accent-color:var(--ydark);cursor:pointer;}
 .check-lbl{font-size:.875rem;font-weight:600;color:#374151;}
 
 .form-footer{padding:18px 26px;display:flex;gap:10px;justify-content:flex-end;}
-.btn-cancel{padding:10px 22px;border:1.5px solid #e4e4e7;background:#fff;border-radius:10px;color:#71717a;font-size:.875rem;font-weight:600;cursor:pointer;text-decoration:none;font-family:'Outfit',sans-serif;transition:.2s;}
-.btn-cancel:hover{border-color:#fca5a5;color:#dc2626;background:#fef2f2;}
-.btn-save{padding:10px 22px;border:none;background:linear-gradient(135deg,var(--y1),var(--yd));border-radius:10px;color:#18181b;font-size:.875rem;font-weight:800;cursor:pointer;font-family:'Outfit',sans-serif;transition:.2s;box-shadow:0 3px 10px rgba(247,223,121,.3);}
+.btn-cancel{padding:10px 22px;border:1.5px solid #e4e4e7;background:#fff;border-radius:10px;color:#71717a;font-size:.875rem;font-weight:600;cursor:pointer;text-decoration:none;font-family:'Inter',sans-serif;transition:.2s;}
+.btn-cancel:hover{border-color:#A78BFA;color:#4C1D95;background:#F5F3FF;}
+.btn-save{padding:10px 22px;border:none;background:linear-gradient(135deg,var(--y1),var(--yd));border-radius:10px;color:#18181b;font-size:.875rem;font-weight:800;cursor:pointer;font-family:'Inter',sans-serif;transition:.2s;box-shadow:0 3px 10px rgba(109,40,217,.3);}
 .btn-save:hover{transform:translateY(-1px);}
 
-.danger-zone{margin-top:20px;background:#fff;border:1px solid #fecaca;border-radius:14px;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
-.danger-title{font-size:.875rem;font-weight:700;color:#b91c1c;margin-bottom:2px;}
+.danger-zone{margin-top:20px;background:#fff;border:1px solid #DDD6FE;border-radius:14px;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.danger-title{font-size:.875rem;font-weight:700;color:#4C1D95;margin-bottom:2px;}
 .danger-sub{font-size:.75rem;color:#a1a1aa;}
-.btn-danger{padding:8px 16px;border:1.5px solid #fca5a5;background:#fef2f2;border-radius:9px;color:#dc2626;font-size:.8rem;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;transition:.2s;}
-.btn-danger:hover{background:#fee2e2;}
+.btn-danger{padding:8px 16px;border:1.5px solid #A78BFA;background:#F5F3FF;border-radius:9px;color:#4C1D95;font-size:.8rem;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;transition:.2s;}
+.btn-danger:hover{background:#EDE9FE;}
 
 /* Delete Modal */
 .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;z-index:999;padding:20px;}
 .modal-box{background:#fff;border-radius:20px;width:100%;max-width:380px;padding:28px;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,.2);}
-.modal-icon{width:52px;height:52px;background:#fef2f2;color:#dc2626;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;}
+.modal-icon{width:52px;height:52px;background:#F5F3FF;color:#4C1D95;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;}
 .modal-title{font-size:1.1rem;font-weight:800;color:#18181b;margin-bottom:6px;}
 .modal-text{font-size:.85rem;color:#71717a;line-height:1.6;margin-bottom:22px;}
 .modal-footer{display:flex;gap:10px;}
-.btn-m{flex:1;padding:11px;border-radius:10px;font-size:.85rem;font-weight:700;cursor:pointer;transition:.2s;border:none;font-family:'Outfit',sans-serif;}
+.btn-m{flex:1;padding:11px;border-radius:10px;font-size:.85rem;font-weight:700;cursor:pointer;transition:.2s;border:none;font-family:'Inter',sans-serif;}
 .btn-m-cancel{background:#f4f4f5;color:#52525b;}
 .btn-m-cancel:hover{background:#e4e4e7;}
-.btn-m-confirm{background:#dc2626;color:#fff;}
-.btn-m-confirm:hover{background:#b91c1c;transform:translateY(-1px);}
+.btn-m-confirm{background:#4C1D95;color:#fff;}
+.btn-m-confirm:hover{background:#4C1D95;transform:translateY(-1px);}
 </style>
 
 <div class="form-wrap">
@@ -71,7 +71,7 @@ textarea.f-input{resize:vertical;min-height:90px;}
                     Company Information
                 </div>
                 <div class="f-row">
-                    <label class="f-label">Company Name <span style="color:#ef4444;">*</span></label>
+                    <label class="f-label">Company Name <span style="color:#6D28D9;">*</span></label>
                     <input type="text" name="name" value="{{ old('name',$supplier->name) }}" required class="f-input">
                 </div>
                 <div class="f-row">

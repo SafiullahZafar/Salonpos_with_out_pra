@@ -5,7 +5,7 @@
 .form-wrap{max-width:700px;margin:0 auto;}
 .form-header{display:flex;align-items:center;gap:12px;margin-bottom:24px;}
 .back-btn{width:36px;height:36px;border-radius:9px;border:1.5px solid #e2e8f0;background:#fff;display:flex;align-items:center;justify-content:center;color:#64748b;text-decoration:none;transition:.2s;flex-shrink:0;}
-.back-btn:hover{border-color:#86efac;color:#16a34a;background:#f0fdf4;}
+.back-btn:hover{border-color:#A78BFA;color:#6D28D9;background:#F5F3FF;}
 .form-title{font-size:1.4rem;font-weight:800;color:#0f172a;letter-spacing:-.02em;margin-bottom:3px;}
 .form-sub{font-size:.85rem;color:#64748b;}
 .form-card{backgrou <h5 class="mb-0">

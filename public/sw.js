@@ -1,4 +1,4 @@
-const CACHE_NAME = 'crimpers-salonpos-v1';
+const CACHE_NAME = 'veloura-salon-pos-v1';
 const APP_SHELL = [
     '/',
     '/manifest.json',

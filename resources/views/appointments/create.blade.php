@@ -5,24 +5,24 @@
 .edit-wrap{max-width:680px;margin:0 auto;}
 .edit-header{display:flex;align-items:center;gap:14px;margin-bottom:28px;}
 .back-btn{width:38px;height:38px;border-radius:10px;border:1.5px solid #e2e8f0;background:#fff;display:flex;align-items:center;justify-content:center;color:#64748b;text-decoration:none;transition:.2s;flex-shrink:0;}
-.back-btn:hover{border-color:#F7DF79;color:#c9a800;background:#fffdf0;}
+.back-btn:hover{border-color:#6D28D9;color:#6D28D9;background:#F5F3FF;}
 .edit-title{font-size:1.4rem;font-weight:800;color:#0f172a;letter-spacing:-.02em;margin-bottom:3px;}
 .edit-sub{font-size:.85rem;color:#64748b;}
-.edit-card{background:#fff;border:1px solid #f0e8a0;border-radius:18px;box-shadow:0 2px 12px rgba(0,0,0,.05);overflow:hidden;}
+.edit-card{background:#fff;border:1px solid #DDD6FE;border-radius:18px;box-shadow:0 2px 12px rgba(0,0,0,.05);overflow:hidden;}
 .edit-card-head{padding:20px 28px;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:10px;}
-.edit-card-icon{width:36px;height:36px;border-radius:10px;background:#fffdf0;display:flex;align-items:center;justify-content:center;color:#F7DF79;}
+.edit-card-icon{width:36px;height:36px;border-radius:10px;background:#F5F3FF;display:flex;align-items:center;justify-content:center;color:#6D28D9;}
 .edit-card-title{font-size:.95rem;font-weight:700;color:#1e293b;}
 .edit-card-body{padding:28px;}
 .f-row{margin-bottom:20px;}
 .f-row-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px;}
 .f-label{display:block;font-size:.8rem;font-weight:600;color:#374151;margin-bottom:8px;}
-.f-input{width:100%;padding:11px 14px;border:1.5px solid #e5e7eb;border-radius:11px;font-size:.9rem;font-family:'Outfit',sans-serif;color:#1e293b;background:#fafafa;outline:none;transition:.2s;}
-.f-input:focus{border-color:#F7DF79;background:#fff;box-shadow:0 0 0 3px rgba(247,223,121,.1);}
+.f-input{width:100%;padding:11px 14px;border:1.5px solid #e5e7eb;border-radius:11px;font-size:.9rem;font-family:'Inter',sans-serif;color:#1e293b;background:#fafafa;outline:none;transition:.2s;}
+.f-input:focus{border-color:#6D28D9;background:#fff;box-shadow:0 0 0 3px rgba(109,40,217,.1);}
 textarea.f-input{resize:vertical;min-height:90px;}
 .form-footer{display:flex;gap:12px;justify-content:flex-end;padding-top:8px;border-top:1px solid #f1f5f9;margin-top:8px;}
-.btn-cancel{padding:10px 22px;border:1.5px solid #e2e8f0;background:#fff;border-radius:10px;color:#64748b;font-size:.875rem;font-weight:600;cursor:pointer;text-decoration:none;font-family:'Outfit',sans-serif;transition:.2s;}
-.btn-cancel:hover{border-color:#fca5a5;color:#dc2626;background:#fef2f2;}
-.btn-save{padding:10px 22px;border:none;background:linear-gradient(135deg,#F7DF79,#c9a800);border-radius:10px;color:#18181b;font-size:.875rem;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;transition:.2s;box-shadow:0 3px 10px rgba(247,223,121,.25);}
+.btn-cancel{padding:10px 22px;border:1.5px solid #e2e8f0;background:#fff;border-radius:10px;color:#64748b;font-size:.875rem;font-weight:600;cursor:pointer;text-decoration:none;font-family:'Inter',sans-serif;transition:.2s;}
+.btn-cancel:hover{border-color:#A78BFA;color:#4C1D95;background:#F5F3FF;}
+.btn-save{padding:10px 22px;border:none;background:linear-gradient(135deg,#6D28D9,#6D28D9);border-radius:10px;color:#18181b;font-size:.875rem;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;transition:.2s;box-shadow:0 3px 10px rgba(109,40,217,.25);}
 .btn-save:hover{transform:translateY(-1px);}
 </style>
 
@@ -45,9 +45,9 @@ textarea.f-input{resize:vertical;min-height:90px;}
     </div>
     <div class="edit-card-body">
       @if ($errors->any())
-        <div style="background:#fef2f2; border:1px solid #fca5a5; border-radius:10px; padding:14px; margin-bottom:20px;">
-          <h4 style="color:#dc2626; margin-top:0; margin-bottom:8px; font-size:.9rem;">There were some problems with your input:</h4>
-          <ul style="color:#b91c1c; font-size:.85rem; margin:0; padding-left:20px;">
+        <div style="background:#F5F3FF; border:1px solid #A78BFA; border-radius:10px; padding:14px; margin-bottom:20px;">
+          <h4 style="color:#4C1D95; margin-top:0; margin-bottom:8px; font-size:.9rem;">There were some problems with your input:</h4>
+          <ul style="color:#4C1D95; font-size:.85rem; margin:0; padding-left:20px;">
             @foreach ($errors->all() as $error)
               <li>{{ $error }}</li>
             @endforeach
@@ -60,7 +60,7 @@ textarea.f-input{resize:vertical;min-height:90px;}
           <label class="f-label">Customer Name</label>
           <div style="display:flex;gap:8px;">
             <input type="text" id="custNameInput" name="customer_name" required class="f-input" placeholder="Enter customer name" autocomplete="off">
-            <button type="button" id="scanBtn" style="padding:0 18px;border:1.5px solid #F7DF79;background:#fffdf0;border-radius:11px;color:#c9a800;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:6px;transition:.2s;"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg> Scan</button>
+            <button type="button" id="scanBtn" style="padding:0 18px;border:1.5px solid #6D28D9;background:#F5F3FF;border-radius:11px;color:#6D28D9;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:6px;transition:.2s;"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg> Scan</button>
           </div>
           <div id="custSuggestions" style="display:none;position:absolute;top:100%;left:0;right:0;background:#fff;border:1px solid #e5e7eb;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.1);max-height:200px;overflow-y:auto;z-index:1000;margin-top:4px;"></div>
         </div>
@@ -68,7 +68,7 @@ textarea.f-input{resize:vertical;min-height:90px;}
           <div>
             <label class="f-label">Service</label>
             <select id="serviceSelect" name="service_id" class="f-input">
-              <option value="">Select service…</option>
+              <option value="">Select serviceâ€¦</option>
               @foreach($services as $s)
               <option value="{{ $s->id }}">{{ $s->name }}</option>
               @endforeach
@@ -77,7 +77,7 @@ textarea.f-input{resize:vertical;min-height:90px;}
           <div>
             <label class="f-label">Or Choose Package</label>
             <select id="packageSelect" name="service_package_id" class="f-input">
-              <option value="">Select package…</option>
+              <option value="">Select packageâ€¦</option>
               @foreach($packages as $p)
               <option value="{{ $p->id }}">{{ $p->name }}</option>
               @endforeach
@@ -87,7 +87,7 @@ textarea.f-input{resize:vertical;min-height:90px;}
         <div class="f-row">
           <label class="f-label">Staff Member (Optional)</label>
           <select name="staff_id" class="f-input">
-            <option value="">No staff assigned…</option>
+            <option value="">No staff assignedâ€¦</option>
             @foreach($staffMembers as $s)
             <option value="{{ $s->id }}">{{ $s->name }}</option>
             @endforeach
@@ -114,7 +114,7 @@ textarea.f-input{resize:vertical;min-height:90px;}
         </div>
         <div class="f-row" style="margin-bottom:0;">
           <label class="f-label">Notes (optional)</label>
-          <textarea name="notes" class="f-input" placeholder="Any special requests…"></textarea>
+          <textarea name="notes" class="f-input" placeholder="Any special requestsâ€¦"></textarea>
         </div>
         <div class="form-footer">
           <a href="{{ route('appointments.index') }}" class="btn-cancel">Cancel</a>
@@ -126,7 +126,7 @@ textarea.f-input{resize:vertical;min-height:90px;}
 </div>
 
 <script>
-// ─── Customer Smart Lookup ───────────────────────────────────────────────────
+// â”€â”€â”€ Customer Smart Lookup â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const custNameInput   = document.getElementById('custNameInput');
 const custPhoneInput  = document.getElementById('custPhoneInput');
 const custSuggestions = document.getElementById('custSuggestions');
@@ -136,8 +136,8 @@ let custTimeout, phoneTimeout;
 function showPhoneStatus(msg, type) {
     if (type === 'hide') { phoneStatus.style.display = 'none'; return; }
     const styles = type === 'present'
-        ? 'background:#fef3c7;color:#92400e;border:1px solid #fcd34d;'
-        : 'background:#dbeafe;color:#1e40af;border:1px solid #93c5fd;';
+        ? 'background:#EDE9FE;color:#4C1D95;border:1px solid #C4B5FD;'
+        : 'background:#EDE9FE;color:#4C1D95;border:1px solid #C4B5FD;';
     phoneStatus.style.cssText = 'display:block;margin-top:6px;padding:7px 12px;border-radius:8px;font-size:.78rem;font-weight:600;' + styles;
     phoneStatus.innerHTML = msg;
 }
@@ -165,13 +165,13 @@ document.getElementById('scanBtn').addEventListener('click', function() {
                 const div = document.createElement('div');
                 div.style.cssText = 'padding:10px 12px;cursor:pointer;border-bottom:1px solid #f1f5f9;display:flex;justify-content:space-between;align-items:center;';
                 div.innerHTML = `<span style="font-weight:600;color:#1e293b;">${cust.name}</span><span style="font-size:.78rem;color:#64748b;">${cust.phone || ''}</span>`;
-                div.onmouseover = () => div.style.background = '#fffdf0';
+                div.onmouseover = () => div.style.background = '#F5F3FF';
                 div.onmouseout  = () => div.style.background = '#fff';
                 div.onclick = () => {
                     custNameInput.value = cust.name;
                     if (cust.phone) {
                         custPhoneInput.value = cust.phone;
-                        showPhoneStatus('✅ Already Present — existing customer found', 'present');
+                        showPhoneStatus('âœ… Already Present â€” existing customer found', 'present');
                     }
                     custSuggestions.style.display = 'none';
                 };
@@ -179,12 +179,12 @@ document.getElementById('scanBtn').addEventListener('click', function() {
             });
             custSuggestions.style.display = 'block';
         } else {
-            custSuggestions.innerHTML = '<div style="padding:10px 12px;color:#94a3b8;font-size:.83rem;">No customer found — a new profile will be created on submit.</div>';
+            custSuggestions.innerHTML = '<div style="padding:10px 12px;color:#94a3b8;font-size:.83rem;">No customer found â€” a new profile will be created on submit.</div>';
             custSuggestions.style.display = 'block';
         }
     })
     .catch(() => {
-        custSuggestions.innerHTML = '<div style="padding:10px 12px;color:#dc2626;font-size:.83rem;">Error scanning. Please try again.</div>';
+        custSuggestions.innerHTML = '<div style="padding:10px 12px;color:#4C1D95;font-size:.83rem;">Error scanning. Please try again.</div>';
     });
 });
 
@@ -208,11 +208,11 @@ custPhoneInput.addEventListener('input', function() {
             // Filter strictly by phone match
             const match = data.find(c => c.phone && c.phone.replace(/\s/g,'') === phone.replace(/\s/g,''));
             if (match) {
-                showPhoneStatus('⚠️ Already Present — this number belongs to <strong>' + match.name + '</strong>', 'present');
+                showPhoneStatus('âš ï¸ Already Present â€” this number belongs to <strong>' + match.name + '</strong>', 'present');
                 // Also fill name if name field is empty
                 if (!custNameInput.value.trim()) custNameInput.value = match.name;
             } else {
-                showPhoneStatus('➕ New Client — a new customer profile will be created', 'new');
+                showPhoneStatus('âž• New Client â€” a new customer profile will be created', 'new');
             }
         });
     }, 400);

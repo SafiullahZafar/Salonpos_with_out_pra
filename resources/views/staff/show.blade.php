@@ -4,11 +4,11 @@
 @section('content')
     <style>
         :root {
-            --y1: #F7DF79;
-            --y2: #FBEFBC;
-            --yd: #c9a800;
-            --yk: #a07800;
-            --ybg: #fffdf0;
+            --y1: #6D28D9;
+            --y2: #EDE9FE;
+            --yd: #6D28D9;
+            --yk: #4C1D95;
+            --ybg: #F5F3FF;
         }
 
         /* ── Layout ── */
@@ -28,7 +28,7 @@
         /* ── Profile Card ── */
         .profile-card {
             background: #fff;
-            border: 1.5px solid #e9e0c0;
+            border: 1.5px solid #E7E1EC;
             border-radius: 18px;
             overflow: hidden;
             box-shadow: 0 2px 12px rgba(199, 168, 0, .1);
@@ -70,7 +70,7 @@
 
         .profile-banner-role {
             font-size: .8rem;
-            color: #5a4200;
+            color: #3B0764;
             margin: 0;
             font-weight: 600;
         }
@@ -84,7 +84,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 8px 0;
-            border-bottom: 1px solid #faf6e8;
+            border-bottom: 1px solid #F8F7FA;
             font-size: .82rem;
         }
 
@@ -118,8 +118,8 @@
         }
 
         .badge-inactive {
-            background: #fecaca;
-            color: #7f1d1d;
+            background: #DDD6FE;
+            color: #3B0764;
             padding: 3px 10px;
             border-radius: 99px;
             font-size: .7rem;
@@ -131,7 +131,7 @@
             flex-direction: column;
             gap: 8px;
             padding: 14px 18px;
-            border-top: 1px solid #f5efc8;
+            border-top: 1px solid #EDE9FE;
         }
 
         .btn-edit-profile {
@@ -144,7 +144,7 @@
             font-size: .83rem;
             font-weight: 700;
             cursor: pointer;
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Inter', sans-serif;
             text-decoration: none;
             border: none;
             transition: .2s;
@@ -169,17 +169,17 @@
             font-size: .83rem;
             font-weight: 700;
             cursor: pointer;
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Inter', sans-serif;
             text-decoration: none;
-            border: 1.5px solid #fca5a5;
-            background: #fef2f2;
-            color: #dc2626;
+            border: 1.5px solid #A78BFA;
+            background: #F5F3FF;
+            color: #4C1D95;
             transition: .2s;
         }
 
         .btn-del-profile:hover {
-            background: #fee2e2;
-            border-color: #f87171;
+            background: #EDE9FE;
+            border-color: #8B5CF6;
         }
 
         /* ── Right Panel ── */
@@ -207,7 +207,7 @@
             font-weight: 600;
             color: #64748b;
             border-radius: 9px;
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Inter', sans-serif;
             transition: .2s;
             white-space: nowrap;
         }
@@ -234,7 +234,7 @@
         /* ── Section Cards ── */
         .sec-card {
             background: #fff;
-            border: 1.5px solid #e9e0c0;
+            border: 1.5px solid #E7E1EC;
             border-radius: 14px;
             overflow: hidden;
             margin-bottom: 16px;
@@ -243,7 +243,7 @@
 
         .sec-head {
             padding: 14px 18px;
-            border-bottom: 1px solid #f5efc8;
+            border-bottom: 1px solid #EDE9FE;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -253,21 +253,21 @@
         .sec-title {
             font-size: .78rem;
             font-weight: 700;
-            color: #a07800;
+            color: #4C1D95;
             text-transform: uppercase;
             letter-spacing: .07em;
         }
 
         .btn-toggle {
             padding: 6px 14px;
-            border: 1.5px solid #e9e0c0;
+            border: 1.5px solid #E7E1EC;
             border-radius: 8px;
             background: #fff;
             color: #64748b;
             font-size: .78rem;
             font-weight: 700;
             cursor: pointer;
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Inter', sans-serif;
             transition: .2s;
         }
 
@@ -285,8 +285,8 @@
         /* ── Inline Forms ── */
         .inline-form {
             padding: 18px;
-            border-bottom: 1px solid #f5efc8;
-            background: #fffdf5;
+            border-bottom: 1px solid #EDE9FE;
+            background: #F5F3FF;
             display: none;
         }
 
@@ -336,7 +336,7 @@
             border: 1.5px solid #e2e8f0;
             border-radius: 9px;
             font-size: .875rem;
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Inter', sans-serif;
             color: #18181b;
             background: #fff;
             outline: none;
@@ -359,7 +359,7 @@
             font-size: .85rem;
             font-weight: 700;
             cursor: pointer;
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Inter', sans-serif;
             transition: .2s;
             box-shadow: 0 3px 10px rgba(199, 168, 0, .2);
         }
@@ -378,19 +378,19 @@
             padding: 11px 16px;
             font-size: .72rem;
             font-weight: 700;
-            color: #a07800;
+            color: #4C1D95;
             text-transform: uppercase;
             letter-spacing: .05em;
             text-align: left;
-            background: #fffdf0;
-            border-bottom: 1px solid #f5efc8;
+            background: #F5F3FF;
+            border-bottom: 1px solid #EDE9FE;
         }
 
         .rec-table td {
             padding: 11px 16px;
             font-size: .85rem;
             color: #374151;
-            border-bottom: 1px solid #faf6e8;
+            border-bottom: 1px solid #F8F7FA;
         }
 
         .rec-table tr:last-child td {
@@ -398,7 +398,7 @@
         }
 
         .rec-table tr:hover td {
-            background: #fffdf5;
+            background: #F5F3FF;
         }
 
         /* ── Badges ── */
@@ -416,18 +416,18 @@
         }
 
         .badge-absent {
-            background: #fecaca;
-            color: #7f1d1d;
+            background: #DDD6FE;
+            color: #3B0764;
         }
 
         .badge-late {
-            background: #fef3c7;
-            color: #92400e;
+            background: #EDE9FE;
+            color: #4C1D95;
         }
 
         .badge-halfday,
         .badge-halfdayday {
-            background: #e0e7ff;
+            background: #DDD6FE;
             color: #3730a3;
         }
 
@@ -437,13 +437,13 @@
         }
 
         .badge-morning {
-            background: #dbeafe;
-            color: #1e40af;
+            background: #EDE9FE;
+            color: #4C1D95;
         }
 
         .badge-afternoon {
-            background: #fee2e2;
-            color: #991b1b;
+            background: #EDE9FE;
+            color: #3B0764;
         }
 
         .badge-evening {
@@ -483,7 +483,7 @@
         }
 
         .star-btn.lit {
-            color: #f59e0b;
+            color: #8B5CF6;
         }
 
         .star-btn:hover {
@@ -501,7 +501,7 @@
         .stat-box {
             text-align: center;
             background: var(--ybg);
-            border: 1.5px solid #f0e8b0;
+            border: 1.5px solid #DDD6FE;
             border-radius: 12px;
             padding: 14px 10px;
         }
@@ -524,7 +524,7 @@
         /* ── Alert ── */
         .alert-success {
             background: var(--ybg);
-            border: 1.5px solid #f0e8b0;
+            border: 1.5px solid #DDD6FE;
             border-radius: 10px;
             padding: 12px 16px;
             color: var(--yk);
@@ -594,7 +594,7 @@
                     <span class="p-lbl">Rating</span>
                     <span class="p-val">
                         @for($i = 1; $i <= 5; $i++)
-                            <span style="color:{{ $i <= $staff->rating ? '#f59e0b' : '#e2d48a' }};font-size:.95rem;">★</span>
+                            <span style="color:{{ $i <= $staff->rating ? '#8B5CF6' : '#e2d48a' }};font-size:.95rem;">★</span>
                         @endfor
                     </span>
                 </div>
@@ -859,7 +859,7 @@
         <div
             style="background:#fff;padding:32px 28px;border-radius:20px;width:100%;max-width:400px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.15);animation:modalIn .2s ease-out;margin:16px;">
             <div
-                style="width:56px;height:56px;border-radius:50%;background:#fee2e2;color:#ef4444;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;">
+                style="width:56px;height:56px;border-radius:50%;background:#EDE9FE;color:#6D28D9;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;">
                 <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <polyline points="3 6 5 6 21 6" />
                     <path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6" />
@@ -873,9 +873,9 @@
                     undone</strong>.</p>
             <div style="display:flex;gap:12px;">
                 <button type="button" onclick="closeDeleteModal()"
-                    style="flex:1;padding:11px;border:1.5px solid #e2e8f0;border-radius:10px;background:#fff;color:#64748b;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;font-size:.9rem;">Cancel</button>
+                    style="flex:1;padding:11px;border:1.5px solid #e2e8f0;border-radius:10px;background:#fff;color:#64748b;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;font-size:.9rem;">Cancel</button>
                 <button type="button" onclick="document.getElementById('delete-form').submit()"
-                    style="flex:1;padding:11px;border:none;border-radius:10px;background:#ef4444;color:#fff;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;font-size:.9rem;box-shadow:0 4px 14px rgba(239,68,68,.3);">Yes,
+                    style="flex:1;padding:11px;border:none;border-radius:10px;background:#6D28D9;color:#fff;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;font-size:.9rem;box-shadow:0 4px 14px rgba(109,40,217,.3);">Yes,
                     Delete</button>
             </div>
         </div>

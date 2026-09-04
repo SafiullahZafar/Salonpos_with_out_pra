@@ -4,11 +4,11 @@
 @section('content')
     <style>
         :root {
-            --y1: #F7DF79;
-            --y2: #FBEFBC;
-            --yd: #c9a800;
-            --yk: #a07800;
-            --ybg: #fffdf0;
+            --y1: #6D28D9;
+            --y2: #EDE9FE;
+            --yd: #6D28D9;
+            --yk: #4C1D95;
+            --ybg: #F5F3FF;
         }
 
         .staff-header {
@@ -49,7 +49,7 @@
             font-size: .85rem;
             font-weight: 700;
             cursor: pointer;
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Inter', sans-serif;
             transition: .2s;
             box-shadow: 0 3px 10px rgba(199, 168, 0, .2);
             text-decoration: none;
@@ -73,7 +73,7 @@
             font-size: .85rem;
             font-weight: 700;
             cursor: pointer;
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Inter', sans-serif;
             transition: .2s;
             box-shadow: 0 3px 10px rgba(0, 0, 0, .15);
             text-decoration: none;
@@ -96,7 +96,7 @@
 
         .staff-card {
             background: #fff;
-            border: 1.5px solid #e9e0c0;
+            border: 1.5px solid #E7E1EC;
             border-radius: 16px;
             overflow: hidden;
             box-shadow: 0 2px 8px rgba(199, 168, 0, .06);
@@ -108,13 +108,13 @@
         .staff-card:hover {
             box-shadow: 0 8px 24px rgba(199, 168, 0, .15);
             transform: translateY(-4px);
-            border-color: #c9a800;
+            border-color: #6D28D9;
         }
 
         .staff-card-head {
             padding: 18px;
-            background: linear-gradient(135deg, rgba(247, 223, 121, 0.05), rgba(201, 168, 0, 0.03));
-            border-bottom: 1.5px solid #f5efc8;
+            background: linear-gradient(135deg, rgba(109,40,217, 0.05), rgba(76,29,149, 0.03));
+            border-bottom: 1.5px solid #EDE9FE;
             display: flex;
             align-items: center;
             gap: 14px;
@@ -132,7 +132,7 @@
             font-weight: 800;
             font-size: 1.4rem;
             flex-shrink: 0;
-            box-shadow: 0 3px 10px rgba(201, 168, 0, .2);
+            box-shadow: 0 3px 10px rgba(76,29,149, .2);
         }
 
         .staff-info h3 {
@@ -163,7 +163,7 @@
             align-items: center;
             font-size: .8rem;
             padding: 8px 0;
-            border-bottom: 1px solid #faf6e8;
+            border-bottom: 1px solid #F8F7FA;
         }
 
         .stat-row:last-child {
@@ -190,20 +190,20 @@
         }
 
         .status-active {
-            background: #ecfdf5;
-            color: #065f46;
-            border: 1px solid #d1fae5;
+            background: #F5F3FF;
+            color: #4C1D95;
+            border: 1px solid #EDE9FE;
         }
 
         .status-inactive {
-            background: #fef2f2;
-            color: #991b1b;
-            border: 1px solid #fee2e2;
+            background: #F5F3FF;
+            color: #3B0764;
+            border: 1px solid #EDE9FE;
         }
 
         .staff-card-foot {
             padding: 14px 16px;
-            border-top: 1.5px solid #f5efc8;
+            border-top: 1.5px solid #EDE9FE;
             display: flex;
             gap: 10px;
             background: #fafaf9;
@@ -222,30 +222,30 @@
             cursor: pointer;
             text-align: center;
             transition: all .2s;
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Inter', sans-serif;
         }
 
         .btn-sm:hover {
             background: #f4f4f5;
-            border-color: #c9a800;
+            border-color: #6D28D9;
             color: #18181b;
         }
 
         .btn-sm-del {
-            background: #fef2f2;
-            border-color: #fecaca;
-            color: #ef4444;
+            background: #F5F3FF;
+            border-color: #DDD6FE;
+            color: #6D28D9;
         }
 
         .btn-sm-del:hover {
-            background: #fee2e2;
-            border-color: #f87171;
-            color: #dc2626;
+            background: #EDE9FE;
+            border-color: #8B5CF6;
+            color: #4C1D95;
         }
 
         .empty-state {
             background: #fff;
-            border: 1px solid #e9e0c0;
+            border: 1px solid #E7E1EC;
             border-radius: 16px;
             padding: 60px 20px;
             text-align: center;
@@ -343,13 +343,13 @@
         <div style="margin-top:20px;">{{ $staff->links() }}</div>
     @else
         <div class="empty-state">
-            <svg width="52" height="52" fill="none" stroke="#c9a800" stroke-width="1.5" viewBox="0 0 24 24"
+            <svg width="52" height="52" fill="none" stroke="#6D28D9" stroke-width="1.5" viewBox="0 0 24 24"
                 style="margin:0 auto;opacity:.5;">
                 <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
                 <circle cx="9" cy="7" r="4" />
                 <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
             </svg>
-            <p>No employees yet — add your first team member</p>
+            <p>No employees yet â€” add your first team member</p>
         </div>
     @endif
 
@@ -362,7 +362,7 @@
         <div
             style="background:#fff;padding:32px 28px;border-radius:20px;width:100%;max-width:400px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.15);animation:modalIn .2s ease-out;margin:16px;">
             <div
-                style="width:56px;height:56px;border-radius:50%;background:#fee2e2;color:#ef4444;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;">
+                style="width:56px;height:56px;border-radius:50%;background:#EDE9FE;color:#6D28D9;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;">
                 <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <polyline points="3 6 5 6 21 6" />
                     <path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6" />
@@ -376,9 +376,9 @@
                     undone</strong>.</p>
             <div style="display:flex;gap:12px;">
                 <button type="button" onclick="closeDeleteModal()"
-                    style="flex:1;padding:11px;border:1.5px solid #e2e8f0;border-radius:10px;background:#fff;color:#64748b;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;font-size:.9rem;transition:.2s;">Cancel</button>
+                    style="flex:1;padding:11px;border:1.5px solid #e2e8f0;border-radius:10px;background:#fff;color:#64748b;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;font-size:.9rem;transition:.2s;">Cancel</button>
                 <button type="button" onclick="document.getElementById('delete-form').submit()"
-                    style="flex:1;padding:11px;border:none;border-radius:10px;background:#ef4444;color:#fff;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;font-size:.9rem;box-shadow:0 4px 14px rgba(239,68,68,.3);transition:.2s;">Yes,
+                    style="flex:1;padding:11px;border:none;border-radius:10px;background:#6D28D9;color:#fff;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;font-size:.9rem;box-shadow:0 4px 14px rgba(109,40,217,.3);transition:.2s;">Yes,
                     Delete</button>
             </div>
         </div>

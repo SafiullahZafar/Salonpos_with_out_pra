@@ -3,15 +3,15 @@
 
 @section('content')
 <style>
-:root{--y1:#F7DF79;--y2:#FBEFBC;--yd:#c9a800;--ybg:#fffdf0;}
+:root{--y1:#6D28D9;--y2:#EDE9FE;--yd:#6D28D9;--ybg:#F5F3FF;}
 .exp-wrap{max-width:640px;margin:20px auto 0;}
-.exp-card{background:#fff;border:1.5px solid #e9e0c0;border-radius:20px;box-shadow:0 4px 20px rgba(199,168,0,.08);overflow:hidden;}
+.exp-card{background:#fff;border:1.5px solid #E7E1EC;border-radius:20px;box-shadow:0 4px 20px rgba(76,29,149,.08);overflow:hidden;}
 .exp-head{background:linear-gradient(135deg,var(--y1),var(--yd));padding:24px;text-align:center;color:#18181b;}
 .exp-icon{width:56px;height:56px;border-radius:16px;background:rgba(255,255,255,.3);display:inline-flex;align-items:center;justify-content:center;margin-bottom:12px;box-shadow:0 4px 12px rgba(0,0,0,.05);}
 .exp-title{font-size:1.4rem;font-weight:800;margin:0;}
 .exp-sub{font-size:.85rem;font-weight:600;opacity:.8;margin-top:4px;}
 
-.tab-nav{display:flex;gap:8px;padding:16px 32px;background:#f8fafc;border-bottom:1.5px solid #e9e0c0;flex-wrap:wrap;justify-content:center;}
+.tab-nav{display:flex;gap:8px;padding:16px 32px;background:#f8fafc;border-bottom:1.5px solid #E7E1EC;flex-wrap:wrap;justify-content:center;}
 .tab-btn{padding:10px 20px;border:2px solid #e2e8f0;background:#fff;color:#64748b;border-radius:10px;font-weight:700;font-size:.85rem;cursor:pointer;transition:.2s;text-transform:uppercase;letter-spacing:.02em;display:flex;align-items:center;gap:6px;}
 .tab-btn svg{width:15px;height:15px;stroke-width:2.5;}
 .tab-btn:hover{border-color:var(--y1);color:var(--yd);}
@@ -24,8 +24,8 @@
 
 .f-row{margin-bottom:24px;}
 .f-label{display:block;font-size:.85rem;font-weight:700;color:#1e293b;margin-bottom:8px;}
-.f-input,.f-select{width:100%;padding:14px 16px;border:1.5px solid #e2e8f0;border-radius:12px;font-family:'Outfit',sans-serif;font-size:.95rem;transition:.2s;background:#f8fafc;}
-.f-input:focus,.f-select:focus{border-color:var(--y1);background:#fff;box-shadow:0 0 0 4px rgba(247,223,121,.15);outline:none;}
+.f-input,.f-select{width:100%;padding:14px 16px;border:1.5px solid #e2e8f0;border-radius:12px;font-family:'Inter',sans-serif;font-size:.95rem;transition:.2s;background:#f8fafc;}
+.f-input:focus,.f-select:focus{border-color:var(--y1);background:#fff;box-shadow:0 0 0 4px rgba(109,40,217,.15);outline:none;}
 textarea.f-input{resize:vertical;min-height:90px;}
 .f-select{cursor:pointer;}
 
@@ -37,11 +37,11 @@ textarea.f-input{resize:vertical;min-height:90px;}
 .toggle-switch input{opacity:0;width:0;height:0;}
 .slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background-color:#cbd5e1;transition:.3s;border-radius:34px;}
 .slider:before{position:absolute;content:"";height:22px;width:22px;left:4px;bottom:4px;background-color:white;transition:.3s;border-radius:50%;box-shadow:0 2px 4px rgba(0,0,0,.1);}
-input:checked + .slider{background-color:#10b981;}
+input:checked + .slider{background-color:#8B5CF6;}
 input:checked + .slider:before{transform:translateX(26px);}
 
 .exp-footer{padding:0 32px 32px;}
-.btn-submit{width:100%;padding:16px;background:#18181b;color:var(--y1);border:none;border-radius:12px;font-size:1rem;font-weight:800;cursor:pointer;font-family:'Outfit',sans-serif;transition:.2s;}
+.btn-submit{width:100%;padding:16px;background:#18181b;color:var(--y1);border:none;border-radius:12px;font-size:1rem;font-weight:800;cursor:pointer;font-family:'Inter',sans-serif;transition:.2s;}
 .btn-submit:hover{background:#27272a;transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.1);}
 
 .category-opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px;margin-top:8px;}
@@ -52,7 +52,7 @@ input:checked + .slider:before{transform:translateX(26px);}
 .cat-btn:hover svg,.cat-btn.selected svg{stroke:var(--yd);}
 .cat-btn.selected{font-weight:700;}
 
-.success-msg{background:#dcfce7;border:1px solid #86efac;color:#166534;padding:16px;border-radius:12px;margin-bottom:20px;font-weight:700;text-align:center;display:flex;align-items:center;justify-content:center;gap:8px;}
+.success-msg{background:#EDE9FE;border:1px solid #A78BFA;color:#4C1D95;padding:16px;border-radius:12px;margin-bottom:20px;font-weight:700;text-align:center;display:flex;align-items:center;justify-content:center;gap:8px;}
 </style>
 
 <div class="exp-wrap">
@@ -104,7 +104,7 @@ input:checked + .slider:before{transform:translateX(26px);}
                     <div class="f-row">
                         <label class="f-label">Description</label>
                         <textarea name="description_daily" class="f-input" placeholder="e.g., Tea and snacks for staff, salon cleaning supplies..." id="desc-daily"></textarea>
-                        <div style="color:#ef4444;font-size:.75rem;margin-top:6px;font-weight:600;display:none;" class="err-daily"></div>
+                        <div style="color:#6D28D9;font-size:.75rem;margin-top:6px;font-weight:600;display:none;" class="err-daily"></div>
                     </div>
 
                     <div class="f-row">
@@ -113,7 +113,7 @@ input:checked + .slider:before{transform:translateX(26px);}
                             <span style="position:absolute;left:16px;top:50%;transform:translateY(-50%);font-weight:700;color:#94a3b8;">Rs.</span>
                             <input type="number" step="0.01" name="amount_daily" class="f-input" style="padding-left:46px;" placeholder="0.00" id="amt-daily">
                         </div>
-                        <div style="color:#ef4444;font-size:.75rem;margin-top:6px;font-weight:600;display:none;" class="err-amt-daily"></div>
+                        <div style="color:#6D28D9;font-size:.75rem;margin-top:6px;font-weight:600;display:none;" class="err-amt-daily"></div>
                     </div>
 
                     <div class="toggle-wrap">
@@ -172,7 +172,7 @@ input:checked + .slider:before{transform:translateX(26px);}
                     <div class="f-row">
                         <label class="f-label">Description</label>
                         <textarea name="description_fixed" class="f-input" placeholder="e.g., Monthly water bill for salon..." id="desc-fixed"></textarea>
-                        <div style="color:#ef4444;font-size:.75rem;margin-top:6px;font-weight:600;display:none;" class="err-fixed"></div>
+                        <div style="color:#6D28D9;font-size:.75rem;margin-top:6px;font-weight:600;display:none;" class="err-fixed"></div>
                     </div>
 
                     <div class="f-row">
@@ -181,7 +181,7 @@ input:checked + .slider:before{transform:translateX(26px);}
                             <span style="position:absolute;left:16px;top:50%;transform:translateY(-50%);font-weight:700;color:#94a3b8;">Rs.</span>
                             <input type="number" step="0.01" name="amount_fixed" class="f-input" style="padding-left:46px;" placeholder="0.00" id="amt-fixed">
                         </div>
-                        <div style="color:#ef4444;font-size:.75rem;margin-top:6px;font-weight:600;display:none;" class="err-amt-fixed"></div>
+                        <div style="color:#6D28D9;font-size:.75rem;margin-top:6px;font-weight:600;display:none;" class="err-amt-fixed"></div>
                     </div>
 
                     <div class="toggle-wrap">
@@ -214,7 +214,7 @@ input:checked + .slider:before{transform:translateX(26px);}
                                 </option>
                             @endforeach
                         </select>
-                        <div style="color:#ef4444;font-size:.75rem;margin-top:6px;font-weight:600;display:none;" class="err-staff-id"></div>
+                        <div style="color:#6D28D9;font-size:.75rem;margin-top:6px;font-weight:600;display:none;" class="err-staff-id"></div>
                     </div>
 
                     <div class="f-row">
@@ -238,21 +238,21 @@ input:checked + .slider:before{transform:translateX(26px);}
                                 <span>Other</span>
                             </button>
                         </div>
-                        <div style="color:#ef4444;font-size:.75rem;margin-top:6px;font-weight:600;display:none;" class="err-staff-cat"></div>
+                        <div style="color:#6D28D9;font-size:.75rem;margin-top:6px;font-weight:600;display:none;" class="err-staff-cat"></div>
                     </div>
 
-                    <div id="salary-breakdown-info" style="display:none; margin-bottom:20px; padding:14px 16px; background:#fffdf0; border:1.5px solid #f0e8a0; border-radius:12px; font-size:0.85rem; color:#1e293b;">
-                        <div style="font-weight:800; color:#a07800; margin-bottom:6px; display:flex; align-items:center; gap:6px;">
+                    <div id="salary-breakdown-info" style="display:none; margin-bottom:20px; padding:14px 16px; background:#F5F3FF; border:1.5px solid #DDD6FE; border-radius:12px; font-size:0.85rem; color:#1e293b;">
+                        <div style="font-weight:800; color:#4C1D95; margin-bottom:6px; display:flex; align-items:center; gap:6px;">
                             <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                             Salary Breakdown Summary
                         </div>
                         <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; font-size:0.8rem; color:#475569;">
                             <div>Base Salary: <strong style="color:#1e293b;" id="sb-base">Rs. 0.00</strong></div>
-                            <div>Earned Commission: <strong style="color:#0284c7;" id="sb-comm">Rs. 0.00</strong></div>
-                            <div>Advances Taken: <strong style="color:#eab308;" id="sb-adv">Rs. 0.00</strong></div>
-                            <div>Deductions: <strong style="color:#ef4444;" id="sb-ded">Rs. 0.00</strong></div>
+                            <div>Earned Commission: <strong style="color:#6D28D9;" id="sb-comm">Rs. 0.00</strong></div>
+                            <div>Advances Taken: <strong style="color:#7C3AED;" id="sb-adv">Rs. 0.00</strong></div>
+                            <div>Deductions: <strong style="color:#6D28D9;" id="sb-ded">Rs. 0.00</strong></div>
                         </div>
-                        <div style="border-top:1px dashed #cbd5e1; margin-top:8px; padding-top:6px; font-weight:800; color:#16a34a; font-size:0.9rem;">
+                        <div style="border-top:1px dashed #cbd5e1; margin-top:8px; padding-top:6px; font-weight:800; color:#6D28D9; font-size:0.9rem;">
                             Net Payable: <span id="sb-net">Rs. 0.00</span>
                         </div>
                     </div>
@@ -260,7 +260,7 @@ input:checked + .slider:before{transform:translateX(26px);}
                     <div class="f-row">
                         <label class="f-label">Description</label>
                         <textarea name="description_staff" class="f-input" placeholder="e.g., Monthly salary payment or advance note..." id="desc-staff"></textarea>
-                        <div style="color:#ef4444;font-size:.75rem;margin-top:6px;font-weight:600;display:none;" class="err-staff-desc"></div>
+                        <div style="color:#6D28D9;font-size:.75rem;margin-top:6px;font-weight:600;display:none;" class="err-staff-desc"></div>
                     </div>
 
                     <div class="f-row">
@@ -269,7 +269,7 @@ input:checked + .slider:before{transform:translateX(26px);}
                             <span style="position:absolute;left:16px;top:50%;transform:translateY(-50%);font-weight:700;color:#94a3b8;">Rs.</span>
                             <input type="number" step="0.01" name="amount_staff" class="f-input" style="padding-left:46px;" placeholder="0.00" id="amt-staff">
                         </div>
-                        <div style="color:#ef4444;font-size:.75rem;margin-top:6px;font-weight:600;display:none;" class="err-amt-staff"></div>
+                        <div style="color:#6D28D9;font-size:.75rem;margin-top:6px;font-weight:600;display:none;" class="err-amt-staff"></div>
                     </div>
 
                     <div class="toggle-wrap">

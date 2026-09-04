@@ -24,10 +24,10 @@
     /* Search bar */
     .pos-search-bar {
       background: #fff;
-      border: 1px solid #f0e8a0;
+      border: 1px solid #DDD6FE;
       border-radius: 14px;
       padding: 12px 16px;
-      box-shadow: 0 1px 4px rgba(247, 223, 121, .12);
+      box-shadow: 0 1px 4px rgba(109,40,217, .12);
       display: flex;
       flex-direction: column;
       gap: 10px;
@@ -56,20 +56,20 @@
     .pos-search {
       width: 100%;
       padding: 10px 14px 10px 40px;
-      border: 1.5px solid #f0e8a0;
+      border: 1.5px solid #DDD6FE;
       border-radius: 11px;
-      background: #fffdf8;
+      background: #F8F7FA;
       font-size: .9rem;
       color: #1e293b;
-      font-family: 'Outfit', sans-serif;
+      font-family: 'Inter', sans-serif;
       outline: none;
       transition: .2s;
     }
 
     .pos-search:focus {
-      border-color: #F7DF79;
+      border-color: #6D28D9;
       background: #fff;
-      box-shadow: 0 0 0 3px rgba(247, 223, 121, .1);
+      box-shadow: 0 0 0 3px rgba(109,40,217, .1);
     }
 
     .search-clear {
@@ -88,9 +88,9 @@
     }
 
     .search-clear:hover {
-      border-color: #fca5a5;
-      color: #ef4444;
-      background: #fef2f2;
+      border-color: #A78BFA;
+      color: #6D28D9;
+      background: #F5F3FF;
     }
 
     /* Filter tabs */
@@ -116,23 +116,23 @@
       cursor: pointer;
       white-space: nowrap;
       transition: .2s;
-      font-family: 'Outfit', sans-serif;
+      font-family: 'Inter', sans-serif;
       display: inline-flex;
       align-items: center;
       gap: 6px;
     }
 
     .cat-tab:hover {
-      border-color: #F7DF79;
-      color: #c9a800;
-      background: #fffdf0;
+      border-color: #6D28D9;
+      color: #6D28D9;
+      background: #F5F3FF;
     }
 
     .cat-tab.active {
-      background: linear-gradient(135deg, #F7DF79, #c9a800);
-      border-color: #c9a800;
+      background: linear-gradient(135deg, #6D28D9, #6D28D9);
+      border-color: #6D28D9;
       color: #18181b;
-      box-shadow: 0 2px 8px rgba(201, 168, 0, .2);
+      box-shadow: 0 2px 8px rgba(76,29,149, .2);
     }
 
     .cat-tab.pkg-tab.active {
@@ -143,8 +143,8 @@
     }
 
     .cat-tab.prod-tab.active {
-      background: linear-gradient(135deg, #fef08a, #ca8a04);
-      border-color: #ca8a04;
+      background: linear-gradient(135deg, #DDD6FE, #6D28D9);
+      border-color: #6D28D9;
       color: #18181b;
       box-shadow: 0 2px 8px rgba(202, 138, 4, .2);
     }
@@ -170,7 +170,7 @@
 
     .item-card {
       background: #fff;
-      border: 1.5px solid #f0e8a0;
+      border: 1.5px solid #DDD6FE;
       border-radius: 14px;
       padding: 14px 13px;
       cursor: pointer;
@@ -180,8 +180,8 @@
     }
 
     .item-card:hover {
-      border-color: #F7DF79;
-      box-shadow: 0 4px 14px rgba(247, 223, 121, .25);
+      border-color: #6D28D9;
+      box-shadow: 0 4px 14px rgba(109,40,217, .25);
       transform: translateY(-1px);
     }
 
@@ -197,12 +197,12 @@
     }
     
     .item-card.prod-card {
-      border-color: #fef08a;
-      background: #fefce8;
+      border-color: #DDD6FE;
+      background: #F5F3FF;
     }
     
     .item-card.prod-card:hover {
-      border-color: #ca8a04;
+      border-color: #6D28D9;
       box-shadow: 0 4px 14px rgba(202, 138, 4, .2);
     }
 
@@ -210,12 +210,12 @@
       width: 44px;
       height: 44px;
       border-radius: 11px;
-      background: #fffdf0;
+      background: #F5F3FF;
       display: flex;
       align-items: center;
       justify-content: center;
       margin-bottom: 10px;
-      color: #c9a800;
+      color: #6D28D9;
     }
 
     .item-card.pkg-card .item-icon {
@@ -224,8 +224,8 @@
     }
     
     .item-card.prod-card .item-icon {
-      background: #fef08a;
-      color: #ca8a04;
+      background: #DDD6FE;
+      color: #6D28D9;
     }
 
     .item-badge {
@@ -241,7 +241,7 @@
     }
 
     .badge-hot {
-      background: #F7DF79;
+      background: #6D28D9;
       color: #1e293b;
     }
 
@@ -277,7 +277,7 @@
     .item-price {
       font-size: 1rem;
       font-weight: 700;
-      color: #c9a800;
+      color: #6D28D9;
     }
 
     .item-card.pkg-card .item-price {
@@ -285,7 +285,7 @@
     }
     
     .item-card.prod-card .item-price {
-      color: #ca8a04;
+      color: #6D28D9;
     }
 
     /* Cart */
@@ -330,7 +330,7 @@
     }
 
     .cart-clear:hover {
-      color: #ef4444;
+      color: #6D28D9;
     }
 
     .cart-body {
@@ -374,7 +374,7 @@
 
     .cart-row:hover {
       transform: translateX(2px);
-      border-color: #F7DF79;
+      border-color: #6D28D9;
     }
 
     .cart-row-info {
@@ -456,7 +456,7 @@
       justify-content: space-between;
       align-items: center;
       background: var(--ybg);
-      border: 1.5px solid #F7DF79;
+      border: 1.5px solid #6D28D9;
       border-radius: 14px;
       padding: 12px 16px;
     }
@@ -508,13 +508,13 @@
       border-radius: 14px;
       border: none;
       cursor: pointer;
-      background: linear-gradient(135deg, #fef9c3, #F7DF79);
-      color: #854d0e;
+      background: linear-gradient(135deg, #EDE9FE, #6D28D9);
+      color: #4C1D95;
       font-size: 1rem;
       font-weight: 800;
       font-family: inherit;
       transition: all .25s;
-      box-shadow: 0 4px 15px rgba(247, 223, 121, .3);
+      box-shadow: 0 4px 15px rgba(109,40,217, .3);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -559,8 +559,8 @@
       width: 60px;
       height: 60px;
       border-radius: 50%;
-      background: #FBEFBC;
-      color: #c9a800;
+      background: #EDE9FE;
+      color: #6D28D9;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -598,28 +598,28 @@
       font-weight: 600;
       cursor: pointer;
       border: none;
-      font-family: 'Outfit', sans-serif;
+      font-family: 'Inter', sans-serif;
       transition: .2s;
     }
 
     .modal-btn-print {
-      background: #fffdf0;
-      color: #c9a800;
-      border: 1px solid #F7DF79 !important;
+      background: #F5F3FF;
+      color: #6D28D9;
+      border: 1px solid #6D28D9 !important;
     }
 
     .modal-btn-print:hover {
-      background: #FBEFBC;
+      background: #EDE9FE;
     }
 
     .modal-btn-wa {
-      background: #fffdf0;
-      color: #c9a800;
-      border: 1px solid #F7DF79 !important;
+      background: #F5F3FF;
+      color: #6D28D9;
+      border: 1px solid #6D28D9 !important;
     }
 
     .modal-btn-wa:hover {
-      background: #FBEFBC;
+      background: #EDE9FE;
     }
 
     .modal-done {
@@ -631,11 +631,44 @@
       text-transform: uppercase;
       letter-spacing: .08em;
       cursor: pointer;
-      font-family: 'Outfit', sans-serif;
+      font-family: 'Inter', sans-serif;
     }
 
     .modal-done:hover {
       color: #64748b;
+    }
+    /* Three-zone POS: category rail, catalogue, sticky order panel. */
+    .pos-wrap{gap:20px;align-items:stretch;}
+    .pos-left{position:static;height:calc(100vh - 120px);}
+    .pos-search-bar{border-color:var(--border);border-radius:14px;box-shadow:var(--shadow-card);}
+    .pos-catalog-layout{display:grid;grid-template-columns:156px minmax(0,1fr);gap:14px;min-height:0;flex:1;}
+    .filter-row-container{display:block !important;margin-top:0 !important;padding:10px;background:#fff;border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow-card);overflow-y:auto;}
+    #filter-row{display:flex !important;flex-direction:column;flex-wrap:nowrap !important;max-height:none !important;overflow:visible !important;gap:5px !important;}
+    #filter-row>div{width:100% !important;height:1px !important;margin:7px 0 !important;background:var(--border) !important;}
+    .cat-tab{width:100%;justify-content:flex-start;border-color:transparent;background:transparent;border-radius:9px;padding:9px 10px;}
+    .cat-tab:hover{border-color:var(--brand-200);background:var(--brand-50);color:var(--brand-700);}
+    .cat-tab.active,.cat-tab.pkg-tab.active,.cat-tab.prod-tab.active{background:var(--brand-100);border-color:var(--brand-200);color:var(--brand-800);box-shadow:none;}
+    #toggle-more-cat{display:none !important;}
+    .items-scroll{padding:2px 5px 14px 2px;}
+    .item-card{border-color:var(--border);box-shadow:0 4px 16px rgba(59,7,100,.05);}
+    .item-card:hover{border-color:var(--brand-400);box-shadow:0 8px 22px rgba(59,7,100,.1);}
+    .pos-right{width:380px;min-width:380px;position:sticky;top:92px;height:calc(100vh - 116px);}
+    .mobile-order-content{display:flex;flex:1;min-height:0;flex-direction:column;gap:12px;}
+    .mobile-cart-toggle{display:none;}
+    .cart-main-box,.cart-action-box{border-color:var(--border) !important;border-radius:14px !important;box-shadow:var(--shadow-card) !important;}
+    .checkout-btn{background:var(--brand-700);color:#fff;box-shadow:0 6px 18px rgba(109,40,217,.24);}
+    .checkout-btn:hover{background:var(--brand-600);box-shadow:0 9px 24px rgba(109,40,217,.28);}
+    @media(max-width:1050px){.pos-catalog-layout{grid-template-columns:1fr}.filter-row-container{overflow-x:auto}.filter-row-container #filter-row{flex-direction:row;min-width:max-content}.cat-tab{width:auto}.pos-right{width:340px;min-width:340px}}
+    @media(max-width:767px){
+      .pos-wrap{display:block;min-height:auto}.pos-left{height:auto;min-height:calc(100vh - 96px)}
+      .items-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.main-body{padding-bottom:88px !important}
+      .pos-right{position:fixed;z-index:180;left:8px;right:8px;bottom:8px;top:auto;width:auto;min-width:0;height:auto;max-height:calc(100vh - 80px);gap:0;background:#fff;border:1px solid var(--brand-200);border-radius:16px;box-shadow:0 18px 48px rgba(59,7,100,.22);overflow:hidden}
+      .mobile-cart-toggle{display:flex;width:100%;height:62px;align-items:center;justify-content:space-between;padding:0 18px;color:#fff;background:var(--brand-700);border:0;font-weight:700;cursor:pointer}
+      .mobile-cart-toggle span:last-child{font-size:16px;font-variant-numeric:tabular-nums}
+      .mobile-order-content{display:none;max-height:calc(100vh - 142px);overflow-y:auto;padding:10px}
+      .pos-right.mobile-open .mobile-order-content{display:flex}
+      .pos-right.mobile-open .mobile-cart-toggle{background:var(--brand-800)}
+      .cart-main-box{min-height:300px}.cart-action-box{flex-shrink:0}
     }
   </style>
 
@@ -658,7 +691,7 @@
 
           @if(auth()->user()->hasPermission('reconciliation', 'access') || auth()->user()->hasPermission('pos', 'access'))
             <button class="search-clear" id="reconciliation-btn" title="Cash Reconciliation"
-              onclick="window.location.href='{{ url('reconciliation') }}'" style="border-color:#f0e8a0; color:#c9a800;">
+              onclick="window.location.href='{{ url('reconciliation') }}'" style="border-color:#DDD6FE; color:#6D28D9;">
               <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
                 <path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
               </svg>
@@ -672,8 +705,10 @@
             </svg>
           </button>
         </div>
+      </div>
 
-        {{-- Expandable filter tabs --}}
+      <div class="pos-catalog-layout">
+        {{-- Category rail --}}
         <div class="filter-row-container" style="display:flex; align-items:flex-start; gap:8px; margin-top:8px;">
           <div id="filter-row"
             style="display:flex; flex-wrap:wrap; gap:8px; overflow:hidden; max-height:500px; transition:max-height 0.3s ease; flex:1;">
@@ -695,10 +730,8 @@
             </svg>
           </button>
         </div>
-      </div>
-
-      {{-- Items grid --}}
-      <div class="items-scroll">
+        {{-- Items grid --}}
+        <div class="items-scroll">
         <div class="items-grid" id="items-grid">
 
           {{-- Packages --}}
@@ -725,7 +758,7 @@
                 @if($pkgOriginalPrice > $pkg->price)
                   <div class="item-price" id="price-pkg-{{ $pkg->id }}">
                     <span style="text-decoration:line-through; font-size:0.75em; opacity:0.55;">PKR {{ number_format($pkgOriginalPrice, 0) }}</span>
-                    <span style="color:#22c55e; font-size:1rem; font-weight:800;"> PKR {{ number_format($pkg->price, 0) }}</span>
+                    <span style="color:#7C3AED; font-size:1rem; font-weight:800;"> PKR {{ number_format($pkg->price, 0) }}</span>
                   </div>
                 @else
                   <div class="item-price" id="price-pkg-{{ $pkg->id }}">PKR {{ number_format($pkg->price, 2) }}</div>
@@ -780,18 +813,26 @@
           @endforeach
 
         </div>
+        </div>
       </div>
     </div>
 
     {{-- RIGHT: Cart & Checkout --}}
     <div class="pos-right">
 
+      <button type="button" class="mobile-cart-toggle" id="mobile-cart-toggle" aria-expanded="false" aria-controls="mobile-order-content">
+        <span><strong id="mobile-cart-count">0</strong> items in order</span>
+        <span id="mobile-cart-total">PKR 0.00</span>
+      </button>
+
+      <div id="mobile-order-content" class="mobile-order-content">
+
       {{-- Part 1: Order Summary Box --}}
       <div class="cart-main-box"
-        style="flex:1; display:flex; flex-direction:column; background:#fff; border-radius:18px; border:1px solid #f0e8a0; margin-bottom:12px; overflow:hidden; box-shadow:0 2px 10px rgba(0,0,0,.03);">
-        <div class="cart-header" style="background:#fffdf8; border-bottom:1px solid #f0e8a0;">
+        style="flex:1; display:flex; flex-direction:column; background:#fff; border-radius:18px; border:1px solid #DDD6FE; margin-bottom:12px; overflow:hidden; box-shadow:0 2px 10px rgba(0,0,0,.03);">
+        <div class="cart-header" style="background:#F8F7FA; border-bottom:1px solid #DDD6FE;">
           <div class="cart-title">
-            <svg width="18" height="18" fill="none" stroke="#c9a800" stroke-width="2.5" viewBox="0 0 24 24">
+            <svg width="18" height="18" fill="none" stroke="#6D28D9" stroke-width="2.5" viewBox="0 0 24 24">
               <path d="M6 2 3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
               <line x1="3" y1="6" x2="21" y2="6" />
               <path d="M16 10a4 4 0 01-8 0" />
@@ -827,7 +868,7 @@
 
       {{-- Part 2: Customer & Finalize Box --}}
       <div class="cart-action-box"
-        style="background:#fff; border-radius:18px; border:1px solid #f0e8a0; padding:16px; box-shadow:0 2px 10px rgba(0,0,0,.03);">
+        style="background:#fff; border-radius:18px; border:1px solid #DDD6FE; padding:16px; box-shadow:0 2px 10px rgba(0,0,0,.03);">
         <div class="pay-section-label" style="margin-bottom:10px; display:flex; align-items:center; gap:5px;">
           <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24">
             <path
@@ -846,9 +887,10 @@
               style="width:100%; border:1.5px solid #e2e8f0; font-size:.8rem; padding:8px 10px;" placeholder="Phone">
           </div>
         </div>
+    </div>
 
         <button type="button" id="lookup-cust-btn"
-          style="width:100%; padding:9px; background:#fffdf0; border:1.5px solid #f0e8a0; border-radius:10px; color:#c9a800; font-weight:800; font-size:.72rem; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:6px;">
+          style="width:100%; padding:9px; background:#F5F3FF; border:1.5px solid #DDD6FE; border-radius:10px; color:#6D28D9; font-weight:800; font-size:.72rem; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:6px;">
           <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
             <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
           </svg>
@@ -856,17 +898,17 @@
         </button>
 
         <div id="cust-quick-stats"
-          style="display:none; margin-top:12px; padding:10px; background:#f0f9ff; border:1px solid #bae6fd; border-radius:12px;">
+          style="display:none; margin-top:12px; padding:10px; background:#F5F3FF; border:1px solid #DDD6FE; border-radius:12px;">
           <div style="display:flex; justify-content:space-between; align-items:center;">
             <span id="cust-membership"
-              style="font-size:.6rem; background:#0369a1; color:#fff; padding:2px 6px; border-radius:99px; font-weight:800; text-transform:uppercase;">Standard</span>
-            <span id="cust-last-visit" style="font-size:.65rem; color:#0369a1; font-weight:700;"></span>
+              style="font-size:.6rem; background:#4C1D95; color:#fff; padding:2px 6px; border-radius:99px; font-weight:800; text-transform:uppercase;">Standard</span>
+            <span id="cust-last-visit" style="font-size:.65rem; color:#4C1D95; font-weight:700;"></span>
           </div>
           <div style="display:flex; justify-content:space-between; align-items:center; margin-top:4px;">
-            <div style="font-size:.78rem; font-weight:800; color:#0c4a6e;">
-              Spent: <span id="cust-total-spent" style="color:#059669;">PKR 0</span>
+            <div style="font-size:.78rem; font-weight:800; color:#3B0764;">
+              Spent: <span id="cust-total-spent" style="color:#4C1D95;">PKR 0</span>
             </div>
-            <a href="#" id="cust-detail-link" target="_blank" style="font-size:.65rem; font-weight:700; color:#fff; background:#0c4a6e; padding:4px 8px; border-radius:6px; text-decoration:none; transition:.2s;">View Detail</a>
+            <a href="#" id="cust-detail-link" target="_blank" style="font-size:.65rem; font-weight:700; color:#fff; background:#3B0764; padding:4px 8px; border-radius:6px; text-decoration:none; transition:.2s;">View Detail</a>
           </div>
         </div>
 
@@ -874,13 +916,14 @@
           disabled>Proceed to Payment</button>
       </div>
 
+      </div>
     </div>
   </div>
 
   {{-- Staff Selection Modal --}}
   <div class="modal-overlay" id="staff-tier-modal">
     <div class="modal-box" style="max-width:500px;">
-      <div class="modal-icon" style="background:#fffdf0; color:#c9a800;">
+      <div class="modal-icon" style="background:#F5F3FF; color:#6D28D9;">
         <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
           <path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
           <circle cx="8.5" cy="7" r="4" />
@@ -915,13 +958,13 @@
 
   <style>
     .tier-option:hover {
-      border-color: #F7DF79;
-      background: #fffdf0;
+      border-color: #6D28D9;
+      background: #F5F3FF;
     }
 
     .tier-option.selected {
-      border-color: #c9a800;
-      background: #fffdf0;
+      border-color: #6D28D9;
+      background: #F5F3FF;
       box-shadow: 0 4px 15px rgba(199, 168, 0, .15);
     }
   </style>
@@ -937,6 +980,17 @@
       const cartEl = document.getElementById('cart-items');
       const emptyMsg = document.getElementById('empty-cart-msg');
       const checkBtn = document.getElementById('checkout-btn');
+      const mobileCartToggle = document.getElementById('mobile-cart-toggle');
+      const mobileCartCount = document.getElementById('mobile-cart-count');
+      const mobileCartTotal = document.getElementById('mobile-cart-total');
+      const posRight = document.querySelector('.pos-right');
+
+      if (mobileCartToggle) {
+        mobileCartToggle.addEventListener('click', () => {
+          const isOpen = posRight.classList.toggle('mobile-open');
+          mobileCartToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+      }
 
       // Customer Inputs
       const custNameInput = document.getElementById('pos_customer_name');
@@ -1065,7 +1119,7 @@
 
           if (peakEnabled == "1" && isPeakTime(peakStart, peakEnd)) {
             const finalPrice = parseFloat(price) + parseFloat(peakPrice);
-            displayPriceEl.innerHTML = `<span style="text-decoration:line-through; font-size:0.7em; opacity:0.6;">PKR ${parseFloat(price).toFixed(2)}</span> <span style="color:#ef4444;">PKR ${finalPrice.toFixed(2)}</span> <span style="font-size:0.5em; background:#fee2e2; color:#ef4444; padding:2px 4px; border-radius:4px; vertical-align:middle;">PEAK</span>`;
+            displayPriceEl.innerHTML = `<span style="text-decoration:line-through; font-size:0.7em; opacity:0.6;">PKR ${parseFloat(price).toFixed(2)}</span> <span style="color:#6D28D9;">PKR ${finalPrice.toFixed(2)}</span> <span style="font-size:0.5em; background:#EDE9FE; color:#6D28D9; padding:2px 4px; border-radius:4px; vertical-align:middle;">PEAK</span>`;
             card.dataset.currentPrice = finalPrice;
             card.dataset.peakActive = "1";
           } else {
@@ -1151,6 +1205,7 @@
         cartEl.querySelectorAll('.cart-row').forEach(r => r.remove());
         const pendingBal = activeCustomer ? parseFloat(activeCustomer.pending_balance || 0) : 0;
         
+        if (mobileCartCount) mobileCartCount.textContent = cart.reduce((sum, item) => sum + item.qty, 0);
         if (!cart.length) {
           emptyMsg.style.display = 'flex';
           checkBtn.disabled = pendingBal <= 0;
@@ -1211,6 +1266,7 @@
       function setTotals(sub) {
         document.getElementById('subtotal-val').textContent = `PKR ${sub.toLocaleString(undefined, { minimumFractionDigits: 2 })}`;
         document.getElementById('total-val').textContent = `PKR ${sub.toLocaleString(undefined, { minimumFractionDigits: 2 })}`;
+        if (mobileCartTotal) mobileCartTotal.textContent = `PKR ${sub.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
       }
 
       // ── Checkout ──────────────────────────────────────────────────

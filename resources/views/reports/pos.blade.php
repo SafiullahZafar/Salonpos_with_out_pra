@@ -19,7 +19,7 @@
         position: absolute;
         top: 0; left: 0; bottom: 0;
         width: 4px;
-        background: linear-gradient(180deg, #F5EFC0, #F7DF79);
+        background: linear-gradient(180deg, #EDE9FE, #6D28D9);
     }
     .metric-title {
         font-size: 0.85rem;
@@ -79,8 +79,8 @@
         transition: all 0.2s;
     }
     .form-control:focus {
-        border-color: #F7DF79;
-        box-shadow: 0 0 0 3px rgba(247, 223, 121, 0.2);
+        border-color: #6D28D9;
+        box-shadow: 0 0 0 3px rgba(109,40,217, 0.2);
     }
     
     .btn-submit {
@@ -107,14 +107,14 @@
         font-weight: 600;
         display: inline-block;
     }
-    .badge-cash { background: #dcfce7; color: #166534; }
-    .badge-card { background: #dbeafe; color: #1e40af; }
-    .badge-jazzcash { background: #fef3c7; color: #92400e; }
+    .badge-cash { background: #EDE9FE; color: #4C1D95; }
+    .badge-card { background: #EDE9FE; color: #4C1D95; }
+    .badge-jazzcash { background: #EDE9FE; color: #4C1D95; }
     .badge-easypaisa { background: #f3e8ff; color: #6b21a8; }
     .badge-multiple { background: #f1f5f9; color: #475569; }
 
     .btn-export-csv {
-        background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+        background: linear-gradient(135deg, #7C3AED 0%, #6D28D9 100%);
         color: #ffffff;
         border: none;
         border-radius: 10px;
@@ -135,7 +135,7 @@
     }
 
     .btn-export-xls {
-        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        background: linear-gradient(135deg, #8B5CF6 0%, #4C1D95 100%);
         color: #ffffff;
         border: none;
         border-radius: 10px;
@@ -189,11 +189,11 @@
     </div>
     <div class="metric-card">
         <div class="metric-title">Total Tax Collected</div>
-        <div class="metric-value" style="color: #0ea5e9;">Rs {{ number_format($totalTax, 2) }}</div>
+        <div class="metric-value" style="color: #7C3AED;">Rs {{ number_format($totalTax, 2) }}</div>
     </div>
     <div class="metric-card">
         <div class="metric-title">Total Discounts Given</div>
-        <div class="metric-value" style="color: #f43f5e;">Rs {{ number_format($totalDiscount, 2) }}</div>
+        <div class="metric-value" style="color: #6D28D9;">Rs {{ number_format($totalDiscount, 2) }}</div>
     </div>
     <div class="metric-card">
         <div class="metric-title">Total Transactions</div>
@@ -239,7 +239,7 @@
                             {{ ucfirst($invoice->payment_method) }}
                         </span>
                     </td>
-                    <td style="padding: 14px 20px; text-align: right; font-size: 0.9rem; font-weight: 700; color: #166534;">
+                    <td style="padding: 14px 20px; text-align: right; font-size: 0.9rem; font-weight: 700; color: #4C1D95;">
                         Rs {{ number_format($invoice->payable_amount, 2) }}
                     </td>
                 </tr>

@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reset Password — The Crimpers</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Reset Password — Veloura Salon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        :root{--y1:#F7DF79;--y2:#FBEFBC;--yd:#c9a800;--yk:#a07800;--ybg:#fffdf0;}
-        *{margin:0;padding:0;box-sizing:border-box;font-family:'Outfit',sans-serif;}
+        :root{--y1:#6D28D9;--y2:#EDE9FE;--yd:#6D28D9;--yk:#4C1D95;--ybg:#F5F3FF;}
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
 
-        body{min-height:100vh;display:flex;background:#0f0f0f;overflow:hidden;}
+        body{min-height:100vh;display:flex;background:#fff;overflow:hidden;}
 
         .auth-left{flex:1;background:linear-gradient(160deg,#1a1a1a 0%,#111 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 40px;position:relative;overflow:hidden;}
-        .auth-left::before{content:'';position:absolute;top:-80px;left:-80px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(247,223,121,.12) 0%,transparent 70%);}
+        .auth-left::before{content:'';position:absolute;top:-80px;left:-80px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(109,40,217,.12) 0%,transparent 70%);}
         .auth-left-content{position:relative;z-index:1;text-align:center;max-width:320px;}
-        .auth-brand-icon{width:72px;height:72px;border-radius:20px;background:linear-gradient(135deg,var(--y1),var(--yd));display:flex;align-items:center;justify-content:center;margin:0 auto 24px;box-shadow:0 12px 30px rgba(199,168,0,.3);}
+        .auth-brand-icon{width:72px;height:72px;border-radius:20px;background:linear-gradient(135deg,var(--y1),var(--yd));display:flex;align-items:center;justify-content:center;margin:0 auto 24px;box-shadow:0 12px 30px rgba(76,29,149,.3);}
         .auth-brand-name{font-size:2rem;font-weight:800;color:#fff;letter-spacing:-.03em;margin-bottom:8px;}
         .auth-brand-sub{font-size:.9rem;color:#71717a;line-height:1.6;}
 
@@ -22,27 +22,30 @@
         @media(max-width:768px){.auth-left{display:none;}.auth-right{width:100%;padding:40px 28px;}}
 
         .form-header{width:100%;margin-bottom:28px;}
-        .form-header-icon{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--y1),var(--yd));display:flex;align-items:center;justify-content:center;margin-bottom:16px;box-shadow:0 6px 16px rgba(199,168,0,.25);}
+        .form-header-icon{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--y1),var(--yd));display:flex;align-items:center;justify-content:center;margin-bottom:16px;box-shadow:0 6px 16px rgba(76,29,149,.25);}
         .form-header h2{font-size:1.5rem;font-weight:800;color:#0f172a;letter-spacing:-.02em;margin-bottom:6px;}
         .form-header p{font-size:.875rem;color:#64748b;line-height:1.6;}
 
         .f-group{margin-bottom:16px;width:100%;}
         .f-label{display:block;font-size:.82rem;font-weight:700;color:#334155;margin-bottom:7px;}
-        .f-input{width:100%;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:11px;font-family:'Outfit',sans-serif;font-size:.9rem;color:#18181b;outline:none;transition:.2s;background:#fff;}
-        .f-input:focus{border-color:var(--yd);box-shadow:0 0 0 3px rgba(199,168,0,.12);}
+        .f-input{width:100%;padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:11px;font-family:'Inter',sans-serif;font-size:.9rem;color:#18181b;outline:none;transition:.2s;background:#fff;}
+        .f-input:focus{border-color:var(--yd);box-shadow:0 0 0 3px rgba(76,29,149,.12);}
         .f-input:disabled{background:#f8fafc;color:#94a3b8;cursor:not-allowed;}
 
-        .btn-reset{width:100%;padding:13px;background:linear-gradient(135deg,var(--y1),var(--yd));border:none;border-radius:11px;color:#18181b;font-size:.95rem;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;box-shadow:0 4px 14px rgba(199,168,0,.3);transition:.2s;margin-top:6px;}
-        .btn-reset:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(199,168,0,.4);}
+        .btn-reset{width:100%;padding:13px;background:linear-gradient(135deg,var(--y1),var(--yd));border:none;border-radius:11px;color:#18181b;font-size:.95rem;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;box-shadow:0 4px 14px rgba(76,29,149,.3);transition:.2s;margin-top:6px;}
+        .btn-reset:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(76,29,149,.4);}
 
-        .error-box{background:#fef2f2;border:1.5px solid #fecaca;border-radius:10px;padding:11px 14px;margin-bottom:20px;color:#dc2626;font-size:.83rem;font-weight:600;display:flex;align-items:center;gap:8px;width:100%;}
+        .error-box{background:#F5F3FF;border:1.5px solid #DDD6FE;border-radius:10px;padding:11px 14px;margin-bottom:20px;color:#4C1D95;font-size:.83rem;font-weight:600;display:flex;align-items:center;gap:8px;width:100%;}
 
         .back-link{margin-top:20px;text-align:center;}
         .back-link a{font-size:.82rem;color:#64748b;text-decoration:none;font-weight:600;display:inline-flex;align-items:center;gap:5px;transition:.15s;}
         .back-link a:hover{color:#18181b;}
 
         .auth-footer{position:absolute;bottom:20px;font-size:.72rem;color:#94a3b8;font-weight:500;}
-    </style>
+.auth-left{flex:0 0 35%;background:linear-gradient(145deg,#3B0764,#6D28D9);}
+.auth-left::before{background:radial-gradient(circle,rgba(221,214,254,.18),transparent 70%);}
+.auth-right{width:auto;flex:1}.form-title{color:#4C1D95}.btn-reset{background:#6D28D9;color:#fff;box-shadow:0 6px 18px rgba(109,40,217,.22)}
+</style>
 </head>
 <body>
     <div class="auth-left">
@@ -50,7 +53,7 @@
             <div class="auth-brand-icon">
                 <svg width="36" height="36" fill="none" stroke="#18181b" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 21a9 9 0 110-18 9 9 0 010 18z"/><path d="M12 8v4l3 3"/></svg>
             </div>
-            <div class="auth-brand-name">The Crimpers</div>
+            <div class="auth-brand-name">Veloura Salon</div>
             <div class="auth-brand-sub">Create a strong new password to secure your account.</div>
         </div>
     </div>
@@ -103,7 +106,7 @@
             </a>
         </div>
 
-        <div class="auth-footer">Powered by The Crimpers</div>
+        <div class="auth-footer">Powered by PixoraSoftTech</div>
     </div>
 </body>
 </html>

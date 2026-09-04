@@ -4,43 +4,43 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Book Your Service — The Crimpers</title>
+    <title>Book Your Service — Veloura Salon</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <style>
-        body { font-family:'Outfit',sans-serif; background:#f0fdf4; color:#1e293b; }
-        .service-card { background:#fff; border:2px solid #dcfce7; border-radius:14px; cursor:pointer; transition:all .25s; }
-        .service-card:hover { border-color:#22c55e; box-shadow:0 4px 16px rgba(34,197,94,.15); transform:translateY(-2px); }
-        .service-card.selected { border-color:#16a34a; background:#f0fdf4; box-shadow:0 4px 16px rgba(34,197,94,.2); }
-        .category-tab { background:#fff; border:1px solid #bbf7d0; color:#475569; border-radius:99px; transition:all .25s; }
-        .category-tab.active { background:linear-gradient(135deg,#22c55e,#16a34a); color:#fff; border-color:transparent; }
-        .cart-item { background:#f0fdf4; border:1px solid #dcfce7; border-radius:10px; }
-        .btn-green { background:linear-gradient(135deg,#22c55e,#16a34a); color:#fff; border-radius:10px; transition:all .25s; }
-        .btn-green:hover { transform:translateY(-1px); box-shadow:0 4px 14px rgba(34,197,94,.35); }
+        body { font-family:'Inter',sans-serif; background:#fff; color:#1e293b; }
+        .service-card { background:#fff; border:2px solid #EDE9FE; border-radius:14px; cursor:pointer; transition:all .25s; }
+        .service-card:hover { border-color:#7C3AED; box-shadow:0 4px 16px rgba(124,58,237,.15); transform:translateY(-2px); }
+        .service-card.selected { border-color:#6D28D9; background:#F5F3FF; box-shadow:0 4px 16px rgba(124,58,237,.2); }
+        .category-tab { background:#fff; border:1px solid #DDD6FE; color:#475569; border-radius:99px; transition:all .25s; }
+        .category-tab.active { background:linear-gradient(135deg,#7C3AED,#6D28D9); color:#fff; border-color:transparent; }
+        .cart-item { background:#F5F3FF; border:1px solid #EDE9FE; border-radius:10px; }
+        .btn-green { background:linear-gradient(135deg,#7C3AED,#6D28D9); color:#fff; border-radius:10px; transition:all .25s; }
+        .btn-green:hover { transform:translateY(-1px); box-shadow:0 4px 14px rgba(124,58,237,.35); }
         .btn-green:disabled { opacity:.5; cursor:not-allowed; transform:none; }
-        input,select { border:1px solid #bbf7d0; border-radius:10px; background:#f9fafb; transition:border-color .2s,box-shadow .2s; }
-        input:focus,select:focus { outline:none; border-color:#22c55e; box-shadow:0 0 0 3px rgba(34,197,94,.15); background:#fff; }
-        .payment-label { border:2px solid #dcfce7; border-radius:10px; cursor:pointer; transition:all .2s; }
-        .payment-label:has(input:checked) { border-color:#22c55e; background:#f0fdf4; }
+        input,select { border:1px solid #DDD6FE; border-radius:10px; background:#f9fafb; transition:border-color .2s,box-shadow .2s; }
+        input:focus,select:focus { outline:none; border-color:#7C3AED; box-shadow:0 0 0 3px rgba(124,58,237,.15); background:#fff; }
+        .payment-label { border:2px solid #EDE9FE; border-radius:10px; cursor:pointer; transition:all .2s; }
+        .payment-label:has(input:checked) { border-color:#7C3AED; background:#F5F3FF; }
     </style>
 </head>
 <body class="antialiased">
-    <header class="bg-white border-b border-green-100 shadow-sm sticky top-0 z-30">
+    <header class="bg-white border-b border-purple-100 shadow-sm sticky top-0 z-30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
             <div class="flex items-center gap-3">
-                <div class="w-9 h-9 rounded-xl bg-green-500 flex items-center justify-center shadow-sm">
+                <div class="w-9 h-9 rounded-xl bg-purple-500 flex items-center justify-center shadow-sm">
                     <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
                     </svg>
                 </div>
                 <div>
-                    <h1 class="text-lg font-bold text-green-700 leading-none">The Crimpers</h1>
-                    <span class="text-xs text-green-500">Customer Portal</span>
+                    <h1 class="text-lg font-bold text-purple-700 leading-none">Veloura Salon</h1>
+                    <span class="text-xs text-purple-500">Customer Portal</span>
                 </div>
             </div>
-            <a href="{{ route('login') }}" class="text-sm font-semibold text-green-600 hover:text-green-800 transition-colors">Staff Login →</a>
+            <a href="{{ route('login') }}" class="text-sm font-semibold text-purple-600 hover:text-purple-800 transition-colors">Staff Login →</a>
         </div>
     </header>
 
@@ -61,21 +61,21 @@
                                 <div class="flex justify-between items-start mb-2">
                                     <h3 class="font-semibold text-slate-800">{{ $service->name }}</h3>
                                     @if($service->is_popular)
-                                        <span class="text-xs px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 font-medium">Popular</span>
+                                        <span class="text-xs px-2 py-0.5 rounded-full bg-purple-100 text-purple-700 font-medium">Popular</span>
                                     @endif
                                 </div>
                                 <p class="text-xs text-slate-500 mb-3">{{ $service->duration }} mins</p>
-                                <p class="text-lg font-bold text-green-600">PKR {{ $service->price }}</p>
+                                <p class="text-lg font-bold text-purple-600">PKR {{ $service->price }}</p>
                             </div>
                         @endforeach
                         @foreach($category->products as $product)
                             <div class="service-card p-4" data-id="{{ $product->id }}" data-type="product" data-category="{{ $category->id }}" data-name="{{ $product->name }}" data-price="{{ $product->selling_price }}">
                                 <div class="flex justify-between items-start mb-2">
                                     <h3 class="font-semibold text-slate-800">{{ $product->name }}</h3>
-                                    <span class="text-xs px-2 py-0.5 rounded-full bg-blue-100 text-blue-700 font-medium">Product</span>
+                                    <span class="text-xs px-2 py-0.5 rounded-full bg-purple-100 text-purple-700 font-medium">Product</span>
                                 </div>
                                 <p class="text-xs text-slate-500 mb-3">Stock: {{ $product->current_stock }}</p>
-                                <p class="text-lg font-bold text-green-600">PKR {{ $product->selling_price }}</p>
+                                <p class="text-lg font-bold text-purple-600">PKR {{ $product->selling_price }}</p>
                             </div>
                         @endforeach
                     @endforeach
@@ -83,9 +83,9 @@
             </div>
 
             <div class="lg:col-span-1">
-                <div class="bg-white rounded-2xl border border-green-100 shadow-sm p-6 sticky top-24">
+                <div class="bg-white rounded-2xl border border-purple-100 shadow-sm p-6 sticky top-24">
                     <h3 class="text-lg font-bold text-slate-800 mb-5 flex items-center gap-2">
-                        <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-5 h-5 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
                         </svg>
                         Your Booking
@@ -113,10 +113,10 @@
                                 <label class="payment-label flex items-center justify-center p-2.5 text-sm font-semibold text-slate-700"><input type="radio" name="payment_method" value="qr" class="sr-only">QR Pay</label>
                             </div>
                         </div>
-                        <div class="bg-green-50 rounded-xl p-4 mb-5 space-y-2 border border-green-100">
+                        <div class="bg-purple-50 rounded-xl p-4 mb-5 space-y-2 border border-purple-100">
                             <div class="flex justify-between text-sm text-slate-600"><span>Subtotal</span><span id="subtotal">$0.00</span></div>
                             <div class="flex justify-between text-sm text-slate-600"><span>Tax (5%)</span><span id="tax">$0.00</span></div>
-                            <div class="flex justify-between font-bold text-slate-800 pt-2 border-t border-green-200"><span>Total</span><span id="total" class="text-green-600 text-lg">$0.00</span></div>
+                            <div class="flex justify-between font-bold text-slate-800 pt-2 border-t border-purple-200"><span>Total</span><span id="total" class="text-purple-600 text-lg">$0.00</span></div>
                         </div>
                         <button type="submit" id="book-btn" class="btn-green w-full py-3 font-bold text-sm" disabled>Complete Booking</button>
                     </form>
@@ -125,16 +125,16 @@
         </div>
     </div>
 
-    <div id="success-modal" class="fixed inset-0 z-50 items-center justify-center p-4 bg-black/40 backdrop-blur-sm" style="display:none">
-        <div class="bg-white w-full max-w-sm rounded-2xl p-8 text-center shadow-2xl border border-green-100">
-            <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-5">
+    <div id="success-modal" class="modal-overlay fixed inset-0 z-50 items-center justify-center p-4 bg-black/40 backdrop-blur-sm" style="display:none" role="dialog" aria-modal="true" aria-labelledby="booking-success-title">
+        <div class="bg-white w-full max-w-sm rounded-2xl p-8 text-center shadow-2xl border border-purple-100">
+            <div class="w-16 h-16 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mx-auto mb-5">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
             </div>
-            <h2 class="text-2xl font-bold text-slate-800 mb-1">Booking Confirmed!</h2>
-            <p class="text-slate-500 text-sm mb-6">Thank you for choosing The Crimpers</p>
+            <h2 id="booking-success-title" class="text-2xl font-bold text-slate-800 mb-1">Booking Confirmed!</h2>
+            <p class="text-slate-500 text-sm mb-6">Thank you for choosing Veloura Salon</p>
             <div class="space-y-3">
                 <a href="#" id="view-receipt-btn" class="block w-full btn-green py-3 font-semibold text-sm">View Receipt</a>
-                <button onclick="window.location.reload()" class="block w-full bg-green-50 hover:bg-green-100 text-green-700 py-3 rounded-xl font-semibold text-sm transition-colors border border-green-100">Book Another Service</button>
+                <button onclick="window.location.reload()" class="block w-full bg-purple-50 hover:bg-purple-100 text-purple-700 py-3 rounded-xl font-semibold text-sm transition-colors border border-purple-100">Book Another Service</button>
             </div>
         </div>
     </div>
@@ -183,8 +183,8 @@
             cartEl.innerHTML = cart.map(item => `
                 <div class="cart-item p-3 flex justify-between items-center">
                     <div><p class="text-sm font-semibold text-slate-800">${item.name}</p><p class="text-xs text-slate-500">Qty: ${item.quantity}</p></div>
-                    <div class="text-right"><p class="text-sm font-bold text-slate-800">$${(item.price*item.quantity).toFixed(2)}</p>
-                    <button onclick="removeItem('${item.id}','${item.type}')" class="text-xs text-red-400 hover:text-red-600">Remove</button></div>
+                    <div class="text-right"><p class="text-sm font-bold text-slate-800">PKR ${(item.price*item.quantity).toFixed(2)}</p>
+                    <button onclick="removeItem('${item.id}','${item.type}')" class="text-xs text-purple-400 hover:text-purple-600">Remove</button></div>
                 </div>`).join('');
             bookBtn.disabled = false;
             setTotals(cart.reduce((s, i) => s + i.price * i.quantity, 0));
@@ -206,7 +206,11 @@
         document.getElementById('booking-form').addEventListener('submit', function (e) {
             e.preventDefault();
             const fd = new FormData(this);
-            fd.append('items', JSON.stringify(cart));
+            cart.forEach((item, index) => {
+                fd.append(`items[${index}][id]`, item.id);
+                fd.append(`items[${index}][type]`, item.type);
+                fd.append(`items[${index}][quantity]`, item.quantity);
+            });
             fetch(this.action, {
                 method: 'POST', body: fd,
                 headers: { 'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content }

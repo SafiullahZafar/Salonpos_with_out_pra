@@ -15,8 +15,7 @@ return Application::configure(basePath: dirname(__DIR__))
             'permission' => \App\Http\Middleware\CheckModulePermission::class,
         ]);
 
-        // Mobile restriction — runs inside web group, after auth resolves
-        $middleware->appendToGroup('web', \App\Http\Middleware\RestrictMobileAccess::class);
+        // Responsive navigation keeps every authorized workflow available on mobile.
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         $exceptions->render(function (\Illuminate\Database\QueryException $e, \Illuminate\Http\Request $request) {

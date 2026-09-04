@@ -1,9 +1,9 @@
-﻿@extends('layouts.app')
+@extends('layouts.app')
 @section('title', 'Staff Performance')
 
 @section('content')
 <style>
-:root{--y1:#F7DF79;--y2:#FBEFBC;--yd:#c9a800;--yk:#a07800;}
+:root{--y1:#6D28D9;--y2:#EDE9FE;--yd:#6D28D9;--yk:#4C1D95;}
 
 /* Header */
 .pg-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:22px;gap:16px;flex-wrap:wrap;}
@@ -12,7 +12,7 @@
 
 /* Sort buttons */
 .sort-bar{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap;}
-.sort-btn{padding:7px 16px;border:1.5px solid #E8EAED;background:#fff;border-radius:99px;cursor:pointer;font-size:.8rem;font-weight:700;font-family:'Outfit',sans-serif;color:#5C6370;transition:.18s;}
+.sort-btn{padding:7px 16px;border:1.5px solid #E8EAED;background:#fff;border-radius:99px;cursor:pointer;font-size:.8rem;font-weight:700;font-family:'Inter',sans-serif;color:#5C6370;transition:.18s;}
 .sort-btn:hover{border-color:var(--yd);color:var(--yk);}
 .sort-btn.active{background:var(--y2);border-color:var(--yd);color:var(--yk);}
 

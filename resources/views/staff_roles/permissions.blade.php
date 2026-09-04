@@ -6,20 +6,20 @@
 .perm-card{background:#fff;border:1px solid #e2e8f0;border-radius:20px;padding:32px;box-shadow:0 1px 3px rgba(0,0,0,.03);}
 .perm-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:24px;}
 .perm-group{padding:20px;border:1.5px solid #f1f5f9;border-radius:16px;background:#fcfcfc;transition:.2s;}
-.perm-group:hover{border-color:#F7DF79;background:#fff;}
+.perm-group:hover{border-color:#6D28D9;background:#fff;}
 .perm-group-title{font-size:.92rem;font-weight:700;color:#1e293b;margin-bottom:14px;display:flex;align-items:center;gap:8px;padding-bottom:10px;border-bottom:1px solid #f1f5f9;}
-.perm-group-title svg{color:#a07800;}
+.perm-group-title svg{color:#4C1D95;}
 .perm-item{display:flex;align-items:center;justify-content:space-between;padding:6px 0;}
 .perm-label{font-size:.85rem;color:#475569;font-weight:500;}
 .perm-toggle{position:relative;display:inline-block;width:38px;height:20px;}
 .perm-toggle input{opacity:0;width:0;height:0;}
 .slider{position:absolute;cursor:pointer;inset:0;background-color:#e2e8f0;transition:.3s;border-radius:34px;}
 .slider:before{position:absolute;content:"";height:14px;width:14px;left:3px;bottom:3px;background-color:white;transition:.3s;border-radius:50%;}
-input:checked + .slider{background-color:#c9a800;}
+input:checked + .slider{background-color:#6D28D9;}
 input:checked + .slider:before{transform:translateX(18px);}
 
 .role-selector{background:#fff;border:1px solid #e2e8f0;border-radius:15px;padding:20px;margin-bottom:24px;display:flex;align-items:center;gap:15px;}
-.role-select{flex:1;padding:12px;border:1.5px solid #f0e8a0;border-radius:12px;font-family:'Outfit',sans-serif;font-size:1rem;background:var(--ybg);outline:none;}
+.role-select{flex:1;padding:12px;border:1.5px solid #DDD6FE;border-radius:12px;font-family:'Inter',sans-serif;font-size:1rem;background:var(--ybg);outline:none;}
 .btn-load{padding:12px 24px;background:#18181b;color:#fff;border:none;border-radius:12px;font-weight:700;cursor:pointer;transition:.2s;}
 .btn-load:hover{background:#3f3f46;}
 </style>
@@ -47,11 +47,11 @@ input:checked + .slider:before{transform:translateX(18px);}
                 <div style="display:flex;gap:10px;align-items:center;">
                     <div style="flex:1;">
                         <label style="font-size:.75rem;font-weight:700;color:#64748b;text-transform:uppercase;">Opening Time</label>
-                        <input type="time" name="opening_time" value="{{ \Carbon\Carbon::parse($branch->opening_time)->format('H:i') }}" style="width:100%;padding:10px;border:1.5px solid #e2e8f0;border-radius:8px;font-family:'Outfit',sans-serif;outline:none;">
+                        <input type="time" name="opening_time" value="{{ \Carbon\Carbon::parse($branch->opening_time)->format('H:i') }}" style="width:100%;padding:10px;border:1.5px solid #e2e8f0;border-radius:8px;font-family:'Inter',sans-serif;outline:none;">
                     </div>
                     <div style="flex:1;">
                         <label style="font-size:.75rem;font-weight:700;color:#64748b;text-transform:uppercase;">Closing Time</label>
-                        <input type="time" name="closing_time" value="{{ \Carbon\Carbon::parse($branch->closing_time)->format('H:i') }}" style="width:100%;padding:10px;border:1.5px solid #e2e8f0;border-radius:8px;font-family:'Outfit',sans-serif;outline:none;">
+                        <input type="time" name="closing_time" value="{{ \Carbon\Carbon::parse($branch->closing_time)->format('H:i') }}" style="width:100%;padding:10px;border:1.5px solid #e2e8f0;border-radius:8px;font-family:'Inter',sans-serif;outline:none;">
                     </div>
                 </div>
                 <button type="submit" class="btn-load" style="padding:10px;font-size:.85rem;margin-top:4px;">Update Hours</button>
@@ -64,7 +64,7 @@ input:checked + .slider:before{transform:translateX(18px);}
     <form action="{{ route('business-settings.index') }}" method="GET" class="role-selector">
         <div style="font-weight:700;color:#1e293b;font-size:.9rem;white-space:nowrap;">Select Role to Configure:</div>
         <select name="role_id" class="role-select" onchange="this.form.submit()">
-            <option value="">— Choose a Role —</option>
+            <option value="">â€” Choose a Role â€”</option>
             @foreach($roles as $role)
             <option value="{{ $role->id }}" {{ (request('role_id') == $role->id) ? 'selected' : '' }}>{{ $role->name }}</option>
             @endforeach
@@ -99,7 +99,7 @@ input:checked + .slider:before{transform:translateX(18px);}
                         <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                         Operational Scope
                     </label>
-                    <select name="role_branch_id" style="width:100%; padding:10px 14px; border:1.5px solid #f0e8a0; border-radius:12px; font-size:0.85rem; font-weight:700; background:#fffdf8; outline:none; font-family:inherit; color:#1e293b; cursor:pointer;">
+                    <select name="role_branch_id" style="width:100%; padding:10px 14px; border:1.5px solid #DDD6FE; border-radius:12px; font-size:0.85rem; font-weight:700; background:#F8F7FA; outline:none; font-family:inherit; color:#1e293b; cursor:pointer;">
                         <option value="all" {{ is_null($selectedRole->branch_id) ? 'selected' : '' }}>All Branches (Global)</option>
                         @foreach(\App\Models\Branch::all() as $br)
                             <option value="{{ $br->id }}" {{ $selectedRole->branch_id == $br->id ? 'selected' : '' }}>{{ $br->name }}</option>
@@ -107,7 +107,7 @@ input:checked + .slider:before{transform:translateX(18px);}
                     </select>
                 </div>
 
-                <button type="submit" style="padding:10px 24px;background:linear-gradient(135deg,#c9a800,#a07800);border:none;border-radius:11px;color:#fff;font-weight:700;font-size:.85rem;cursor:pointer;box-shadow:0 4px 12px rgba(160,120,0,.25);">
+                <button type="submit" style="padding:10px 24px;background:linear-gradient(135deg,#6D28D9,#4C1D95);border:none;border-radius:11px;color:#fff;font-weight:700;font-size:.85rem;cursor:pointer;box-shadow:0 4px 12px rgba(160,120,0,.25);">
                     Save Sanctions
                 </button>
             </div>
@@ -192,8 +192,8 @@ input:checked + .slider:before{transform:translateX(18px);}
                     </div>
 
                     {{-- POS sub-label --}}
-                    <div style="font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#a07800;margin:4px 0 8px;padding-bottom:4px;border-bottom:1px dashed #fde68a;">
-                        ⚡ Point of Sale
+                    <div style="font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#4C1D95;margin:4px 0 8px;padding-bottom:4px;border-bottom:1px dashed #DDD6FE;">
+                        âš¡ Point of Sale
                     </div>
                     <div class="perm-item">
                         <span class="perm-label">Access POS Terminal</span>
@@ -321,8 +321,8 @@ input:checked + .slider:before{transform:translateX(18px);}
                 </div>
 
                 {{-- Business --}}
-                <div class="perm-group" style="background:#f0f9ff;border-color:#bae6fd;">
-                    <div class="perm-group-title" style="color:#0369a1;border-color:#bae6fd;">
+                <div class="perm-group" style="background:#F5F3FF;border-color:#DDD6FE;">
+                    <div class="perm-group-title" style="color:#4C1D95;border-color:#DDD6FE;">
                         <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
                         Business Settings
                     </div>
@@ -336,13 +336,13 @@ input:checked + .slider:before{transform:translateX(18px);}
                 </div>
 
                 {{-- Security --}}
-                <div class="perm-group" style="background:#fff6f6;border-color:#fee2e2;">
-                    <div class="perm-group-title" style="color:#ef4444;border-color:#fee2e2;">
+                <div class="perm-group" style="background:#F5F3FF;border-color:#EDE9FE;">
+                    <div class="perm-group-title" style="color:#6D28D9;border-color:#EDE9FE;">
                         <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
                         Security & Root
                     </div>
                     <div class="perm-item">
-                        <span class="perm-label" style="color:#ef4444;font-weight:700;">Full Settings Access</span>
+                        <span class="perm-label" style="color:#6D28D9;font-weight:700;">Full Settings Access</span>
                         <label class="perm-toggle">
                             <input type="checkbox" name="permissions[admin][all]" value="1" {{ $isSet('admin','all') ? 'checked' : '' }}>
                             <span class="slider"></span>
@@ -374,21 +374,21 @@ input:checked + .slider:before{transform:translateX(18px);}
                     <tbody>
                         {{-- Master Role Login (Generic Role Login) --}}
                         @if($selectedRole->email)
-                        <tr style="border-bottom:1px solid #f1f5f9; background:#fffcf0;">
-                            <td style="padding:16px 12px; font-weight:800; color:#854d0e;">
+                        <tr style="border-bottom:1px solid #f1f5f9; background:#F5F3FF;">
+                            <td style="padding:16px 12px; font-weight:800; color:#4C1D95;">
                                 <div style="display:flex; align-items:center; gap:6px;">
                                     <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 15V3m0 12l-4-4m4 4l4-4"/></svg>
                                     Master Role Account
                                 </div>
                             </td>
                             <td style="padding:16px 12px;">
-                                <input type="email" name="role_email" value="{{ $selectedRole->email }}" style="padding:8px 12px; border:1.5px solid #fde047; border-radius:8px; font-size:0.85rem; width:220px; font-weight:700; color:#854d0e;">
+                                <input type="email" name="role_email" value="{{ $selectedRole->email }}" style="padding:8px 12px; border:1.5px solid #A78BFA; border-radius:8px; font-size:0.85rem; width:220px; font-weight:700; color:#4C1D95;">
                             </td>
                             <td style="padding:16px 12px;">
-                                <input type="password" name="role_password" placeholder="••••••••" style="padding:8px 12px; border:1.5px solid #fde047; border-radius:8px; font-size:0.85rem; width:180px;">
+                                <input type="password" name="role_password" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" style="padding:8px 12px; border:1.5px solid #A78BFA; border-radius:8px; font-size:0.85rem; width:180px;">
                             </td>
                             <td style="padding:16px 12px; text-align:right;">
-                                <span style="font-size:0.7rem; color:#a16207; background:#fefce8; padding:4px 10px; border-radius:30px; font-weight:800;">SHARED TERMINAL</span>
+                                <span style="font-size:0.7rem; color:#6D28D9; background:#F5F3FF; padding:4px 10px; border-radius:30px; font-weight:800;">SHARED TERMINAL</span>
                             </td>
                         </tr>
                         @endif
@@ -407,10 +407,10 @@ input:checked + .slider:before{transform:translateX(18px);}
                                 </div>
                             </td>
                             <td style="padding:16px 12px;">
-                                <input type="email" name="user_emails[{{ $u->id }}]" value="{{ $u->email }}" style="padding:8px 12px; border:1px solid #e2e8f0; border-radius:8px; font-size:0.85rem; width:220px; font-family:'Outfit',sans-serif;">
+                                <input type="email" name="user_emails[{{ $u->id }}]" value="{{ $u->email }}" style="padding:8px 12px; border:1px solid #e2e8f0; border-radius:8px; font-size:0.85rem; width:220px; font-family:'Inter',sans-serif;">
                             </td>
                             <td style="padding:16px 12px;">
-                                <input type="password" name="user_passwords[{{ $u->id }}]" placeholder="••••••••" style="padding:8px 12px; border:1px solid #e2e8f0; border-radius:8px; font-size:0.85rem; width:180px;">
+                                <input type="password" name="user_passwords[{{ $u->id }}]" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" style="padding:8px 12px; border:1px solid #e2e8f0; border-radius:8px; font-size:0.85rem; width:180px;">
                             </td>
                             <td style="padding:16px 12px; text-align:right;">
                                 <span style="font-size:0.75rem; color:#94a3b8; font-weight:600;">Individual Account</span>

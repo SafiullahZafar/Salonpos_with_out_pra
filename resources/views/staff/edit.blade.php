@@ -4,11 +4,11 @@
 @section('content')
     <style>
         :root {
-            --y1: #F7DF79;
-            --y2: #FBEFBC;
-            --yd: #c9a800;
-            --yk: #a07800;
-            --ybg: #fffdf0;
+            --y1: #6D28D9;
+            --y2: #EDE9FE;
+            --yd: #6D28D9;
+            --yk: #4C1D95;
+            --ybg: #F5F3FF;
         }
 
         .page-header {
@@ -57,7 +57,7 @@
 
         .form-card {
             background: #fff;
-            border: 1.5px solid #e9e0c0;
+            border: 1.5px solid #E7E1EC;
             border-radius: 18px;
             overflow: hidden;
             box-shadow: 0 2px 12px rgba(199, 168, 0, .08);
@@ -67,7 +67,7 @@
         .form-card-head {
             padding: 16px 22px;
             background: var(--ybg);
-            border-bottom: 1.5px solid #f0e8b0;
+            border-bottom: 1.5px solid #DDD6FE;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -139,7 +139,7 @@
             padding: 10px 13px;
             border: 1.5px solid #e2e8f0;
             border-radius: 10px;
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Inter', sans-serif;
             font-size: .9rem;
             color: #18181b;
             background: #fff;
@@ -216,8 +216,8 @@
         }
 
         .error-box {
-            background: #fef2f2;
-            border: 1.5px solid #fecaca;
+            background: #F5F3FF;
+            border: 1.5px solid #DDD6FE;
             border-radius: 10px;
             padding: 12px 16px;
             margin-bottom: 20px;
@@ -226,7 +226,7 @@
         .error-box ul {
             margin: 0;
             padding-left: 18px;
-            color: #ef4444;
+            color: #6D28D9;
             font-size: .85rem;
         }
 
@@ -245,7 +245,7 @@
             color: #64748b;
             font-weight: 700;
             text-decoration: none;
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Inter', sans-serif;
             font-size: .9rem;
             transition: .2s;
             background: #fff;
@@ -266,7 +266,7 @@
             color: #18181b;
             font-weight: 700;
             cursor: pointer;
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Inter', sans-serif;
             font-size: .9rem;
             box-shadow: 0 3px 12px rgba(199, 168, 0, .25);
             transition: .2s;
@@ -292,7 +292,7 @@
             height: 42px;
             border-radius: 10px;
             background: var(--ybg);
-            border: 1.5px solid #e9e0c0;
+            border: 1.5px solid #E7E1EC;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -310,7 +310,7 @@
         /* Danger Zone */
         .danger-zone {
             background: #fff;
-            border: 1.5px solid #fca5a5;
+            border: 1.5px solid #A78BFA;
             border-radius: 18px;
             overflow: hidden;
             margin-top: 8px;
@@ -318,8 +318,8 @@
 
         .danger-zone-head {
             padding: 16px 22px;
-            background: #fef2f2;
-            border-bottom: 1.5px solid #fecaca;
+            background: #F5F3FF;
+            border-bottom: 1.5px solid #DDD6FE;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -329,18 +329,18 @@
             width: 34px;
             height: 34px;
             border-radius: 9px;
-            background: #fee2e2;
+            background: #EDE9FE;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #ef4444;
+            color: #6D28D9;
             flex-shrink: 0;
         }
 
         .danger-zone-head-title {
             font-size: .9rem;
             font-weight: 700;
-            color: #dc2626;
+            color: #4C1D95;
         }
 
         .danger-zone-body {
@@ -362,19 +362,19 @@
             padding: 10px 20px;
             border: none;
             border-radius: 10px;
-            background: #ef4444;
+            background: #6D28D9;
             color: #fff;
             font-weight: 700;
             cursor: pointer;
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Inter', sans-serif;
             font-size: .875rem;
-            box-shadow: 0 3px 10px rgba(239, 68, 68, .25);
+            box-shadow: 0 3px 10px rgba(109,40,217, .25);
             transition: .2s;
             white-space: nowrap;
         }
 
         .btn-delete:hover {
-            background: #dc2626;
+            background: #4C1D95;
             transform: translateY(-1px);
         }
 
@@ -474,7 +474,7 @@
                     <span class="form-card-head-title">Commission Settings</span>
                 </div>
                 <div class="form-card-body">
-                    <div style="background:#fffbeb; border:1.5px solid #fde68a; border-radius:10px; padding:10px 14px; margin-bottom:16px; font-size:.82rem; color:#92400e;">
+                    <div style="background:#F5F3FF; border:1.5px solid #DDD6FE; border-radius:10px; padding:10px 14px; margin-bottom:16px; font-size:.82rem; color:#4C1D95;">
                         <strong>ℹ️ Commission Info:</strong> Commission is earned as a <strong>% of each service/package</strong> amount. If a discount is given on the invoice, commission is reduced proportionally.
                     </div>
                     <div class="f-group">
@@ -568,7 +568,7 @@
             </div>
             <div class="danger-zone-body">
                 <div class="danger-zone-desc">
-                    <strong style="color:#dc2626;">Delete this employee</strong><br>
+                    <strong style="color:#4C1D95;">Delete this employee</strong><br>
                     Permanently removes {{ $staff->name }} and all associated records. This cannot be undone.
                 </div>
                 <button type="button" class="btn-delete" onclick="openDeleteModal()">Delete Employee</button>
@@ -587,7 +587,7 @@
         <div
             style="background:#fff;padding:32px 28px;border-radius:20px;width:100%;max-width:400px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.15);animation:modalIn .2s ease-out;margin:16px;">
             <div
-                style="width:56px;height:56px;border-radius:50%;background:#fee2e2;color:#ef4444;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;">
+                style="width:56px;height:56px;border-radius:50%;background:#EDE9FE;color:#6D28D9;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;">
                 <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <polyline points="3 6 5 6 21 6" />
                     <path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6" />
@@ -602,9 +602,9 @@
             </p>
             <div style="display:flex;gap:12px;">
                 <button type="button" onclick="closeDeleteModal()"
-                    style="flex:1;padding:11px;border:1.5px solid #e2e8f0;border-radius:10px;background:#fff;color:#64748b;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;font-size:.9rem;">Cancel</button>
+                    style="flex:1;padding:11px;border:1.5px solid #e2e8f0;border-radius:10px;background:#fff;color:#64748b;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;font-size:.9rem;">Cancel</button>
                 <button type="button" onclick="document.getElementById('delete-form').submit()"
-                    style="flex:1;padding:11px;border:none;border-radius:10px;background:#ef4444;color:#fff;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;font-size:.9rem;box-shadow:0 4px 14px rgba(239,68,68,.3);">Yes,
+                    style="flex:1;padding:11px;border:none;border-radius:10px;background:#6D28D9;color:#fff;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;font-size:.9rem;box-shadow:0 4px 14px rgba(109,40,217,.3);">Yes,
                     Delete</button>
             </div>
         </div>

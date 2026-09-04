@@ -9,7 +9,7 @@
 .filters{display:flex;gap:12px;margin-bottom:20px;flex-wrap:wrap;}
 .filter-group{display:flex;flex-direction:column;gap:4px;}
 .filter-label{font-size:.8rem;font-weight:600;color:#64748b;text-transform:uppercase;}
-.filter-select{padding:8px 12px;border:1px solid #e2e8f0;border-radius:8px;font-size:.9rem;font-family:'Outfit',sans-serif;}
+.filter-select{padding:8px 12px;border:1px solid #e2e8f0;border-radius:8px;font-size:.9rem;font-family:'Inter',sans-serif;}
 
 .summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:24px;}
 .summary-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:16px;text-align:center;}
@@ -23,10 +23,10 @@
 
 .product-name{font-weight:600;color:#1e293b;}
 .sku{font-size:.75rem;color:#94a3b8;}
-.price{font-weight:600;color:#16a34a;}
+.price{font-weight:600;color:#6D28D9;}
 
 .btn-export-csv {
-    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    background: linear-gradient(135deg, #7C3AED 0%, #6D28D9 100%);
     color: #ffffff;
     border: none;
     border-radius: 10px;
@@ -48,7 +48,7 @@
 }
 
 .btn-export-xls {
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    background: linear-gradient(135deg, #8B5CF6 0%, #4C1D95 100%);
     color: #ffffff;
     border: none;
     border-radius: 10px;
@@ -133,7 +133,7 @@
             <div class="sku">{{ $product->sku ?: 'No SKU' }}</div>
         </div>
         <span>{{ ucfirst(str_replace('_', ' ', $product->product_type)) }}</span>
-        <span style="font-weight:600;{{ $product->current_stock <= $product->min_stock_level ? 'color:#dc2626;' : '' }}">
+        <span style="font-weight:600;{{ $product->current_stock <= $product->min_stock_level ? 'color:#4C1D95;' : '' }}">
             {{ $product->current_stock }}
         </span>
         <span>PKR {{ number_format($product->cost_price, 2) }}</span>

@@ -6,11 +6,11 @@
 .form-wrap{max-width:760px;margin:0 auto;}
 .form-header{display:flex;align-items:center;gap:12px;margin-bottom:24px;}
 .back-btn{width:36px;height:36px;border-radius:9px;border:1.5px solid #e2e8f0;background:#fff;display:flex;align-items:center;justify-content:center;color:#64748b;text-decoration:none;transition:.2s;flex-shrink:0;}
-.back-btn:hover{border-color:#F7DF79;color:#c9a800;background:#fffdf0;}
+.back-btn:hover{border-color:#6D28D9;color:#6D28D9;background:#F5F3FF;}
 .form-title{font-size:1.4rem;font-weight:800;color:#0f172a;letter-spacing:-.02em;margin-bottom:3px;}
 .form-sub{font-size:.85rem;color:#64748b;}
 
-.form-card{background:#fff;border:1px solid #f0e8a0;border-radius:18px;box-shadow:0 2px 12px rgba(0,0,0,.05);overflow:hidden;}
+.form-card{background:#fff;border:1px solid #DDD6FE;border-radius:18px;box-shadow:0 2px 12px rgba(0,0,0,.05);overflow:hidden;}
 .form-section{padding:22px 26px;border-bottom:1px solid #f1f5f9;}
 .form-section:last-of-type{border-bottom:none;}
 .section-title{font-size:.78rem;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.09em;margin-bottom:16px;display:flex;align-items:center;gap:7px;}
@@ -20,8 +20,8 @@
 .f-grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;}
 .f-row{margin-bottom:0;}
 .f-label{display:block;font-size:.78rem;font-weight:600;color:#374151;margin-bottom:7px;}
-.f-input{width:100%;padding:10px 13px;border:1.5px solid #e5e7eb;border-radius:10px;font-size:.875rem;font-family:'Outfit',sans-serif;color:#1e293b;background:#fafafa;outline:none;transition:.2s;}
-.f-input:focus{border-color:#F7DF79;background:#fff;box-shadow:0 0 0 3px rgba(247,223,121,.1);}
+.f-input{width:100%;padding:10px 13px;border:1.5px solid #e5e7eb;border-radius:10px;font-size:.875rem;font-family:'Inter',sans-serif;color:#1e293b;background:#fafafa;outline:none;transition:.2s;}
+.f-input:focus{border-color:#6D28D9;background:#fff;box-shadow:0 0 0 3px rgba(109,40,217,.1);}
 .f-input::placeholder{color:#9ca3af;}
 .f-prefix-wrap{position:relative;}
 .f-prefix{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:.82rem;font-weight:600;color:#94a3b8;pointer-events:none;white-space:nowrap;}
@@ -31,43 +31,43 @@
 .toggle-info-title{font-size:.875rem;font-weight:600;color:#1e293b;margin-bottom:2px;}
 .toggle-info-sub{font-size:.75rem;color:#94a3b8;}
 .toggle-label{display:flex;align-items:center;gap:8px;cursor:pointer;font-size:.82rem;font-weight:600;color:#374151;}
-.toggle-label input[type=checkbox]{width:16px;height:16px;accent-color:#c9a800;cursor:pointer;}
+.toggle-label input[type=checkbox]{width:16px;height:16px;accent-color:#6D28D9;cursor:pointer;}
 
 .check-row{display:flex;align-items:center;gap:8px;cursor:pointer;}
-.check-row input[type=checkbox]{width:15px;height:15px;accent-color:#c9a800;cursor:pointer;}
+.check-row input[type=checkbox]{width:15px;height:15px;accent-color:#6D28D9;cursor:pointer;}
 .check-label{font-size:.85rem;font-weight:600;color:#374151;}
 
-.peak-box{background:#fffbeb;border:1px solid #fde68a;border-radius:12px;padding:16px 18px;margin-top:14px;}
-.peak-box-title{font-size:.78rem;font-weight:700;color:#92400e;text-transform:uppercase;letter-spacing:.07em;margin-bottom:12px;}
+.peak-box{background:#F5F3FF;border:1px solid #DDD6FE;border-radius:12px;padding:16px 18px;margin-top:14px;}
+.peak-box-title{font-size:.78rem;font-weight:700;color:#4C1D95;text-transform:uppercase;letter-spacing:.07em;margin-bottom:12px;}
 
 .form-footer{padding:18px 26px;border-top:1px solid #f1f5f9;display:flex;gap:10px;justify-content:flex-end;}
-.btn-cancel{padding:10px 22px;border:1.5px solid #e2e8f0;background:#fff;border-radius:10px;color:#64748b;font-size:.875rem;font-weight:600;cursor:pointer;text-decoration:none;font-family:'Outfit',sans-serif;transition:.2s;}
-.btn-cancel:hover{border-color:#fca5a5;color:#dc2626;background:#fef2f2;}
-.btn-save{padding:10px 22px;border:none;background:linear-gradient(135deg,#F7DF79,#c9a800);border-radius:10px;color:#fff;font-size:.875rem;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;transition:.2s;box-shadow:0 3px 10px rgba(247,223,121,.25);}
-.btn-save:hover{transform:translateY(-1px);box-shadow:0 5px 16px rgba(247,223,121,.35);}
+.btn-cancel{padding:10px 22px;border:1.5px solid #e2e8f0;background:#fff;border-radius:10px;color:#64748b;font-size:.875rem;font-weight:600;cursor:pointer;text-decoration:none;font-family:'Inter',sans-serif;transition:.2s;}
+.btn-cancel:hover{border-color:#A78BFA;color:#4C1D95;background:#F5F3FF;}
+.btn-save{padding:10px 22px;border:none;background:linear-gradient(135deg,#6D28D9,#6D28D9);border-radius:10px;color:#fff;font-size:.875rem;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;transition:.2s;box-shadow:0 3px 10px rgba(109,40,217,.25);}
+.btn-save:hover{transform:translateY(-1px);box-shadow:0 5px 16px rgba(109,40,217,.35);}
 
 /* Quick Add Category Modal */
 .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);backdrop-filter:blur(3px);display:none;align-items:center;justify-content:center;z-index:100;padding:20px;}
-.modal-box{background:#fff;border-radius:18px;width:100%;max-width:360px;padding:24px;box-shadow:0 20px 50px rgba(0,0,0,.15);border:1px solid #f0e8a0;}
+.modal-box{background:#fff;border-radius:18px;width:100%;max-width:360px;padding:24px;box-shadow:0 20px 50px rgba(0,0,0,.15);border:1px solid #DDD6FE;}
 .modal-title{font-size:1.1rem;font-weight:800;color:#0f172a;margin-bottom:8px;}
 .modal-sub{font-size:.8rem;color:#64748b;margin-bottom:18px;}
 .m-footer{display:flex;gap:10px;margin-top:20px;}
 .btn-m{flex:1;padding:10px;border-radius:10px;font-size:.85rem;font-weight:700;cursor:pointer;border:none;font-family:inherit;}
 .btn-m-cancel{background:#f1f5f9;color:#64748b;}
-.btn-m-save{background:#c9a800;color:#fff;}
+.btn-m-save{background:#6D28D9;color:#fff;}
 
 /* Toast Notifications */
 .toast-container{position:fixed;top:24px;right:24px;z-index:9999;display:flex;flex-direction:column;gap:12px;pointer-events:none;}
 .toast{min-width:280px;background:#fff;border-radius:12px;padding:16px;display:flex;align-items:center;gap:12px;box-shadow:0 10px 25px rgba(0,0,0,.15);border:1px solid #e2e8f0;transform:translateX(100%);transition:.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);pointer-events:auto;}
 .toast.show{transform:translateX(0);}
 .toast-icon{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.ti-success{background:#FBEFBC;color:#c9a800;}
-.ti-error{background:#fee2e2;color:#dc2626;}
+.ti-success{background:#EDE9FE;color:#6D28D9;}
+.ti-error{background:#EDE9FE;color:#4C1D95;}
 .toast-msg{font-size:.85rem;font-weight:600;color:#1e293b;}
 
 /* Delete Modal Specifics */
-.modal-box.delete-confirm{border-color:#fee2e2;max-width:400px;}
-.btn-m-delete{background:#ef4444;color:#fff;}
+.modal-box.delete-confirm{border-color:#EDE9FE;max-width:400px;}
+.btn-m-delete{background:#6D28D9;color:#fff;}
 </style>
 
 <div class="form-wrap">
@@ -88,7 +88,7 @@
             {{-- Basic info --}}
             <div class="form-section">
                 <div class="section-title">
-                    <div class="section-icon" style="background:#fffdf0;color:#F7DF79;">
+                    <div class="section-icon" style="background:#F5F3FF;color:#6D28D9;">
                         <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
                     </div>
                     Basic Information
@@ -102,8 +102,8 @@
                         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:7px;">
                             <label class="f-label" style="margin-bottom:0;">Category</label>
                             <div style="display:flex;gap:12px;">
-                                <button type="button" onclick="showCatModal()" style="font-size:.7rem;font-weight:700;color:#c9a800;background:none;border:none;cursor:pointer;padding:0;">+ Add New</button>
-                                <button type="button" id="delete_cat_btn" onclick="deleteSelectedCat()" style="font-size:.7rem;font-weight:700;color:#ef4444;background:none;border:none;cursor:pointer;padding:0;">- Delete Selected</button>
+                                <button type="button" onclick="showCatModal()" style="font-size:.7rem;font-weight:700;color:#6D28D9;background:none;border:none;cursor:pointer;padding:0;">+ Add New</button>
+                                <button type="button" id="delete_cat_btn" onclick="deleteSelectedCat()" style="font-size:.7rem;font-weight:700;color:#6D28D9;background:none;border:none;cursor:pointer;padding:0;">- Delete Selected</button>
                             </div>
                         </div>
                         <select name="category_id" id="cat_select" required class="f-input">
@@ -236,7 +236,7 @@
 {{-- Delete Confirmation Modal --}}
 <div class="modal-overlay" id="delCatModal">
     <div class="modal-box delete-confirm">
-        <div class="modal-title" style="color:#ef4444;">Delete Category?</div>
+        <div class="modal-title" style="color:#6D28D9;">Delete Category?</div>
         <div class="modal-sub" id="del_msg_text">Are you sure you want to delete this category? All services in it will be affected.</div>
         <div class="m-footer">
             <button type="button" class="btn-m btn-m-cancel" onclick="hideDelModal()">Keep Category</button>

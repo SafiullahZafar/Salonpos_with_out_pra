@@ -3,11 +3,11 @@
 @section('content')
 <style>
     :root {
-        --y1: #F7DF79;
-        --y2: #FBEFBC;
-        --yd: #c9a800;
-        --ydark: #a07800;
-        --ybg: #fffdf0;
+        --y1: #6D28D9;
+        --y2: #EDE9FE;
+        --yd: #6D28D9;
+        --ydark: #4C1D95;
+        --ybg: #F5F3FF;
     }
 
     .perf-wrap {
@@ -47,7 +47,7 @@
 
     .btn-pay {
         padding: 9px 20px;
-        background: linear-gradient(135deg, #16a34a, #15803d);
+        background: linear-gradient(135deg, #6D28D9, #4C1D95);
         color: #fff;
         border: none;
         border-radius: 9px;
@@ -76,7 +76,7 @@
 
     .stat-card {
         background: #fff;
-        border: 1.5px solid #f0e8a0;
+        border: 1.5px solid #DDD6FE;
         border-radius: 16px;
         padding: 18px 20px;
         box-shadow: 0 2px 8px rgba(0,0,0,.03);
@@ -112,7 +112,7 @@
     /* History Panel */
     .panel {
         background: #fff;
-        border: 1.5px solid #f0e8a0;
+        border: 1.5px solid #DDD6FE;
         border-radius: 16px;
         overflow: hidden;
         box-shadow: 0 1px 4px rgba(0,0,0,.04);
@@ -236,8 +236,8 @@
     .modal-icon {
         width: 50px;
         height: 50px;
-        background: #f0fdf4;
-        color: #16a34a;
+        background: #F5F3FF;
+        color: #6D28D9;
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -281,7 +281,7 @@
     }
 
     .btn-m-confirm {
-        background: #16a34a;
+        background: #6D28D9;
         color: #fff;
     }
 </style>
@@ -302,7 +302,7 @@
         <div>
             @php
                 $btnBg = $staff->days_since_last_payment >= 30 
-                    ? 'linear-gradient(135deg, #16a34a, #15803d)' 
+                    ? 'linear-gradient(135deg, #6D28D9, #4C1D95)'
                     : 'linear-gradient(135deg, #94a3b8, #64748b)';
                 $btnShadow = $staff->days_since_last_payment >= 30 
                     ? 'rgba(22, 163, 74, 0.2)' 
@@ -327,20 +327,20 @@
             <div class="stat-lbl">Earned Commission</div>
             <div class="stat-val" style="color: var(--ydark);">PKR {{ number_format($staff->total_earned_commission, 2) }}</div>
         </div>
-        <div class="stat-card" style="background:#fefce8; border-color:#fef08a;">
-            <div class="stat-icon" style="background:#fef08a; color:#854d0e;"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/></svg></div>
-            <div class="stat-lbl" style="color:#854d0e;">Advances Taken</div>
-            <div class="stat-val" style="color:#a16207;">PKR {{ number_format($staff->current_cycle_advances, 2) }}</div>
+        <div class="stat-card" style="background:#F5F3FF; border-color:#DDD6FE;">
+            <div class="stat-icon" style="background:#DDD6FE; color:#4C1D95;"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/></svg></div>
+            <div class="stat-lbl" style="color:#4C1D95;">Advances Taken</div>
+            <div class="stat-val" style="color:#6D28D9;">PKR {{ number_format($staff->current_cycle_advances, 2) }}</div>
         </div>
-        <div class="stat-card" style="background:#fef2f2; border-color:#fecaca;">
-            <div class="stat-icon" style="background:#fecaca; color:#991b1b;"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
-            <div class="stat-lbl" style="color:#991b1b;">Deductions</div>
-            <div class="stat-val" style="color:#b91c1c;">PKR {{ number_format($staff->current_cycle_deductions, 2) }}</div>
+        <div class="stat-card" style="background:#F5F3FF; border-color:#DDD6FE;">
+            <div class="stat-icon" style="background:#DDD6FE; color:#3B0764;"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+            <div class="stat-lbl" style="color:#3B0764;">Deductions</div>
+            <div class="stat-val" style="color:#4C1D95;">PKR {{ number_format($staff->current_cycle_deductions, 2) }}</div>
         </div>
         <div class="stat-card" style="background: var(--ybg);">
             <div class="stat-icon" style="background: var(--y1); color: var(--ydark);"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 8h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div>
             <div class="stat-lbl">Net Due Payable</div>
-            <div class="stat-val" style="color: #16a34a;">PKR {{ number_format($staff->net_salary_payable, 2) }}</div>
+            <div class="stat-val" style="color: #6D28D9;">PKR {{ number_format($staff->net_salary_payable, 2) }}</div>
         </div>
     </div>
 
@@ -370,20 +370,20 @@
                                 <td style="color:#71717a; font-size:0.8rem;">{{ $exp->created_at->format('M d, Y h:i A') }}</td>
                                 <td>
                                     @if(in_array($exp->category, ['full_salary', 'salary']))
-                                        <span style="background:#dcfce7; color:#166534; padding:2px 8px; border-radius:6px; font-weight:700; font-size:0.75rem;">Full Salary</span>
+                                        <span style="background:#EDE9FE; color:#4C1D95; padding:2px 8px; border-radius:6px; font-weight:700; font-size:0.75rem;">Full Salary</span>
                                     @elseif(in_array($exp->category, ['advance', 'salary_advance']))
-                                        <span style="background:#fef9c3; color:#854d0e; padding:2px 8px; border-radius:6px; font-weight:700; font-size:0.75rem;">Advance</span>
+                                        <span style="background:#EDE9FE; color:#4C1D95; padding:2px 8px; border-radius:6px; font-weight:700; font-size:0.75rem;">Advance</span>
                                     @elseif($exp->category === 'deduction')
-                                        <span style="background:#fee2e2; color:#991b1b; padding:2px 8px; border-radius:6px; font-weight:700; font-size:0.75rem;">Deduction</span>
+                                        <span style="background:#EDE9FE; color:#3B0764; padding:2px 8px; border-radius:6px; font-weight:700; font-size:0.75rem;">Deduction</span>
                                     @else
                                         <span style="background:#f1f5f9; color:#475569; padding:2px 8px; border-radius:6px; font-weight:700; font-size:0.75rem;">{{ ucfirst($exp->category ?? 'Expense') }}</span>
                                     @endif
                                 </td>
                                 <td style="font-size:0.82rem; color:#334155;">{{ $exp->description }}</td>
-                                <td style="font-weight:700; color:#16a34a;">PKR {{ number_format($exp->amount, 2) }}</td>
+                                <td style="font-weight:700; color:#6D28D9;">PKR {{ number_format($exp->amount, 2) }}</td>
                                 <td>
                                     @if($exp->deducted_from_drawer)
-                                        <span style="color:#0284c7; font-weight:600; font-size:0.75rem;">Yes</span>
+                                        <span style="color:#6D28D9; font-weight:600; font-size:0.75rem;">Yes</span>
                                     @else
                                         <span style="color:#94a3b8; font-size:0.75rem;">No</span>
                                     @endif
@@ -460,17 +460,17 @@
 <div class="modal-overlay" id="payModal">
     <div class="modal-box">
         @if($staff->days_since_last_payment < 30)
-            <div class="modal-icon" style="background: #fef2f2; color: #ef4444;">
+            <div class="modal-icon" style="background: #F5F3FF; color: #6D28D9;">
                 <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
             </div>
-            <div class="modal-title" style="color: #b91c1c;">Pay Early Salary Warning!</div>
+            <div class="modal-title" style="color: #4C1D95;">Pay Early Salary Warning!</div>
             <div class="modal-text">
                 <strong>WARNING:</strong> Only <strong>{{ $staff->days_since_last_payment }} days</strong> have passed since this employee's last salary payment (less than 30 days expected). <br><br>
                 Are you sure you want to pay <strong>{{ $staff->name }}</strong> early? This will reset their cycle to 0.
             </div>
             <div class="modal-footer">
                 <button class="btn-m btn-m-cancel" onclick="hidePayModal()">Cancel</button>
-                <button class="btn-m btn-m-confirm" style="background: #ef4444;" onclick="document.getElementById('pay-form').submit()">Yes, Pay Early</button>
+                <button class="btn-m btn-m-confirm" style="background: #6D28D9;" onclick="document.getElementById('pay-form').submit()">Yes, Pay Early</button>
             </div>
         @else
             <div class="modal-icon">

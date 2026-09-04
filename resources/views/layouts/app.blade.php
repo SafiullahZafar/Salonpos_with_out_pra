@@ -4,18 +4,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta name="theme-color" content="#111827">
+    <meta name="theme-color" content="#4C1D95">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Crimpers POS">
-    <title>{{ config('app.name', 'The Crimpers') }} — @yield('title', 'Dashboard')</title>
+    <meta name="apple-mobile-web-app-title" content="Veloura POS">
+    <title>{{ config('app.name', 'Veloura Salon') }} — @yield('title', 'Dashboard')</title>
 
     <link rel="manifest" href="{{ asset('manifest.json') }}">
     <link rel="apple-touch-icon" href="{{ asset('icons/icon-192.svg') }}">
     <link rel="icon" href="{{ asset('favicon.ico') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
@@ -23,20 +23,20 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
-            font-family: 'Outfit', sans-serif;
-            background: #f3f4f6;
+            font-family: 'Inter', sans-serif;
+            background: #ffffff;
             color: #111827;
         }
 
-        /* ─── Layout shell ─── */
+        /* â”€â”€â”€ Layout shell â”€â”€â”€ */
         .app-shell {
             display: flex;
             min-height: 100vh;
         }
 
-        /* ══════════════════════════════════════
+        /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
            SIDEBAR
-        ══════════════════════════════════════ */
+        â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
         .sidebar {
             width: 240px;
             min-height: 100vh;
@@ -80,7 +80,7 @@
         }
         .sidebar-backdrop.visible { display: block; }
 
-        /* ── Header ── */
+        /* â”€â”€ Header â”€â”€ */
         .sidebar-header {
             background: #F0F2F5;
             border-bottom: 1px solid #D8DBE0;
@@ -130,10 +130,10 @@
             letter-spacing: .02em;
         }
 
-        /* ── Nav ── */
+        /* â”€â”€ Nav â”€â”€ */
         .sidebar-nav { flex: 1; padding: 10px 12px 20px; }
 
-        /* ── Section labels ── */
+        /* â”€â”€ Section labels â”€â”€ */
         .sidebar-section-label {
             display: flex;
             align-items: center;
@@ -172,7 +172,7 @@
         .nav-section { overflow: hidden; max-height: 0; transition: max-height .3s cubic-bezier(.4,0,.2,1); }
         .nav-section.open { max-height: 800px; }
 
-        /* ── Nav links ── */
+        /* â”€â”€ Nav links â”€â”€ */
         .sidebar-link {
             display: flex;
             align-items: center;
@@ -190,7 +190,7 @@
             overflow: hidden;
         }
 
-        /* Hover — darker gray */
+        /* Hover â€” darker gray */
         .sidebar-link:hover {
             background: #DDE0E5;
             color: #18181b;
@@ -202,20 +202,20 @@
             background: transparent;
         }
 
-        /* Active — soft yellowish */
+        /* Active â€” soft yellowish */
         .sidebar-link.active {
-            background: #F5EFC0;
-            color: #7A5C00;
+            background: #EDE9FE;
+            color: #4C1D95;
             font-weight: 700;
             box-shadow: 0 1px 6px rgba(212,184,0,.15);
-            border: 1px solid #D4B800;
+            border: 1px solid #7C3AED;
         }
 
         .sidebar-link.active::before { display: none; }
 
         .sidebar-link.active .sidebar-icon {
             background: transparent;
-            color: #7A5C00;
+            color: #4C1D95;
         }
 
         /* Icon box */
@@ -237,9 +237,9 @@
         .sidebar.collapsed .sidebar-link { justify-content: center; padding: 9px 0; transform: none !important; }
         .sidebar.collapsed .sidebar-link .sidebar-icon { margin: 0 auto; }
 
-        /* ══════════════════════════════════════
+        /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
            TOP HEADER
-        ══════════════════════════════════════ */
+        â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
         .top-header {
             height: 56px;
             background: #F0F2F5;
@@ -312,7 +312,7 @@
             border-radius: 8px;
             font-size: 0.8rem;
             font-weight: 600;
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Inter', sans-serif;
             cursor: pointer;
             transition: background .15s, color .15s;
             border: none;
@@ -326,17 +326,17 @@
             color: #18181b;
         }
 
-        /* POS button — yellow accent, no border */
+        /* POS button â€” yellow accent, no border */
         .top-header-btn.pos-btn {
-            background: #F5EFC0;
-            color: #7A5C00;
+            background: #EDE9FE;
+            color: #4C1D95;
             font-weight: 700;
             border: none;
         }
 
         .top-header-btn.pos-btn:hover {
-            background: #EDE580;
-            color: #5A4200;
+            background: #DDD6FE;
+            color: #3B0764;
             transform: translateY(-1px);
         }
 
@@ -387,14 +387,14 @@
             flex-shrink: 0;
         }
 
-        /* ══════════════════════════════════════
+        /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
            MAIN CONTENT
-        ══════════════════════════════════════ */
+        â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
         .main-content {
             flex: 1;
             margin-left: 240px;
             min-height: 100vh;
-            background: #F4F5F7;
+            background: #ffffff;
             display: flex;
             flex-direction: column;
             transition: margin-left .25s cubic-bezier(.4,0,.2,1);
@@ -426,29 +426,29 @@
             margin-top: auto;
         }
 
-        /* ══════════════════════════════════════
+        /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
            SHARED COMPONENTS
-        ══════════════════════════════════════ */
+        â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
         .card {
             background: #ffffff;
-            border: 1px solid #dcfce7;
+            border: 1px solid #EDE9FE;
             border-radius: 16px;
-            box-shadow: 0 1px 6px rgba(34,197,94,.06);
+            box-shadow: 0 1px 6px rgba(124,58,237,.06);
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+            background: linear-gradient(135deg, #7C3AED 0%, #6D28D9 100%);
             color: #ffffff;
             border-radius: 10px;
             border: none;
             cursor: pointer;
             transition: all .25s;
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Inter', sans-serif;
         }
 
         .btn-primary:hover {
             transform: translateY(-1px);
-            box-shadow: 0 4px 14px rgba(34,197,94,.35);
+            box-shadow: 0 4px 14px rgba(124,58,237,.35);
         }
 
         .btn-primary:disabled {
@@ -457,44 +457,44 @@
             transform: none;
         }
 
-        .badge-green { background:#dcfce7; color:#15803d; border-radius:99px; padding:2px 10px; font-size:.72rem; font-weight:600; }
-        .badge-blue  { background:#dbeafe; color:#1d4ed8; border-radius:99px; padding:2px 10px; font-size:.72rem; font-weight:600; }
-        .badge-amber { background:#fef3c7; color:#92400e; border-radius:99px; padding:2px 10px; font-size:.72rem; font-weight:600; }
-        .badge-red   { background:#fee2e2; color:#b91c1c; border-radius:99px; padding:2px 10px; font-size:.72rem; font-weight:600; }
+        .badge-green { background:#EDE9FE; color:#4C1D95; border-radius:99px; padding:2px 10px; font-size:.72rem; font-weight:600; }
+        .badge-blue  { background:#EDE9FE; color:#4C1D95; border-radius:99px; padding:2px 10px; font-size:.72rem; font-weight:600; }
+        .badge-amber { background:#EDE9FE; color:#4C1D95; border-radius:99px; padding:2px 10px; font-size:.72rem; font-weight:600; }
+        .badge-red   { background:#EDE9FE; color:#4C1D95; border-radius:99px; padding:2px 10px; font-size:.72rem; font-weight:600; }
 
         .gradient-text {
-            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+            background: linear-gradient(135deg, #7C3AED 0%, #6D28D9 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        /* ── Tables ── */
+        /* â”€â”€ Tables â”€â”€ */
         table { width: 100%; border-collapse: collapse; }
-        table thead tr { background: #f0fdf4; }
-        table thead th { color: #15803d; font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; padding: 14px 20px; font-weight: 700; text-align: left; }
-        table tbody tr { border-bottom: 1px solid #f0fdf4; transition: background .15s; }
+        table thead tr { background: #F5F3FF; }
+        table thead th { color: #4C1D95; font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; padding: 14px 20px; font-weight: 700; text-align: left; }
+        table tbody tr { border-bottom: 1px solid #F5F3FF; transition: background .15s; }
         table tbody tr:hover { background: #f9fffe; }
         table tbody td { padding: 14px 20px; font-size: .875rem; }
 
-        /* ── Inputs ── */
+        /* â”€â”€ Inputs â”€â”€ */
         input[type=text], input[type=email], input[type=password],
         input[type=number], input[type=tel], select, textarea {
-            border: 1px solid #f0e8a0;
+            border: 1px solid #DDD6FE;
             border-radius: 10px;
             background: #f9fafb;
             color: #1e293b;
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Inter', sans-serif;
             transition: border-color .2s, box-shadow .2s;
         }
 
         input:focus, select:focus, textarea:focus {
             outline: none;
-            border-color: #F7DF79;
-            box-shadow: 0 0 0 3px rgba(247,223,121,.2);
+            border-color: #6D28D9;
+            box-shadow: 0 0 0 3px rgba(109,40,217,.2);
             background: #ffffff;
         }
 
-        /* ── Branch Switcher ── */
+        /* â”€â”€ Branch Switcher â”€â”€ */
         .branch-switcher-wrap {
             margin-right: 12px;
             position: relative;
@@ -518,7 +518,7 @@
         }
 
         .branch-select:hover {
-            border-color: #F7DF79;
+            border-color: #6D28D9;
             color: #1e293b;
             box-shadow: 0 4px 10px rgba(0,0,0,.06);
         }
@@ -530,12 +530,12 @@
             color: #94a3b8;
         }
 
-        /* ── Scrollbar ── */
+        /* â”€â”€ Scrollbar â”€â”€ */
         ::-webkit-scrollbar { width: 5px; height: 5px; }
         ::-webkit-scrollbar-track { background: #f5f6fa; }
         ::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 99px; }
         ::-webkit-scrollbar-thumb:hover { background: #cbd5e1; }
-        /* Hide POS button on mobile — not usable on small screens */
+        /* Hide POS button on mobile â€” not usable on small screens */
         @media(max-width:768px){
             #pos-header-btn { display: none !important; }
             .top-header-date { display: none; }
@@ -544,7 +544,7 @@
             .top-header-user { padding: 4px; border-radius: 50%; }
         }
 
-        /* ─── Mobile Restriction: hide navigation chrome ─── */
+        /* â”€â”€â”€ Mobile Restriction: hide navigation chrome â”€â”€â”€ */
         @media(max-width: 768px) {
             /* Hide sidebar entirely */
             #appSidebar,
@@ -564,6 +564,95 @@
                 display: none;
             }
         }
+    </style>
+    <style>
+        /* New application shell overrides legacy layout rules while page templates migrate. */
+        html,body,.app-shell { background:#FFFFFF !important; }
+        body { font-family:'Inter','Aptos',system-ui,sans-serif;background:#FFFFFF !important;color:var(--ink); }
+        .main-content,.main-body { background:#FFFFFF !important; }
+        .main-content { margin-left:260px !important;min-width:0;transition:margin-left .24s cubic-bezier(.4,0,.2,1); }
+        .main-content.sidebar-collapsed { margin-left:76px !important; }
+        .top-header { height:72px !important;padding:0 24px !important;background:#FFFFFF !important;border-bottom:1px solid var(--border) !important;box-shadow:none !important;backdrop-filter:none; }
+        .top-header-left { min-width:0; }
+        .top-header-page-title { color:var(--brand-800) !important;font-size:14px !important;font-weight:750 !important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis; }
+        .top-header-page-title::before { content:'Workspace';display:block;color:var(--muted);font-size:10px;font-weight:650;letter-spacing:.07em;text-transform:uppercase;line-height:1.1; }
+        .top-header-divider { background:var(--border) !important; }
+        .sidebar-toggle-btn { background:var(--brand-50) !important;color:var(--brand-700) !important;border:1px solid var(--brand-200) !important; }
+        .sidebar-toggle-btn:hover { background:var(--brand-100) !important;color:var(--brand-900) !important; }
+        .top-header-right { flex-shrink:0; }
+        .top-header-btn,.top-header-date,.top-header-user { background:#fff !important;color:var(--muted) !important;border:1px solid var(--border) !important; }
+        .top-header-btn:hover,.top-header-user:hover { color:var(--brand-800) !important;border-color:var(--brand-200) !important;background:var(--brand-50) !important; }
+        .top-header-btn.pos-btn { background:var(--brand-700) !important;color:#fff !important;border-color:var(--brand-700) !important;box-shadow:0 5px 14px rgba(109,40,217,.18); }
+        .top-header-btn.pos-btn:hover { background:var(--brand-600) !important;color:#fff !important; }
+        .top-header-avatar { background:var(--brand-800) !important; }
+        .branch-select { color:var(--brand-800) !important;background:#fff !important;border-color:var(--border) !important;box-shadow:none !important; }
+        .branch-select:hover,.branch-select:focus { border-color:var(--brand-400) !important; }
+        .main-body { width:100%;max-width:1600px;margin:0 auto;padding:24px !important; }
+        .sidebar-backdrop { background:rgba(23,19,31,.48) !important;backdrop-filter:blur(3px); }
+        @media(max-width:1023px){ .ui-command-search{display:none;} }
+        @media(max-width:768px){
+            #appSidebar,.sidebar { display:flex !important; }
+            #sidebarToggle { display:inline-flex !important; }
+            #sidebar-backdrop.visible { display:block !important; }
+            .main-content { margin-left:0 !important; }
+            .top-header { height:64px !important;padding:0 16px !important; }
+            .main-body { padding:16px !important; }
+            .top-header-date,.branch-switcher-wrap,.top-header-user { display:none !important; }
+            #pos-header-btn { display:none !important; }
+            .panel-link,.qa-pos-link { display:inline-flex !important; }
+        }
+
+        /* Refined command header */
+        .top-header{
+            height:82px !important;
+            display:grid !important;
+            grid-template-columns:minmax(210px,.75fr) minmax(260px,480px) minmax(max-content,1fr);
+            align-items:center;
+            gap:22px !important;
+            padding:0 26px !important;
+            background:#FFFFFF !important;
+            border-bottom:1px solid var(--border) !important;
+            box-shadow:0 7px 24px rgba(59,7,100,.045) !important;
+        }
+        .top-header-left{display:flex;align-items:center;gap:13px;min-width:0}
+        .sidebar-toggle-btn{width:42px !important;height:42px !important;border-radius:12px !important;background:#fff !important;border:1px solid var(--border) !important;box-shadow:0 4px 12px rgba(59,7,100,.06)}
+        .sidebar-toggle-btn:hover{background:var(--brand-50) !important;border-color:var(--brand-200) !important;transform:translateY(-1px)}
+        .top-header-divider{display:none}
+        .top-header-title-block{min-width:0}
+        .top-header-kicker{display:flex;align-items:center;gap:6px;margin-bottom:3px;color:var(--brand-600);font-size:10px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;white-space:nowrap}
+        .top-header-kicker::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--brand-600);box-shadow:0 0 0 4px var(--brand-100)}
+        .top-header-page-title{display:block;color:var(--brand-900) !important;font-size:17px !important;font-weight:780 !important;line-height:1.2;letter-spacing:-.025em !important}
+        .top-header-page-title::before{display:none !important}
+        .ui-command-search{width:100%;max-width:480px;justify-self:center}
+        .ui-command-search input{height:44px;min-height:44px;padding-left:43px;background:#F8F7FA;border-color:var(--border);border-radius:13px}
+        .ui-command-search input:focus{background:#fff;box-shadow:0 0 0 4px rgba(124,58,237,.09)}
+        .ui-command-search svg{left:15px;color:var(--brand-500)}
+        .ui-command-search kbd{right:11px;color:var(--brand-700);background:#fff;border-color:var(--brand-200)}
+        .top-header-right{justify-self:end;display:flex;align-items:center;gap:8px;min-width:0}
+        .branch-switcher-wrap{height:42px;display:flex;align-items:center;padding-left:11px;background:#fff;border:1px solid var(--border);border-radius:12px;transition:.2s}
+        .branch-switcher-wrap::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--brand-500);box-shadow:0 0 0 3px var(--brand-100);flex:0 0 auto}
+        .branch-switcher-wrap:hover,.branch-switcher-wrap:focus-within{border-color:var(--brand-300);background:var(--brand-50)}
+        .branch-switcher-wrap form{height:100%}
+        .branch-select{height:40px !important;max-width:180px;padding:0 30px 0 9px !important;background:transparent !important;border:0 !important;font-size:12px !important;font-weight:750 !important}
+        .branch-select:focus{box-shadow:none !important}
+        .branch-switcher-icon{right:10px !important;color:var(--brand-600) !important}
+        .top-header-date{height:42px;padding:0 12px !important;gap:8px !important;border-radius:12px !important;background:#fff !important}
+        .top-header-date svg{color:var(--brand-600)}
+        .date-copy{display:flex;flex-direction:column;line-height:1.12}
+        .date-copy strong{color:var(--ink);font-size:11px;font-weight:750}
+        .date-copy span{color:var(--muted);font-size:9px;font-weight:650;text-transform:uppercase;letter-spacing:.05em}
+        .top-header-btn.pos-btn{height:42px;padding:0 15px !important;border-radius:12px !important;gap:8px !important;white-space:nowrap}
+        .top-header-btn.pos-btn .pos-arrow{opacity:.72;transition:transform .18s}
+        .top-header-btn.pos-btn:hover .pos-arrow{transform:translateX(2px)}
+        .top-header-user{height:42px;padding:3px 10px 3px 4px !important;gap:8px !important;border-radius:12px !important;background:#fff !important}
+        .top-header-avatar{width:34px !important;height:34px !important;border-radius:10px !important;background:linear-gradient(145deg,var(--brand-900),var(--brand-600)) !important}
+        .top-header-user-copy{display:flex;min-width:0;max-width:115px;flex-direction:column;line-height:1.15}
+        .top-header-user-copy strong{overflow:hidden;color:var(--ink);font-size:11px;text-overflow:ellipsis;white-space:nowrap}
+        .top-header-user-copy small{margin-top:2px;color:var(--muted);font-size:9px;font-weight:650;text-transform:capitalize}
+        @media(max-width:1280px){.top-header{grid-template-columns:minmax(190px,.7fr) minmax(220px,390px) auto;gap:14px !important}.top-header-date{display:none !important}.branch-select{max-width:145px}}
+        @media(max-width:1050px){.top-header{grid-template-columns:1fr auto}.ui-command-search{display:none}.top-header-user{display:none !important}}
+        @media(max-width:768px){.top-header{height:70px !important;grid-template-columns:1fr auto;padding:0 14px !important;gap:10px !important}.sidebar-toggle-btn{width:40px !important;height:40px !important}.top-header-kicker{display:none}.top-header-page-title{font-size:15px !important}.branch-switcher-wrap,.top-header-date,.top-header-user{display:none !important}#pos-header-btn{display:inline-flex !important;width:42px;padding:0 !important;justify-content:center}#pos-header-btn .pos-label,#pos-header-btn .pos-arrow{display:none}.main-body{padding-top:18px !important}}
+
     </style>
 </head>
 <body>
@@ -586,7 +675,16 @@
                     </svg>
                 </button>
                 <div class="top-header-divider"></div>
-                <span class="top-header-page-title">@yield('title', 'Dashboard')</span>
+                <div class="top-header-title-block">
+                    <span class="top-header-kicker">Veloura workspace</span>
+                    <span class="top-header-page-title">@yield('title', 'Dashboard')</span>
+                </div>
+            </div>
+
+            <div class="ui-command-search" role="search">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+                <input id="globalCommandSearch" type="search" autocomplete="off" placeholder="Find a page or action..." aria-label="Find a page or action">
+                <kbd>Ctrl K</kbd>
             </div>
 
             <div class="top-header-right">
@@ -621,7 +719,7 @@
                 {{-- Date chip --}}
                 <div class="top-header-date">
                     <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                    {{ now()->format('M j, Y') }}
+                    <span class="date-copy"><strong>{{ now()->format('M j, Y') }}</strong><span>{{ now()->format('l') }}</span></span>
                 </div>
 
                 {{-- POS button: hidden on mobile (POS not suitable for small screens) --}}
@@ -629,13 +727,14 @@
                     <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
                         <path d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
                     </svg>
-                    POS Terminal
+                    <span class="pos-label">Open POS</span>
+                    <svg class="pos-arrow" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></svg>
                 </a>
 
                 @auth
                 <div class="top-header-user">
                     <div class="top-header-avatar">{{ strtoupper(substr(auth()->user()->name, 0, 1)) }}</div>
-                    <span>{{ auth()->user()->name }}</span>
+                    <span class="top-header-user-copy"><strong>{{ auth()->user()->name }}</strong><small>{{ auth()->user()->role ?? 'Team member' }}</small></span>
                 </div>
                 @endauth
             </div>
@@ -643,24 +742,105 @@
 
         <div class="main-body">
             @if($errors->any())
-                <div style="background: #fee2e2; border: 1px solid #ef4444; color: #b91c1c; padding: 12px 16px; border-radius: 12px; margin-bottom: 20px; font-weight: 600; display: flex; align-items: center; gap: 10px;">
+                <div class="ui-alert" role="alert">
                     <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
                     <span>{{ $errors->first() }}</span>
                 </div>
             @endif
             
             @if(session('success'))
-                <div style="background: #dcfce7; border: 1px solid #22c55e; color: #15803d; padding: 12px 16px; border-radius: 12px; margin-bottom: 20px; font-weight: 600; display: flex; align-items: center; gap: 10px;">
+                <div class="ui-alert" role="status">
                     <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                     <span>{{ session('success') }}</span>
                 </div>
             @endif
 
             @if(session('error'))
-                <div style="background: #fee2e2; border: 1px solid #ef4444; color: #b91c1c; padding: 12px 16px; border-radius: 12px; margin-bottom: 20px; font-weight: 600; display: flex; align-items: center; gap: 10px;">
+                <div class="ui-alert" role="alert">
                     <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
                     <span>{{ session('error') }}</span>
                 </div>
+            @endif
+
+            @php
+                $workspaceLabel = null;
+                $workspaceTabs = [];
+
+                if (request()->routeIs('appointments.*')) {
+                    $workspaceLabel = 'Appointments';
+                    $workspaceTabs = [
+                        ['label' => 'List', 'href' => route('appointments.index'), 'active' => request()->routeIs('appointments.index')],
+                        ['label' => 'Calendar', 'href' => route('appointments.calendar'), 'active' => request()->routeIs('appointments.calendar')],
+                        ['label' => 'New appointment', 'href' => route('appointments.create'), 'active' => request()->routeIs('appointments.create')],
+                    ];
+                } elseif (request()->routeIs('customers.*', 'suppliers.*')) {
+                    $workspaceLabel = 'Clients & partners';
+                    if (auth()->user()->hasPermission('customers', 'view')) {
+                        $workspaceTabs[] = ['label' => 'Clients', 'href' => route('customers.index'), 'active' => request()->routeIs('customers.*')];
+                    }
+                    if (auth()->user()->hasPermission('suppliers', 'view')) {
+                        $workspaceTabs[] = ['label' => 'Suppliers', 'href' => route('suppliers.index'), 'active' => request()->routeIs('suppliers.*')];
+                    }
+                } elseif (request()->routeIs('products.*', 'inventory.*', 'services.*', 'packages.*', 'purchases.*')) {
+                    $workspaceLabel = 'Catalog & stock';
+                    if (auth()->user()->hasPermission('inventory', 'view')) {
+                        $workspaceTabs = [
+                            ['label' => 'Products', 'href' => route('products.index'), 'active' => request()->routeIs('products.*')],
+                            ['label' => 'Inventory', 'href' => route('inventory.dashboard'), 'active' => request()->routeIs('inventory.*')],
+                            ['label' => 'Services', 'href' => route('services.index'), 'active' => request()->routeIs('services.*')],
+                            ['label' => 'Packages', 'href' => route('packages.index'), 'active' => request()->routeIs('packages.*')],
+                        ];
+                    }
+                    if (auth()->user()->hasPermission('purchases', 'view')) {
+                        $workspaceTabs[] = ['label' => 'Purchasing', 'href' => route('purchases.index'), 'active' => request()->routeIs('purchases.*')];
+                    }
+                } elseif (request()->routeIs('invoices.*', 'reconciliation.*', 'expenses.*')) {
+                    $workspaceLabel = 'History & finance';
+                    $workspaceTabs = [
+                        ['label' => 'Sales', 'href' => route('invoices.index', ['tab' => 'sales']), 'active' => request()->routeIs('invoices.*') && request('tab', 'sales') === 'sales'],
+                        ['label' => 'Purchases', 'href' => route('invoices.index', ['tab' => 'purchases']), 'active' => request()->routeIs('invoices.index') && request('tab') === 'purchases'],
+                        ['label' => 'Reconciliation', 'href' => route('invoices.index', ['tab' => 'reconciliation']), 'active' => request()->routeIs('reconciliation.*') || (request()->routeIs('invoices.index') && request('tab') === 'reconciliation')],
+                        ['label' => 'Expenses', 'href' => route('invoices.index', ['tab' => 'expenses']), 'active' => request()->routeIs('expenses.*') || (request()->routeIs('invoices.index') && request('tab') === 'expenses')],
+                    ];
+                } elseif (request()->routeIs('staff.*', 'staff-roles.*', 'business-settings.*')) {
+                    $workspaceLabel = 'People';
+                    if (auth()->user()->hasPermission('staff', 'view')) {
+                        $workspaceTabs = [
+                            ['label' => 'Directory', 'href' => route('staff.index'), 'active' => request()->routeIs('staff.index', 'staff.show', 'staff.create', 'staff.edit')],
+                            ['label' => 'Attendance', 'href' => route('staff.attendance-all'), 'active' => request()->routeIs('staff.attendance*')],
+                            ['label' => 'HRMS', 'href' => route('staff.hrms'), 'active' => request()->routeIs('staff.hrms*')],
+                            ['label' => 'Salary', 'href' => route('staff.salary-dashboard'), 'active' => request()->routeIs('staff.salary*')],
+                        ];
+                    }
+                    if (auth()->user()->hasPermission('business', 'view')) {
+                        $workspaceTabs[] = ['label' => 'Roles & settings', 'href' => route('staff-roles.index'), 'active' => request()->routeIs('staff-roles.*', 'business-settings.*')];
+                    }
+                } elseif (request()->routeIs('reports.*')) {
+                    $workspaceLabel = 'Reports';
+                    $workspaceTabs = [
+                        ['label' => 'Overview', 'href' => route('reports.index'), 'active' => request()->routeIs('reports.index')],
+                        ['label' => 'POS', 'href' => route('reports.pos'), 'active' => request()->routeIs('reports.pos')],
+                        ['label' => 'Staff', 'href' => route('reports.staff'), 'active' => request()->routeIs('reports.staff')],
+                        ['label' => 'Attendance', 'href' => route('reports.attendance'), 'active' => request()->routeIs('reports.attendance')],
+                        ['label' => 'Salary', 'href' => route('reports.salary'), 'active' => request()->routeIs('reports.salary')],
+                        ['label' => 'Customer purchases', 'href' => route('reports.customer-purchases'), 'active' => request()->routeIs('reports.customer-purchases')],
+                        ['label' => 'Employee clients', 'href' => route('reports.employee-customers'), 'active' => request()->routeIs('reports.employee-customers')],
+                    ];
+                } elseif (request()->routeIs('promotions.*', 'whatsapp.*')) {
+                    $workspaceLabel = 'Marketing';
+                    $workspaceTabs = [
+                        ['label' => 'Discount rules', 'href' => route('promotions.discount-rules'), 'active' => request()->routeIs('promotions.discount-rules*')],
+                        ['label' => 'Coupons', 'href' => route('promotions.coupons'), 'active' => request()->routeIs('promotions.coupons*')],
+                        ['label' => 'Gift cards', 'href' => route('promotions.gift-cards'), 'active' => request()->routeIs('promotions.gift-cards*')],
+                        ['label' => 'Membership alerts', 'href' => route('promotions.membership-alerts'), 'active' => request()->routeIs('promotions.membership-alerts*')],
+                        ['label' => 'Package sessions', 'href' => route('promotions.package-sessions'), 'active' => request()->routeIs('promotions.package-sessions*')],
+                        ['label' => 'WhatsApp', 'href' => route('whatsapp.index'), 'active' => request()->routeIs('whatsapp.*')],
+                    ];
+                }
+            @endphp
+
+            @if($workspaceLabel && count($workspaceTabs))
+                <x-ui.workspace-tabs :label="$workspaceLabel" :tabs="$workspaceTabs" />
             @endif
 
             @yield('content')
@@ -677,7 +857,7 @@
     const backdrop   = document.getElementById('sidebar-backdrop');
     const isMobile   = () => window.innerWidth <= 768;
 
-    // ── Mobile drawer toggle ──────────────────────────────────────
+    // â”€â”€ Mobile drawer toggle â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     function openMobileDrawer() {
         sidebar.classList.add('mobile-open');
         backdrop.classList.add('visible');
@@ -692,8 +872,8 @@
 
     backdrop.addEventListener('click', closeMobileDrawer);
 
-    // ── Sidebar collapse (desktop) ──────────────────────────────
-    const COLLAPSED_KEY = 'sm_sidebar_collapsed';
+    // â”€â”€ Sidebar collapse (desktop) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    const COLLAPSED_KEY = 'sm_sidebar_collapsed_v2';
 
     function applySidebarState(collapsed, animate) {
         if (!animate) {
@@ -711,7 +891,8 @@
 
     // Restore desktop state on load (no animation)
     if (!isMobile()) {
-        const isCollapsed = localStorage.getItem(COLLAPSED_KEY) === '1';
+        const storedState = localStorage.getItem(COLLAPSED_KEY);
+        const isCollapsed = storedState === null ? true : storedState === '1';
         applySidebarState(isCollapsed, false);
     }
 
@@ -732,7 +913,7 @@
     });
 
     // Close mobile drawer when a nav link is clicked
-    sidebar.querySelectorAll('.sidebar-link').forEach(function(link) {
+    sidebar.querySelectorAll('a.sidebar-link, .sub-link').forEach(function(link) {
         link.addEventListener('click', function() {
             if (isMobile()) closeMobileDrawer();
         });
@@ -742,12 +923,13 @@
     window.addEventListener('resize', function() {
         if (!isMobile()) {
             closeMobileDrawer();
-            const isCollapsed = localStorage.getItem(COLLAPSED_KEY) === '1';
+            const storedState = localStorage.getItem(COLLAPSED_KEY);
+            const isCollapsed = storedState === null ? true : storedState === '1';
             applySidebarState(isCollapsed, false);
         }
     });
 
-    // ── Section collapse (accordion) ──────────────────────────────
+    // â”€â”€ Section collapse (accordion) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     const SECTIONS_KEY = 'sm_sections_open';
 
     function getOpenSections() {
@@ -759,6 +941,28 @@
 
     function saveOpenSections(map) {
         localStorage.setItem(SECTIONS_KEY, JSON.stringify(map));
+    }
+
+    // Lightweight command search: focuses with Ctrl/Cmd+K and opens the best
+    // existing permitted destination on Enter. No routes are duplicated here.
+    const commandSearch = document.getElementById('globalCommandSearch');
+    if (commandSearch) {
+        document.addEventListener('keydown', function (event) {
+            if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k') {
+                event.preventDefault();
+                commandSearch.focus();
+                commandSearch.select();
+            }
+        });
+        commandSearch.addEventListener('keydown', function (event) {
+            if (event.key !== 'Enter') return;
+            const query = commandSearch.value.trim().toLowerCase();
+            if (!query) return;
+            const match = Array.from(sidebar.querySelectorAll('a.sidebar-link, a.sub-link')).find(function (link) {
+                return link.textContent.trim().toLowerCase().includes(query);
+            });
+            if (match) window.location.href = match.href;
+        });
     }
 
     const openMap = getOpenSections();
@@ -774,7 +978,7 @@
         }
     });
 
-    // Apply initial state — no transition
+    // Apply initial state â€” no transition
     allLabels.forEach(function(label) {
         const section = label.dataset.section;
         const body = document.getElementById('section-' + section);
@@ -795,7 +999,7 @@
         body.style.transition = '';
     });
 
-    // Click handler — accordion: close others, open clicked
+    // Click handler â€” accordion: close others, open clicked
     allLabels.forEach(function(label) {
         const section = label.dataset.section;
         const body = document.getElementById('section-' + section);
@@ -832,29 +1036,29 @@
 })();
 </script>
 
-<div id="global-appointment-alert" style="display:none; position:fixed; top:20px; right:24px; background:#fff; border-left:4px solid #F7DF79; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.15); padding:16px 20px; z-index:9999; max-width:350px; animation: slide-in-right 0.3s ease-out;">
+<div id="global-appointment-alert" style="display:none; position:fixed; top:20px; right:24px; background:#fff; border-left:4px solid #6D28D9; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.15); padding:16px 20px; z-index:9999; max-width:350px; animation: slide-in-right 0.3s ease-out;">
     <div style="display:flex; justify-content:space-between; align-items:flex-start;">
         <div>
-            <div style="font-size:0.8rem; font-weight:700; color:#c9a800; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:4px;">Client Arriving Now</div>
+            <div style="font-size:0.8rem; font-weight:700; color:#6D28D9; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:4px;">Client Arriving Now</div>
             <div id="ga-client-name" style="font-size:1.1rem; font-weight:700; color:#1e293b; margin-bottom:2px;">Name</div>
-            <div id="ga-client-details" style="font-size:0.8rem; color:#64748b; margin-bottom:4px;">Service · Staff</div>
-            <div id="ga-client-time" style="font-size:0.85rem; font-weight:600; color:#c9a800; margin-bottom:12px;">Time</div>
+            <div id="ga-client-details" style="font-size:0.8rem; color:#64748b; margin-bottom:4px;">Service Â· Staff</div>
+            <div id="ga-client-time" style="font-size:0.85rem; font-weight:600; color:#6D28D9; margin-bottom:12px;">Time</div>
         </div>
         <button onclick="dismissGlobalAlert()" style="background:none; border:none; cursor:pointer; color:#94a3b8; padding:2px;"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
     </div>
     <div style="display:flex; gap:8px;">
-        <button id="ga-btn-arrived" style="flex:1; padding:8px 0; border:none; border-radius:8px; background:#dcfce7; color:#166534; font-weight:600; font-size:0.8rem; cursor:pointer; font-family:'Outfit',sans-serif; transition:.2s;">Arrived</button>
-        <button id="ga-btn-late" style="flex:1; padding:8px 0; border:none; border-radius:8px; background:#fef9c3; color:#854d0e; font-weight:600; font-size:0.8rem; cursor:pointer; font-family:'Outfit',sans-serif; transition:.2s;">Late</button>
-        <button id="ga-btn-discard" style="flex:1; padding:8px 0; border:none; border-radius:8px; background:#fee2e2; color:#991b1b; font-weight:600; font-size:0.8rem; cursor:pointer; font-family:'Outfit',sans-serif; transition:.2s;">No Show</button>
+        <button id="ga-btn-arrived" style="flex:1; padding:8px 0; border:none; border-radius:8px; background:#EDE9FE; color:#4C1D95; font-weight:600; font-size:0.8rem; cursor:pointer; font-family:'Inter',sans-serif; transition:.2s;">Arrived</button>
+        <button id="ga-btn-late" style="flex:1; padding:8px 0; border:none; border-radius:8px; background:#EDE9FE; color:#4C1D95; font-weight:600; font-size:0.8rem; cursor:pointer; font-family:'Inter',sans-serif; transition:.2s;">Late</button>
+        <button id="ga-btn-discard" style="flex:1; padding:8px 0; border:none; border-radius:8px; background:#EDE9FE; color:#3B0764; font-weight:600; font-size:0.8rem; cursor:pointer; font-family:'Inter',sans-serif; transition:.2s;">No Show</button>
     </div>
 </div>
 
 <style>
 @keyframes slide-in-right { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
-@keyframes glow-arriving { 0% { box-shadow: 0 0 0 0 rgba(247, 223, 121, 0.7); } 70% { box-shadow: 0 0 0 10px rgba(247, 223, 121, 0); } 100% { box-shadow: 0 0 0 0 rgba(247, 223, 121, 0); } }
-@keyframes glow-discarded { 0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.5); } 70% { box-shadow: 0 0 0 12px rgba(239, 68, 68, 0); } 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); } }
-.row-arriving { animation: glow-arriving 2s infinite; background:#fffdf0 !important; }
-.row-discarded { animation: glow-discarded 2s infinite; background:#fef2f2 !important; }
+@keyframes glow-arriving { 0% { box-shadow: 0 0 0 0 rgba(109,40,217, 0.7); } 70% { box-shadow: 0 0 0 10px rgba(109,40,217, 0); } 100% { box-shadow: 0 0 0 0 rgba(109,40,217, 0); } }
+@keyframes glow-discarded { 0% { box-shadow: 0 0 0 0 rgba(109,40,217, 0.5); } 70% { box-shadow: 0 0 0 12px rgba(109,40,217, 0); } 100% { box-shadow: 0 0 0 0 rgba(109,40,217, 0); } }
+.row-arriving { animation: glow-arriving 2s infinite; background:#F5F3FF !important; }
+.row-discarded { animation: glow-discarded 2s infinite; background:#F5F3FF !important; }
 </style>
 
 <script>
@@ -913,7 +1117,7 @@ function pollArrivingAppointments() {
             
             activeAlertAppointmentId = appt.id;
             document.getElementById('ga-client-name').innerText = appt.customer_name;
-            document.getElementById('ga-client-details').innerText = `${appt.service} · ${appt.staff}`;
+            document.getElementById('ga-client-details').innerText = `${appt.service} Â· ${appt.staff}`;
             document.getElementById('ga-client-time').innerText = appt.start_time;
             document.getElementById('global-appointment-alert').style.display = 'block';
 

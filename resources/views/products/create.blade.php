@@ -3,11 +3,11 @@
 @section('content')
     <style>
         :root {
-            --y1: #F7DF79;
-            --y2: #FBEFBC;
-            --yd: #c9a800;
-            --ydark: #a07800;
-            --ybg: #fffdf0;
+            --y1: #6D28D9;
+            --y2: #EDE9FE;
+            --yd: #6D28D9;
+            --ydark: #4C1D95;
+            --ybg: #F5F3FF;
         }
 
         .pg-header {
@@ -53,7 +53,7 @@
 
         .form-card {
             background: #fff;
-            border: 1.5px solid #f0e8a0;
+            border: 1.5px solid #DDD6FE;
             border-radius: 16px;
             overflow: hidden;
             box-shadow: 0 1px 6px rgba(0, 0, 0, .04);
@@ -126,10 +126,10 @@
         .f-textarea {
             width: 100%;
             padding: 9px 12px;
-            border: 1.5px solid #f0e8a0;
+            border: 1.5px solid #DDD6FE;
             border-radius: 9px;
             font-size: .875rem;
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Inter', sans-serif;
             color: #18181b;
             background: var(--ybg);
             outline: none;
@@ -142,7 +142,7 @@
         .f-textarea:focus {
             border-color: var(--y1);
             background: #fff;
-            box-shadow: 0 0 0 3px rgba(247, 223, 121, .15);
+            box-shadow: 0 0 0 3px rgba(109,40,217, .15);
         }
 
         .f-textarea {
@@ -187,14 +187,14 @@
             font-weight: 600;
             cursor: pointer;
             text-decoration: none;
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Inter', sans-serif;
             transition: .2s;
         }
 
         .btn-cancel:hover {
-            border-color: #fca5a5;
-            color: #dc2626;
-            background: #fef2f2;
+            border-color: #A78BFA;
+            color: #4C1D95;
+            background: #F5F3FF;
         }
 
         .btn-save {
@@ -206,14 +206,14 @@
             font-size: .875rem;
             font-weight: 800;
             cursor: pointer;
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Inter', sans-serif;
             transition: .2s;
-            box-shadow: 0 3px 10px rgba(247, 223, 121, .3);
+            box-shadow: 0 3px 10px rgba(109,40,217, .3);
         }
 
         .btn-save:hover {
             transform: translateY(-1px);
-            box-shadow: 0 5px 14px rgba(247, 223, 121, .4);
+            box-shadow: 0 5px 14px rgba(109,40,217, .4);
         }
 
         /* Quick Add Category Modal */
@@ -231,7 +231,7 @@
 
         .modal-box {
             background: #fff;
-            border: 1.5px solid #f0e8a0;
+            border: 1.5px solid #DDD6FE;
             border-radius: 18px;
             width: 100%;
             max-width: 360px;
@@ -326,8 +326,8 @@
         }
 
         .ti-error {
-            background: #fee2e2;
-            color: #dc2626;
+            background: #EDE9FE;
+            color: #4C1D95;
         }
 
         .toast-msg {
@@ -338,12 +338,12 @@
 
         /* Delete Modal Specifics */
         .modal-box.delete-confirm {
-            border-color: #fee2e2;
+            border-color: #EDE9FE;
             max-width: 400px;
         }
 
         .btn-m-delete {
-            background: #ef4444;
+            background: #6D28D9;
             color: #fff;
         }
     </style>
@@ -364,8 +364,8 @@
         @csrf
 
         @if($errors->any())
-            <div style="background:#fef2f2;border:1px solid #fecaca;border-radius:12px;padding:14px;margin-bottom:16px;">
-                <ul style="margin:0;padding-left:20px;color:#ef4444;font-size:0.85rem;">
+            <div style="background:#F5F3FF;border:1px solid #DDD6FE;border-radius:12px;padding:14px;margin-bottom:16px;">
+                <ul style="margin:0;padding-left:20px;color:#6D28D9;font-size:0.85rem;">
                     @foreach($errors->all() as $error)
                         <li>{{ $error }}</li>
                     @endforeach
@@ -385,7 +385,7 @@
                 </div>
                 <div class="f-grid-4">
                     <div>
-                        <label class="f-label">Product Name <span style="color:#ef4444;">*</span></label>
+                        <label class="f-label">Product Name <span style="color:#6D28D9;">*</span></label>
                         <input type="text" name="name" required class="f-input" placeholder="e.g. Shampoo 500ml">
                     </div>
                     <div>
@@ -393,7 +393,7 @@
                         <input type="text" name="sku" class="f-input" placeholder="Auto-generated if blank">
                     </div>
                     <div>
-                        <label class="f-label">Product Type <span style="color:#ef4444;">*</span></label>
+                        <label class="f-label">Product Type <span style="color:#6D28D9;">*</span></label>
                         <select name="product_type" id="product_type" required class="f-select">
                             <option value="retail">For Sale</option>
                             <option value="service_supply">Shop Use</option>
@@ -407,7 +407,7 @@
                                     style="font-size:.65rem;font-weight:800;color:var(--ydark);background:none;border:none;cursor:pointer;padding:0;">+
                                     Add New</button>
                                 <button type="button" id="delete_cat_btn" onclick="deleteSelectedCat()"
-                                    style="font-size:.65rem;font-weight:800;color:#ef4444;background:none;border:none;cursor:pointer;padding:0;">-
+                                    style="font-size:.65rem;font-weight:800;color:#6D28D9;background:none;border:none;cursor:pointer;padding:0;">-
                                     Delete Selected</button>
                             </div>
                         </div>
@@ -450,7 +450,7 @@
                             placeholder="Purchase cost">
                     </div>
                     <div>
-                        <label class="f-label">Current Stock <span style="color:#ef4444;">*</span></label>
+                        <label class="f-label">Current Stock <span style="color:#6D28D9;">*</span></label>
                         <input type="number" name="current_stock" min="0" step="1" value="0" required class="f-input">
                     </div>
                 </div>
@@ -482,8 +482,6 @@
             </div>
         </div>
     </form>
-    </div>
-    </form>
 
     {{-- Quick Add Modal --}}
     <div class="modal-overlay" id="catModal">
@@ -504,7 +502,7 @@
     {{-- Delete Confirmation Modal --}}
     <div class="modal-overlay" id="delCatModal">
         <div class="modal-box delete-confirm">
-            <div class="modal-title" style="color:#ef4444;">Delete Category?</div>
+            <div class="modal-title" style="color:#6D28D9;">Delete Category?</div>
             <div class="modal-sub" id="del_msg_text">Are you sure you want to delete this category? All products in it will
                 be affected.</div>
             <div class="m-footer">

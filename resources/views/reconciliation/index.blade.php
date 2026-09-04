@@ -3,46 +3,47 @@
 
 @section('content')
 <style>
-:root{--y1:#F7DF79;--y2:#FBEFBC;--yd:#c9a800;--yk:#a07800;--ybg:#fffdf0;}
+:root{--y1:#6D28D9;--y2:#EDE9FE;--yd:#6D28D9;--yk:#4C1D95;--ybg:#F5F3FF;}
 
 /* ── Hero ── */
-.recon-hero{background:linear-gradient(135deg,#1a1a1a,#2d2d2d);border-radius:20px;padding:26px 30px;margin-bottom:22px;display:flex;align-items:center;justify-content:space-between;gap:16px;position:relative;overflow:hidden;}
-.recon-hero::before{content:'';position:absolute;top:-50px;right:-50px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(247,223,121,.15) 0%,transparent 70%);}
-.recon-hero-title{font-size:1.5rem;font-weight:800;color:#fff;margin:0 0 5px;letter-spacing:-.02em;}
-.recon-hero-sub{font-size:.85rem;color:#a1a1aa;margin:0;}
-.recon-hero-date{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:12px 18px;text-align:right;flex-shrink:0;}
+.recon-hero{background:#fff;border:1px solid var(--border);border-radius:14px;padding:20px 24px;margin-bottom:22px;display:flex;align-items:center;justify-content:space-between;gap:16px;position:relative;overflow:hidden;box-shadow:var(--shadow-card);}
+.recon-hero::before{content:'';position:absolute;top:-50px;right:-50px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(109,40,217,.15) 0%,transparent 70%);}
+.recon-hero-title{font-size:1.5rem;font-weight:800;color:var(--brand-800);margin:0 0 5px;letter-spacing:-.02em;}
+.recon-hero-sub{font-size:.85rem;color:var(--muted);margin:0;}
+.recon-hero-date{background:var(--brand-50);border:1px solid var(--brand-200);border-radius:12px;padding:12px 18px;text-align:right;flex-shrink:0;}
 .recon-hero-date-label{font-size:.65rem;font-weight:700;color:#a1a1aa;text-transform:uppercase;letter-spacing:.08em;}
 .recon-hero-date-val{font-size:1rem;font-weight:800;color:var(--y1);margin-top:2px;}
 
 /* ── Stat Cards ── */
 .stat-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:22px;}
-.stat-card{background:#fff;border:1.5px solid #e9e0c0;border-radius:16px;padding:20px;box-shadow:0 2px 10px rgba(199,168,0,.07);display:flex;align-items:center;gap:14px;}
+.stat-card{background:#fff;border:1.5px solid #E7E1EC;border-radius:16px;padding:20px;box-shadow:0 2px 10px rgba(76,29,149,.07);display:flex;align-items:center;gap:14px;}
 .stat-icon{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .stat-icon-yellow{background:var(--y2);color:var(--yk);}
-.stat-icon-green{background:#dcfce7;color:#16a34a;}
+.stat-icon-green{background:#EDE9FE;color:#6D28D9;}
 .stat-label{font-size:.72rem;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px;}
 .stat-val{font-size:1.3rem;font-weight:800;color:#0f172a;}
-.stat-val.green{color:#16a34a;}
+.stat-val.green{color:#6D28D9;}
 
 /* ── Main Grid ── */
-.recon-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
-@media(max-width:900px){.recon-grid{grid-template-columns:1fr;}}
+.recon-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;align-items:start;}
+@media(max-width:1180px){.recon-grid{grid-template-columns:1fr 1fr}.status-banner{grid-column:1/-1}}
+@media(max-width:760px){.recon-grid{grid-template-columns:1fr}.status-banner{grid-column:auto}}
 
 /* ── Panel ── */
-.panel{background:#fff;border:1.5px solid #e9e0c0;border-radius:18px;overflow:hidden;box-shadow:0 2px 10px rgba(199,168,0,.07);}
-.panel-head{padding:16px 22px;background:var(--ybg);border-bottom:1.5px solid #f0e8b0;display:flex;align-items:center;gap:10px;}
+.panel{background:#fff;border:1.5px solid #E7E1EC;border-radius:18px;overflow:hidden;box-shadow:0 2px 10px rgba(76,29,149,.07);}
+.panel-head{padding:16px 22px;background:var(--ybg);border-bottom:1.5px solid #DDD6FE;display:flex;align-items:center;gap:10px;}
 .panel-head-icon{width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,var(--y1),var(--yd));display:flex;align-items:center;justify-content:center;color:#18181b;flex-shrink:0;}
 .panel-head h3{font-size:.9rem;font-weight:700;color:#18181b;margin:0;}
 .panel-body{padding:22px;}
 
 /* ── Figures ── */
-.fig-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid #faf6e8;font-size:.875rem;}
+.fig-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid #F8F7FA;font-size:.875rem;}
 .fig-row:last-child{border-bottom:none;}
 .fig-label{display:flex;align-items:center;gap:8px;color:#64748b;}
 .fig-dot{width:8px;height:8px;border-radius:50%;background:var(--yd);flex-shrink:0;}
-.fig-dot-blue{background:#3b82f6;}
+.fig-dot-blue{background:#7C3AED;}
 .fig-val{font-weight:700;color:#1e293b;}
-.fig-total{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;background:var(--ybg);border-radius:12px;margin-top:14px;border:1.5px solid #f0e8b0;}
+.fig-total{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;background:var(--ybg);border-radius:12px;margin-top:14px;border:1.5px solid #DDD6FE;}
 .fig-total-label{font-size:.82rem;font-weight:700;color:var(--yk);}
 .fig-total-val{font-size:1.1rem;font-weight:800;color:var(--yk);}
 
@@ -51,30 +52,30 @@
 .form-label{font-size:.82rem;font-weight:700;color:#334155;margin-bottom:7px;display:block;}
 .form-label span{font-weight:400;color:#94a3b8;}
 .input-wrap{display:flex;align-items:center;border:1.5px solid #e2e8f0;border-radius:11px;overflow:hidden;background:#fff;transition:.2s;}
-.input-wrap:focus-within{border-color:var(--yd);box-shadow:0 0 0 3px rgba(199,168,0,.12);}
-.input-prefix{padding:0 14px;font-size:.85rem;font-weight:700;color:var(--yk);background:var(--ybg);border-right:1.5px solid #f0e8b0;height:44px;display:flex;align-items:center;flex-shrink:0;}
-.form-input{flex:1;padding:11px 14px;border:none;outline:none;font-family:'Outfit',sans-serif;font-size:.95rem;color:#18181b;background:transparent;}
+.input-wrap:focus-within{border-color:var(--yd);box-shadow:0 0 0 3px rgba(76,29,149,.12);}
+.input-prefix{padding:0 14px;font-size:.85rem;font-weight:700;color:var(--yk);background:var(--ybg);border-right:1.5px solid #DDD6FE;height:44px;display:flex;align-items:center;flex-shrink:0;}
+.form-input{flex:1;padding:11px 14px;border:none;outline:none;font-family:'Inter',sans-serif;font-size:.95rem;color:#18181b;background:transparent;}
 .form-input.big{font-size:1.3rem;font-weight:800;color:#0f172a;}
-.btn-submit{width:100%;padding:13px;background:linear-gradient(135deg,var(--y1),var(--yd));border:none;border-radius:11px;color:#18181b;font-weight:700;font-size:.95rem;cursor:pointer;font-family:'Outfit',sans-serif;box-shadow:0 3px 12px rgba(199,168,0,.25);transition:.2s;}
-.btn-submit:hover{transform:translateY(-1px);box-shadow:0 5px 18px rgba(199,168,0,.35);}
+.btn-submit{width:100%;padding:13px;background:linear-gradient(135deg,var(--y1),var(--yd));border:none;border-radius:11px;color:#18181b;font-weight:700;font-size:.95rem;cursor:pointer;font-family:'Inter',sans-serif;box-shadow:0 3px 12px rgba(76,29,149,.25);transition:.2s;}
+.btn-submit:hover{transform:translateY(-1px);box-shadow:0 5px 18px rgba(76,29,149,.35);}
 
 /* ── Status Banner ── */
-.status-banner{border-radius:16px;padding:22px 24px;margin-top:20px;display:flex;align-items:flex-start;gap:16px;}
-.status-banner.matched{background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1.5px solid #86efac;}
-.status-banner.mismatch{background:linear-gradient(135deg,#fef2f2,#fee2e2);border:1.5px solid #fca5a5;}
+.status-banner{min-height:100%;border-radius:16px;padding:22px 24px;margin-top:0;display:flex;align-items:flex-start;gap:16px;}
+.status-banner.matched{background:linear-gradient(135deg,#F5F3FF,#EDE9FE);border:1.5px solid #A78BFA;}
+.status-banner.mismatch{background:linear-gradient(135deg,#F5F3FF,#EDE9FE);border:1.5px solid #A78BFA;}
 .status-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.status-icon.matched{background:#16a34a;color:#fff;}
-.status-icon.mismatch{background:#ef4444;color:#fff;}
+.status-icon.matched{background:#6D28D9;color:#fff;}
+.status-icon.mismatch{background:#6D28D9;color:#fff;}
 .status-title{font-size:1rem;font-weight:800;margin:0 0 5px;}
-.status-banner.matched .status-title{color:#14532d;}
-.status-banner.mismatch .status-title{color:#7f1d1d;}
+.status-banner.matched .status-title{color:#4C1D95;}
+.status-banner.mismatch .status-title{color:#3B0764;}
 .status-desc{font-size:.85rem;line-height:1.6;margin:0;}
-.status-banner.matched .status-desc{color:#166534;}
-.status-banner.mismatch .status-desc{color:#991b1b;}
+.status-banner.matched .status-desc{color:#4C1D95;}
+.status-banner.mismatch .status-desc{color:#3B0764;}
 .status-diff{font-weight:800;font-size:1rem;}
 
 /* ── Alert ── */
-.alert-success{background:var(--ybg);border:1.5px solid #f0e8b0;border-radius:10px;padding:12px 16px;color:var(--yk);font-size:.875rem;margin-bottom:18px;font-weight:600;display:flex;align-items:center;gap:8px;}
+.alert-success{background:var(--ybg);border:1.5px solid #DDD6FE;border-radius:10px;padding:12px 16px;color:var(--yk);font-size:.875rem;margin-bottom:18px;font-weight:600;display:flex;align-items:center;gap:8px;}
 </style>
 
 @if(session('success'))
@@ -94,7 +95,7 @@
         <div class="recon-hero-date-label">Shift Date</div>
         <div class="recon-hero-date-val">{{ $businessDate->format('M j, Y') }}</div>
         @if($businessDate->isYesterday())
-            <div style="font-size:0.7rem; color:#ef4444; font-weight:800; margin-top:4px;">(Previous Day Unclosed)</div>
+            <div style="font-size:0.7rem; color:#6D28D9; font-weight:800; margin-top:4px;">(Previous Day Unclosed)</div>
         @endif
     </div>
 </div>
@@ -142,8 +143,8 @@
                 <div class="fig-val">PKR {{ number_format($totalSales, 2) }}</div>
             </div>
             <div class="fig-row">
-                <div class="fig-label"><span class="fig-dot" style="background:#ef4444;"></span>Drawer Expenses</div>
-                <div class="fig-val" style="color:#ef4444;">- PKR {{ number_format($totalExpenses ?? 0, 2) }}</div>
+                <div class="fig-label"><span class="fig-dot" style="background:#6D28D9;"></span>Drawer Expenses</div>
+                <div class="fig-val" style="color:#6D28D9;">- PKR {{ number_format($totalExpenses ?? 0, 2) }}</div>
             </div>
             <div class="fig-total">
                 <div class="fig-total-label">Total Expected Cash</div>
@@ -193,7 +194,6 @@
             </form>
         </div>
     </div>
-</div>
 
 {{-- Status Result --}}
 @if($reconciliation && $reconciliation->actual_cash !== null)
@@ -220,6 +220,17 @@
         </p>
     </div>
 </div>
+@else
+<div class="status-banner matched">
+    <div class="status-icon matched">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+    </div>
+    <div>
+        <p class="status-title">Variance result</p>
+        <p class="status-desc">Enter the actual cash counted. The drawer variance and closing result will appear here.</p>
+    </div>
+</div>
 @endif
+</div>
 
 @endsection

@@ -27,6 +27,7 @@ class AdminController extends Controller
         \App\Models\StaffAttendance::autoCheckout();
         
         $totalSalesToday = Invoice::whereDate('created_at', Carbon::today())->sum('payable_amount');
+        $salesCountToday = Invoice::whereDate('created_at', Carbon::today())->count();
         $totalAppointmentsToday = Appointment::where('appointment_date', $today)->count();
         $completedAppointmentsToday = Appointment::where('appointment_date', $today)->where('status', 'completed')->count();
 
@@ -123,7 +124,7 @@ class AdminController extends Controller
         }
 
         return view('admin.index', compact(
-            'totalSalesToday', 'totalAppointmentsToday', 'completedAppointmentsToday',
+            'totalSalesToday', 'salesCountToday', 'totalAppointmentsToday', 'completedAppointmentsToday',
             'totalSalesWeek', 'totalAppointmentsWeek',
             'totalRevenue', 'totalAppointments', 'totalCustomers', 'totalUsers',
             'totalProducts', 'lowStockProducts', 'outOfStockProducts', 'inventoryValue', 'inventoryValueSell',

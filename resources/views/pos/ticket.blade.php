@@ -4,6 +4,7 @@
     <title>Invoice #{{ $invoice->invoice_no }}</title>
     <style>
         @media print { body { margin:0; padding:0; width:80mm; } .no-print { display:none; } }
+        html, body { background:#FFFFFF; }
         body { font-family:'Courier New',Courier,monospace; width:80mm; margin:0 auto; padding:10px; font-size:12px; color:#000; }
         .center { text-align:center; }
         .right  { text-align:right; }
@@ -15,7 +16,7 @@
 </head>
 <body onload="window.print()">
     <div class="center" style="margin-bottom:12px;">
-        <div style="font-size:18px;font-weight:bold;">THE CRIMPERS</div>
+        <div style="font-size:18px;font-weight:bold;">VELOURA SALON</div>
         <div>123 Beauty Lane, Glamour City</div>
         <div>Tel: +1 234 567 890</div>
     </div>
@@ -59,7 +60,7 @@
 
     <div class="center" style="margin-top:12px;font-size:11px;">
         <div>Thank you for your visit!</div>
-        <div>Follow us @TheCrimpers</div>
+        <div>Follow us @VelouraSalon</div>
     </div>
 
     <div class="no-print" style="margin-top:16px;text-align:center;">

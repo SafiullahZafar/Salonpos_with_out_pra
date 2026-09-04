@@ -9,13 +9,13 @@
 .filters{display:flex;gap:12px;margin-bottom:20px;flex-wrap:wrap;background:#fff;padding:16px;border-radius:12px;border:1px solid #e2e8f0;align-items:flex-end;}
 .filter-group{display:flex;flex-direction:column;gap:4px;}
 .filter-label{font-size:.8rem;font-weight:600;color:#64748b;text-transform:uppercase;}
-.filter-input{padding:8px 12px;border:1px solid #e2e8f0;border-radius:8px;font-size:.9rem;font-family:'Outfit',sans-serif;outline:none;min-width:220px;}
-.filter-input:focus{border-color:#F7DF79;box-shadow:0 0 0 3px rgba(247,223,121,0.2);}
-.btn-primary{background:#18181b;color:#fff;border:none;padding:9px 18px;border-radius:10px;font-weight:600;cursor:pointer;font-family:'Outfit',sans-serif;}
+.filter-input{padding:8px 12px;border:1px solid #e2e8f0;border-radius:8px;font-size:.9rem;font-family:'Inter',sans-serif;outline:none;min-width:220px;}
+.filter-input:focus{border-color:#6D28D9;box-shadow:0 0 0 3px rgba(109,40,217,0.2);}
+.btn-primary{background:#18181b;color:#fff;border:none;padding:9px 18px;border-radius:10px;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;}
 .btn-primary:hover{background:#27272a;}
 
 .btn-export-csv {
-    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    background: linear-gradient(135deg, #7C3AED 0%, #6D28D9 100%);
     color: #ffffff;
     border: none;
     border-radius: 10px;
@@ -33,7 +33,7 @@
 .btn-export-csv:hover { transform: translateY(-2px); box-shadow: 0 6px 14px rgba(59, 130, 246, 0.4); color: #ffffff; }
 
 .btn-export-xls {
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    background: linear-gradient(135deg, #8B5CF6 0%, #4C1D95 100%);
     color: #ffffff;
     border: none;
     border-radius: 10px;
@@ -56,8 +56,8 @@
 .table td{padding:12px 16px;border-bottom:1px solid #f1f5f9;color:#475569;font-size:0.9rem;}
 .table tr:last-child td{border-bottom:none;}
 .name-cell{font-weight:600;color:#1e293b;}
-.amount{font-weight:700;color:#166534;}
-.commission{font-weight:600;color:#0ea5e9;}
+.amount{font-weight:700;color:#4C1D95;}
+.commission{font-weight:600;color:#7C3AED;}
 </style>
 
 <div class="page-header">
@@ -102,14 +102,14 @@
                 <td class="name-cell">{{ $staff->name }}</td>
                 <td>Rs {{ number_format($staff->base_salary, 2) }}</td>
                 <td class="commission">Rs {{ number_format($staff->total_earned_commission, 2) }}</td>
-                <td style="color:#a16207; font-weight:600;">Rs {{ number_format($staff->current_cycle_advances, 2) }}</td>
-                <td style="color:#b91c1c; font-weight:600;">Rs {{ number_format($staff->current_cycle_deductions, 2) }}</td>
+                <td style="color:#6D28D9; font-weight:600;">Rs {{ number_format($staff->current_cycle_advances, 2) }}</td>
+                <td style="color:#4C1D95; font-weight:600;">Rs {{ number_format($staff->current_cycle_deductions, 2) }}</td>
                 <td class="amount">Rs {{ number_format($staff->net_salary_payable, 2) }}</td>
                 <td>
                     @if($staff->last_paid_at)
                         {{ $staff->last_paid_at->format('M d, Y') }}
                     @else
-                        <span style="color:#ef4444; font-size:0.8rem; font-weight:600;">Never Paid</span>
+                        <span style="color:#6D28D9; font-size:0.8rem; font-weight:600;">Never Paid</span>
                     @endif
                 </td>
             </tr>

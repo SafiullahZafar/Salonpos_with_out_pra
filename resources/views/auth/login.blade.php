@@ -3,251 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#111827">
+    <meta name="theme-color" content="#4C1D95">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Crimpers POS">
-    <title>Login — The Crimpers</title>
+    <meta name="apple-mobile-web-app-title" content="Veloura POS">
+    <title>Sign in — Veloura Salon</title>
     <link rel="manifest" href="{{ asset('manifest.json') }}">
     <link rel="apple-touch-icon" href="{{ asset('icons/icon-192.svg') }}">
     <link rel="icon" href="{{ asset('favicon.ico') }}">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        :root{--y1:#F7DF79;--y2:#FBEFBC;--yd:#c9a800;--yk:#a07800;--ybg:#fffdf0;}
-        *{margin:0;padding:0;box-sizing:border-box;font-family:'Outfit',sans-serif;}
-
-        body{
-            min-height:100vh;
-            display:flex;
-            background:#0f0f0f;
-            overflow-x:hidden;
-        }
-        @media(max-width:480px){
-            body{overflow-y:auto;}
-        }
-
-        /* Left decorative panel */
-        .auth-left{
-            flex:1;
-            background:linear-gradient(160deg,#1a1a1a 0%,#111 100%);
-            display:flex;
-            flex-direction:column;
-            align-items:center;
-            justify-content:center;
-            padding:60px 40px;
-            position:relative;
-            overflow:hidden;
-        }
-        .auth-left::before{
-            content:'';position:absolute;top:-80px;left:-80px;
-            width:400px;height:400px;border-radius:50%;
-            background:radial-gradient(circle,rgba(247,223,121,.12) 0%,transparent 70%);
-        }
-        .auth-left::after{
-            content:'';position:absolute;bottom:-100px;right:-60px;
-            width:300px;height:300px;border-radius:50%;
-            background:radial-gradient(circle,rgba(247,223,121,.07) 0%,transparent 70%);
-        }
-        .auth-left-content{position:relative;z-index:1;text-align:center;max-width:340px;}
-        .auth-brand-icon{
-            width:72px;height:72px;border-radius:20px;
-            background:linear-gradient(135deg,var(--y1),var(--yd));
-            display:flex;align-items:center;justify-content:center;
-            margin:0 auto 24px;
-            box-shadow:0 12px 30px rgba(199,168,0,.3);
-        }
-        .auth-brand-name{font-size:2rem;font-weight:800;color:#fff;letter-spacing:-.03em;margin-bottom:8px;}
-        .auth-brand-sub{font-size:.9rem;color:#71717a;line-height:1.6;}
-        .auth-features{margin-top:40px;display:flex;flex-direction:column;gap:14px;text-align:left;}
-        .auth-feature{display:flex;align-items:center;gap:12px;color:#a1a1aa;font-size:.85rem;}
-        .auth-feature-dot{width:28px;height:28px;border-radius:8px;background:rgba(247,223,121,.1);border:1px solid rgba(247,223,121,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--y1);}
-
-        /* Right form panel */
-        .auth-right{
-            width:460px;
-            background:#fff;
-            display:flex;
-            flex-direction:column;
-            align-items:center;
-            justify-content:center;
-            padding:50px 48px;
-            position:relative;
-        }
-        @media(max-width:768px){
-            .auth-left{display:none;}
-            .auth-right{width:100%;padding:40px 24px;min-height:100vh;justify-content:flex-start;padding-top:60px;}
-            .form-header{margin-bottom:24px;}
-            .btn-login{padding:15px;font-size:1rem;}
-            .f-input{padding:13px 14px;font-size:1rem;}
-        }
-        @media(max-width:380px){
-            .auth-right{padding:40px 18px;}
-        }
-
-        .form-header{width:100%;margin-bottom:32px;}
-        .form-header h2{font-size:1.6rem;font-weight:800;color:#0f172a;letter-spacing:-.02em;margin-bottom:6px;}
-        .form-header p{font-size:.875rem;color:#64748b;}
-
-        /* Type selector */
-        .type-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:28px;width:100%;}
-        .type-btn{
-            padding:14px 12px;border:1.5px solid #e2e8f0;border-radius:14px;
-            background:#fff;cursor:pointer;transition:.2s;
-            display:flex;flex-direction:column;align-items:center;gap:7px;
-        }
-        .type-btn:hover{border-color:var(--yd);background:var(--ybg);}
-        .type-btn.active{border-color:var(--yd);background:var(--ybg);box-shadow:0 0 0 3px rgba(199,168,0,.12);}
-        .type-btn-icon{width:36px;height:36px;border-radius:10px;background:#f4f4f5;display:flex;align-items:center;justify-content:center;color:#52525b;transition:.2s;}
-        .type-btn.active .type-btn-icon{background:var(--y2);color:var(--yk);}
-        .type-btn-label{font-size:.78rem;font-weight:700;color:#374151;}
-        .type-btn.active .type-btn-label{color:var(--yk);}
-
-        /* Form */
-        .login-form{width:100%;}
-        .login-form.visible{animation:fadeUp .3s ease-out;}
-
-        .f-group{margin-bottom:18px;}
-        .f-label{display:block;font-size:.82rem;font-weight:700;color:#334155;margin-bottom:7px;}
-        .f-input{
-            width:100%;padding:11px 14px;
-            border:1.5px solid #e2e8f0;border-radius:11px;
-            font-family:'Outfit',sans-serif;font-size:.9rem;color:#18181b;
-            outline:none;transition:.2s;background:#fff;
-        }
-        .f-input:focus{border-color:var(--yd);box-shadow:0 0 0 3px rgba(199,168,0,.12);}
-        .pw-wrap{position:relative;}
-        .pw-wrap .f-input{padding-right:44px;}
-        .pw-toggle{position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;color:#94a3b8;cursor:pointer;display:flex;align-items:center;padding:4px;}
-        .pw-toggle:hover{color:#52525b;}
-
-        .btn-login{
-            width:100%;padding:13px;
-            background:linear-gradient(135deg,var(--y1),var(--yd));
-            border:none;border-radius:11px;
-            color:#18181b;font-size:.95rem;font-weight:700;
-            cursor:pointer;font-family:'Outfit',sans-serif;
-            box-shadow:0 4px 14px rgba(199,168,0,.3);
-            transition:.2s;margin-top:6px;
-        }
-        .btn-login:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(199,168,0,.4);}
-
-        .error-box{
-            background:#fef2f2;border:1.5px solid #fecaca;
-            border-radius:10px;padding:11px 14px;
-            margin-bottom:20px;color:#dc2626;
-            font-size:.83rem;font-weight:600;
-            display:flex;align-items:center;gap:8px;
-        }
-
-        .form-footer{margin-top:20px;text-align:center;}
-        .form-footer a{font-size:.82rem;color:#64748b;text-decoration:none;font-weight:600;}
-        .form-footer a:hover{color:#18181b;}
-
-        .auth-footer{position:absolute;bottom:20px;font-size:.72rem;color:#94a3b8;font-weight:500;}
-
-        @keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+        :root{--p950:#3B0764;--p900:#4C1D95;--p700:#6D28D9;--p600:#7C3AED;--p200:#DDD6FE;--p100:#EDE9FE;--p50:#F5F3FF;--ink:#17131F;--muted:#6B6474;--border:#E7E1EC}
+        *{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:'Inter',system-ui,sans-serif}
+        body{min-height:100vh;padding:28px;color:var(--ink);background:#fff;display:grid;place-items:center;overflow-x:hidden}
+        button,input{font:inherit}.login-shell{position:relative;display:grid;grid-template-columns:minmax(320px,.82fr) minmax(430px,1.18fr);width:min(1120px,100%);min-height:min(720px,calc(100vh - 56px));overflow:hidden;background:#fff;border:1px solid rgba(255,255,255,.34);border-radius:30px;box-shadow:0 32px 90px rgba(24,7,45,.34)}
+        .story-panel{position:relative;isolation:isolate;display:flex;flex-direction:column;justify-content:space-between;padding:52px;color:#fff;background:linear-gradient(155deg,#4C1D95 0%,#6D28D9 62%,#8B5CF6 100%);overflow:hidden}
+        .story-panel::before,.story-panel::after{content:'';position:absolute;z-index:-1;border:1px solid rgba(255,255,255,.18);border-radius:50%}.story-panel::before{width:390px;height:390px;right:-230px;top:-110px;box-shadow:0 0 0 42px rgba(255,255,255,.035),0 0 0 92px rgba(255,255,255,.025)}.story-panel::after{width:260px;height:260px;left:-150px;bottom:-120px;box-shadow:0 0 0 32px rgba(255,255,255,.035)}
+        .brand{display:flex;align-items:center;gap:13px;text-decoration:none;color:#fff}.brand-mark{width:48px;height:48px;border-radius:15px;display:grid;place-items:center;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.24);font-size:15px;font-weight:800;letter-spacing:-.04em}.brand-name{font-size:20px;font-weight:800;letter-spacing:-.035em}.brand-kicker{display:block;margin-top:2px;color:#DDD6FE;font-size:11px;font-weight:650;letter-spacing:.11em;text-transform:uppercase}
+        .story-copy{max-width:420px;margin:70px 0}.story-eyebrow{margin-bottom:16px;color:#EDE9FE;font-size:12px;font-weight:750;letter-spacing:.13em;text-transform:uppercase}.story-copy h1{margin:0 0 18px;font-size:clamp(34px,4vw,55px);line-height:1.02;letter-spacing:-.055em;font-weight:800}.story-copy p{max-width:355px;margin:0;color:#E9D5FF;font-size:15px;line-height:1.75}.story-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.story-stat{padding:13px 12px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:13px;backdrop-filter:blur(10px)}.story-stat strong{display:block;font-size:14px}.story-stat span{display:block;margin-top:3px;color:#DDD6FE;font-size:10px;line-height:1.35}
+        .form-panel{position:relative;display:grid;place-items:center;padding:54px clamp(34px,7vw,92px);background:#fff}.form-panel::before{content:'';position:absolute;top:0;right:0;width:180px;height:180px;background:linear-gradient(225deg,var(--p50),transparent 66%);pointer-events:none}.login-card{position:relative;width:100%;max-width:440px}.mobile-brand{display:none;margin-bottom:34px;color:var(--p900)}
+        .access-label{display:inline-flex;align-items:center;gap:7px;margin-bottom:18px;padding:6px 10px;color:var(--p900);background:var(--p50);border:1px solid var(--p200);border-radius:999px;font-size:11px;font-weight:750;letter-spacing:.07em;text-transform:uppercase}.access-label::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--p600);box-shadow:0 0 0 4px var(--p100)}.form-header h2{margin:0 0 9px;color:var(--p950);font-size:32px;line-height:1.1;letter-spacing:-.045em}.form-header p{margin:0 0 34px;color:var(--muted);font-size:14px;line-height:1.65}
+        .error-box{display:flex;align-items:flex-start;gap:9px;margin-bottom:20px;padding:12px 14px;color:var(--p900);background:var(--p50);border:1px solid var(--p200);border-radius:12px;font-size:13px;font-weight:650}.field{margin-bottom:18px}.field-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}.field label{color:#352E3C;font-size:13px;font-weight:700}.field-head a{color:var(--p700);font-size:12px;font-weight:700;text-decoration:none}.field-head a:hover{text-decoration:underline}.input-wrap{position:relative}.input-icon{position:absolute;left:14px;top:50%;transform:translateY(-50%);display:flex;color:#918A99;pointer-events:none}
+        .field input{width:100%;height:50px;padding:0 45px 0 44px;color:var(--ink);background:#FBFAFC;border:1px solid var(--border);border-radius:13px;outline:none;transition:.2s;font-size:14px}.field input:focus{background:#fff;border-color:var(--p600);box-shadow:0 0 0 4px rgba(124,58,237,.11)}.field input::placeholder{color:#AAA3B1}.password-toggle{position:absolute;right:12px;top:50%;transform:translateY(-50%);display:grid;place-items:center;padding:7px;color:#918A99;background:transparent;border:0;border-radius:8px;cursor:pointer}.password-toggle:hover,.password-toggle:focus-visible{color:var(--p700);background:var(--p50);outline:none}
+        .sign-in-button{width:100%;height:52px;margin-top:8px;display:flex;align-items:center;justify-content:center;gap:10px;color:#fff;background:linear-gradient(135deg,var(--p700),var(--p600));border:0;border-radius:13px;box-shadow:0 12px 26px rgba(109,40,217,.22);font-weight:750;cursor:pointer;transition:.2s}.sign-in-button:hover{transform:translateY(-2px);box-shadow:0 16px 30px rgba(109,40,217,.28)}.sign-in-button:focus-visible{outline:3px solid var(--p200);outline-offset:3px}.security-note{display:flex;align-items:center;justify-content:center;gap:7px;margin:22px 0 0;color:#8A8291;font-size:11px}.developer-credit{position:absolute;right:28px;bottom:22px;color:#9B94A2;font-size:11px}.developer-credit strong{color:var(--p700);font-weight:750}
+        @media(max-width:860px){body{padding:16px;background:#fff}.login-shell{grid-template-columns:1fr;min-height:calc(100vh - 32px);border-radius:24px}.story-panel{display:none}.form-panel{padding:42px 28px 72px}.mobile-brand{display:flex}}
+        @media(max-width:420px){body{padding:0}.login-shell{min-height:100vh;border-radius:0}.form-panel{align-items:start;padding:30px 20px 64px}.form-header h2{font-size:28px}.mobile-brand{margin-bottom:48px}.developer-credit{right:20px;left:20px;text-align:center}}
+        @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important}}
     </style>
 </head>
 <body>
-
-    {{-- Left Panel --}}
-    <div class="auth-left">
-        <div class="auth-left-content">
-            <div class="auth-brand-icon">
-                <svg width="36" height="36" fill="none" stroke="#18181b" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 21a9 9 0 110-18 9 9 0 010 18z"/><path d="M12 8v4l3 3"/></svg>
+    <main class="login-shell">
+        <aside class="story-panel" aria-label="Veloura Salon platform overview">
+            <a class="brand" href="{{ route('login') }}" aria-label="Veloura Salon sign in">
+                <span class="brand-mark">VS</span><span><span class="brand-name">Veloura Salon</span><span class="brand-kicker">Salon operations</span></span>
+            </a>
+            <div class="story-copy"><div class="story-eyebrow">Your day, beautifully organized</div><h1>Where service meets seamless control.</h1><p>Run appointments, sales, staff, clients, and inventory from one calm, connected workspace.</p></div>
+            <div class="story-stats" aria-label="Platform capabilities"><div class="story-stat"><strong>POS</strong><span>Fast checkout</span></div><div class="story-stat"><strong>Calendar</strong><span>Clear schedules</span></div><div class="story-stat"><strong>Insights</strong><span>Live reporting</span></div></div>
+        </aside>
+        <section class="form-panel">
+            <div class="login-card">
+                <div class="mobile-brand brand"><span class="brand-mark">VS</span><span><span class="brand-name">Veloura Salon</span><span class="brand-kicker">Salon operations</span></span></div>
+                <div class="access-label">Secure workspace</div>
+                <header class="form-header"><h2>Welcome back</h2><p>Enter your account details to open the Veloura workspace.</p></header>
+                @if($errors->any())
+                    <div class="error-box" role="alert"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5m0 3h.01"/></svg><span>{{ $errors->first() }}</span></div>
+                @endif
+                <form action="{{ route('login') }}" method="POST">
+                    @csrf
+                    <div class="field"><div class="field-head"><label for="email">Email address</label></div><div class="input-wrap"><span class="input-icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><input id="email" type="email" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="name@example.com" autofocus></div></div>
+                    <div class="field"><div class="field-head"><label for="password">Password</label><a href="{{ route('password.request') }}">Forgot password?</a></div><div class="input-wrap"><span class="input-icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span><input id="password" type="password" name="password" required autocomplete="current-password" placeholder="Enter your password"><button type="button" class="password-toggle" id="passwordToggle" aria-label="Show password" aria-pressed="false"><svg id="eyeIcon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="2.5"/></svg></button></div></div>
+                    <button type="submit" class="sign-in-button">Sign in to workspace<svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></button>
+                </form>
+                <p class="security-note"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.5 2.8 8 7 10 4.2-2 7-5.5 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg>Protected access for authorized team members</p>
             </div>
-            <div class="auth-brand-name">The Crimpers</div>
-            <div class="auth-brand-sub">Professional salon management system for modern businesses.</div>
-
-            <div class="auth-features">
-                <div class="auth-feature">
-                    <div class="auth-feature-dot">
-                        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                    </div>
-                    POS Terminal & Invoicing
-                </div>
-                <div class="auth-feature">
-                    <div class="auth-feature-dot">
-                        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                    </div>
-                    Staff & Attendance Management
-                </div>
-                <div class="auth-feature">
-                    <div class="auth-feature-dot">
-                        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                    </div>
-                    Inventory & Product Control
-                </div>
-                <div class="auth-feature">
-                    <div class="auth-feature-dot">
-                        <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-                    </div>
-                    Appointments & Bookings
-                </div>
-            </div>
-        </div>
-    </div>
-
-    {{-- Right Form Panel --}}
-    <div class="auth-right">
-        <div class="form-header">
-            <h2>Welcome back</h2>
-            <p>Sign in to your account to continue</p>
-        </div>
-
-
-
-        @if($errors->any())
-        <div class="error-box" style="width:100%;">
-            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-            {{ $errors->first() }}
-        </div>
-        @endif
-
-        <form action="{{ route('login') }}" method="POST" id="loginForm" class="login-form">
-            @csrf
-
-            <div class="f-group">
-                <label class="f-label">Email Address</label>
-                <input type="email" name="email" value="{{ old('email') }}" required class="f-input" placeholder="your@email.com" autofocus>
-            </div>
-
-            <div class="f-group">
-                <label class="f-label">Password</label>
-                <div class="pw-wrap">
-                    <input type="password" name="password" id="password" required class="f-input" placeholder="••••••••">
-                    <button type="button" class="pw-toggle" onclick="togglePassword()">
-                        <svg id="eye-icon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-
-            <button type="submit" class="btn-login">Sign In</button>
-        </form>
-
-        <div class="form-footer" style="width:100%;">
-            <a href="{{ route('password.request') }}">Forgot your password?</a>
-        </div>
-
-        <div class="auth-footer">Powered by The BroshTech</div>
-    </div>
-
+            <div class="developer-credit">Designed and powered by <strong>PixoraSoftTech</strong></div>
+        </section>
+    </main>
     <script>
-
-        function togglePassword() {
-            const pass = document.getElementById('password');
-            const icon = document.getElementById('eye-icon');
-            if (pass.type === 'password') {
-                pass.type = 'text';
-                icon.innerHTML = '<path d="M17.94 17.94A10.07 10.07 0 0112 20c-7 0-11-8-11-8a18.45 18.45 0 015.06-5.94M9.9 4.24A9.12 9.12 0 0112 4c7 0 11 8 11 8a18.5 18.5 0 01-2.16 3.19m-6.72-1.07a3 3 0 11-4.24-4.24"></path><line x1="1" y1="1" x2="23" y2="23"></line>';
-            } else {
-                pass.type = 'password';
-                icon.innerHTML = '<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle>';
-            }
-        }
-
+        const toggle=document.getElementById('passwordToggle'),password=document.getElementById('password'),eyeIcon=document.getElementById('eyeIcon');
+        toggle.addEventListener('click',()=>{const showing=password.type==='text';password.type=showing?'password':'text';toggle.setAttribute('aria-pressed',showing?'false':'true');toggle.setAttribute('aria-label',showing?'Show password':'Hide password');eyeIcon.innerHTML=showing?'<path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="2.5"/>':'<path d="M3 3l18 18M10.6 6.2A11 11 0 0 1 12 6c6.5 0 10 6 10 6a15 15 0 0 1-3 3.8M6.2 6.2C3.5 8.1 2 12 2 12s3.5 6 10 6a10 10 0 0 0 3.1-.5"/>';});
     </script>
 </body>
 </html>

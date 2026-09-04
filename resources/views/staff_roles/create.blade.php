@@ -4,11 +4,11 @@
 @section('content')
     <style>
         :root {
-            --y1: #F7DF79;
-            --y2: #FBEFBC;
-            --yd: #c9a800;
-            --yk: #a07800;
-            --ybg: #fffdf0;
+            --y1: #6D28D9;
+            --y2: #EDE9FE;
+            --yd: #6D28D9;
+            --yk: #4C1D95;
+            --ybg: #F5F3FF;
         }
 
         .page-header {
@@ -57,7 +57,7 @@
 
         .form-card {
             background: #fff;
-            border: 1.5px solid #e9e0c0;
+            border: 1.5px solid #E7E1EC;
             border-radius: 18px;
             overflow: hidden;
             box-shadow: 0 2px 12px rgba(199, 168, 0, .08);
@@ -67,7 +67,7 @@
         .form-card-head {
             padding: 16px 22px;
             background: var(--ybg);
-            border-bottom: 1.5px solid #f0e8b0;
+            border-bottom: 1.5px solid #DDD6FE;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -123,7 +123,7 @@
             padding: 10px 13px;
             border: 1.5px solid #e2e8f0;
             border-radius: 10px;
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Inter', sans-serif;
             font-size: .9rem;
             color: #18181b;
             background: #fff;
@@ -144,14 +144,14 @@
         }
 
         .f-error {
-            color: #ef4444;
+            color: #6D28D9;
             font-size: .75rem;
             margin-top: 2px;
         }
 
         .login-card {
             background: var(--ybg);
-            border: 1.5px solid #f0e8b0;
+            border: 1.5px solid #DDD6FE;
             border-radius: 14px;
             padding: 18px;
         }
@@ -169,7 +169,7 @@
         }
 
         .login-card .f-input {
-            border-color: #e9e0c0;
+            border-color: #E7E1EC;
             background: #fff;
         }
 
@@ -180,7 +180,7 @@
 
         .login-note {
             font-size: .75rem;
-            color: #a07800;
+            color: #4C1D95;
             margin-top: 10px;
             line-height: 1.5;
         }
@@ -200,7 +200,7 @@
             color: #64748b;
             font-weight: 700;
             text-decoration: none;
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Inter', sans-serif;
             font-size: .9rem;
             transition: .2s;
             background: #fff;
@@ -221,7 +221,7 @@
             color: #18181b;
             font-weight: 700;
             cursor: pointer;
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Inter', sans-serif;
             font-size: .9rem;
             box-shadow: 0 3px 12px rgba(199, 168, 0, .25);
             transition: .2s;

@@ -56,8 +56,8 @@
     }
 
     .f-input:focus {
-        border-color: #c9a800;
-        box-shadow: 0 0 0 3px rgba(201, 168, 0, 0.1);
+        border-color: #6D28D9;
+        box-shadow: 0 0 0 3px rgba(76,29,149, 0.1);
     }
 
     .btn-filter {
@@ -214,7 +214,7 @@
                                     <td style="font-weight:700; color:#64748b;">{{ $rec['invoice_no'] }}</td>
                                     <td class="cust-badge">{{ $rec['customer'] }}</td>
                                     <td>{{ $rec['services'] }}</td>
-                                    <td style="text-align:right; font-weight:700; color:#16a34a;">PKR {{ number_format($rec['invoice_total'], 2) }}</td>
+                                    <td style="text-align:right; font-weight:700; color:#6D28D9;">PKR {{ number_format($rec['invoice_total'], 2) }}</td>
                                 </tr>
                             @endforeach
                         </tbody>

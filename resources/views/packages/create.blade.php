@@ -6,39 +6,39 @@
 .form-wrap{max-width:720px;margin:0 auto;}
 .form-header{display:flex;align-items:center;gap:12px;margin-bottom:24px;}
 .back-btn{width:36px;height:36px;border-radius:9px;border:1.5px solid #e2e8f0;background:#fff;display:flex;align-items:center;justify-content:center;color:#64748b;text-decoration:none;transition:.2s;flex-shrink:0;}
-.back-btn:hover{border-color:#F7DF79;color:#c9a800;background:#fffdf0;}
+.back-btn:hover{border-color:#6D28D9;color:#6D28D9;background:#F5F3FF;}
 .form-title{font-size:1.4rem;font-weight:800;color:#0f172a;letter-spacing:-.02em;margin-bottom:3px;}
 .form-sub{font-size:.85rem;color:#64748b;}
-.form-card{background:#fff;border:1px solid #f0e8a0;border-radius:18px;box-shadow:0 2px 12px rgba(0,0,0,.05);overflow:hidden;}
+.form-card{background:#fff;border:1px solid #DDD6FE;border-radius:18px;box-shadow:0 2px 12px rgba(0,0,0,.05);overflow:hidden;}
 .form-section{padding:22px 26px;border-bottom:1px solid #f1f5f9;}
 .section-title{font-size:.78rem;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.09em;margin-bottom:16px;display:flex;align-items:center;gap:7px;}
 .section-icon{width:22px;height:22px;border-radius:6px;display:flex;align-items:center;justify-content:center;}
 .f-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
 .f-label{display:block;font-size:.78rem;font-weight:600;color:#374151;margin-bottom:7px;}
-.f-input{width:100%;padding:10px 13px;border:1.5px solid #e5e7eb;border-radius:10px;font-size:.875rem;font-family:'Outfit',sans-serif;color:#1e293b;background:#fafafa;outline:none;transition:.2s;}
-.f-input:focus{border-color:#F7DF79;background:#fff;box-shadow:0 0 0 3px rgba(247,223,121,.1);}
+.f-input{width:100%;padding:10px 13px;border:1.5px solid #e5e7eb;border-radius:10px;font-size:.875rem;font-family:'Inter',sans-serif;color:#1e293b;background:#fafafa;outline:none;transition:.2s;}
+.f-input:focus{border-color:#6D28D9;background:#fff;box-shadow:0 0 0 3px rgba(109,40,217,.1);}
 .f-input::placeholder{color:#9ca3af;}
 textarea.f-input{resize:vertical;min-height:90px;}
 .f-prefix-wrap{position:relative;}
 .f-prefix{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:.82rem;font-weight:600;color:#94a3b8;pointer-events:none;white-space:nowrap;}
 .f-input.has-prefix{padding-left:46px;}
 .check-row{display:flex;align-items:center;gap:8px;cursor:pointer;}
-.check-row input[type=checkbox]{width:15px;height:15px;accent-color:#c9a800;cursor:pointer;}
+.check-row input[type=checkbox]{width:15px;height:15px;accent-color:#6D28D9;cursor:pointer;}
 .check-label{font-size:.85rem;font-weight:600;color:#374151;}
 
 /* Service checkboxes */
 .svc-check-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
 .svc-check-item{display:flex;align-items:center;gap:10px;padding:10px 13px;border:1.5px solid #e5e7eb;border-radius:10px;cursor:pointer;transition:.2s;background:#fafafa;}
-.svc-check-item:hover{border-color:#F7DF79;background:#fffdf0;}
-.svc-check-item input[type=checkbox]{width:15px;height:15px;accent-color:#c9a800;cursor:pointer;flex-shrink:0;}
-.svc-check-item:has(input:checked){border-color:#F7DF79;background:#fffdf0;}
+.svc-check-item:hover{border-color:#6D28D9;background:#F5F3FF;}
+.svc-check-item input[type=checkbox]{width:15px;height:15px;accent-color:#6D28D9;cursor:pointer;flex-shrink:0;}
+.svc-check-item:has(input:checked){border-color:#6D28D9;background:#F5F3FF;}
 .svc-check-name{font-size:.82rem;font-weight:600;color:#1e293b;}
 .svc-check-meta{font-size:.7rem;color:#94a3b8;}
 
 .form-footer{padding:18px 26px;border-top:1px solid #f1f5f9;display:flex;gap:10px;justify-content:flex-end;}
-.btn-cancel{padding:10px 22px;border:1.5px solid #e2e8f0;background:#fff;border-radius:10px;color:#64748b;font-size:.875rem;font-weight:600;cursor:pointer;text-decoration:none;font-family:'Outfit',sans-serif;transition:.2s;}
-.btn-cancel:hover{border-color:#fca5a5;color:#dc2626;background:#fef2f2;}
-.btn-save{padding:10px 22px;border:none;background:linear-gradient(135deg,#F7DF79,#c9a800);border-radius:10px;color:#fff;font-size:.875rem;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;transition:.2s;box-shadow:0 3px 10px rgba(247,223,121,.25);}
+.btn-cancel{padding:10px 22px;border:1.5px solid #e2e8f0;background:#fff;border-radius:10px;color:#64748b;font-size:.875rem;font-weight:600;cursor:pointer;text-decoration:none;font-family:'Inter',sans-serif;transition:.2s;}
+.btn-cancel:hover{border-color:#A78BFA;color:#4C1D95;background:#F5F3FF;}
+.btn-save{padding:10px 22px;border:none;background:linear-gradient(135deg,#6D28D9,#6D28D9);border-radius:10px;color:#fff;font-size:.875rem;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;transition:.2s;box-shadow:0 3px 10px rgba(109,40,217,.25);}
 .btn-save:hover{transform:translateY(-1px);}
 
 /* Peak Pricing & Tiers */
@@ -47,9 +47,9 @@ textarea.f-input{resize:vertical;min-height:90px;}
 .toggle-info-title{font-size:.875rem;font-weight:600;color:#1e293b;margin-bottom:2px;}
 .toggle-info-sub{font-size:.75rem;color:#94a3b8;}
 .toggle-label{display:flex;align-items:center;gap:8px;cursor:pointer;font-size:.82rem;font-weight:600;color:#374151;}
-.toggle-label input[type=checkbox]{width:16px;height:16px;accent-color:#c9a800;cursor:pointer;}
-.peak-box{background:#fffbeb;border:1px solid #fde68a;border-radius:12px;padding:16px 18px;margin-top:14px;}
-.peak-box-title{font-size:.78rem;font-weight:700;color:#92400e;text-transform:uppercase;letter-spacing:.07em;margin-bottom:12px;}
+.toggle-label input[type=checkbox]{width:16px;height:16px;accent-color:#6D28D9;cursor:pointer;}
+.peak-box{background:#F5F3FF;border:1px solid #DDD6FE;border-radius:12px;padding:16px 18px;margin-top:14px;}
+.peak-box-title{font-size:.78rem;font-weight:700;color:#4C1D95;text-transform:uppercase;letter-spacing:.07em;margin-bottom:12px;}
 </style>
 
 <div class="form-wrap">
@@ -70,7 +70,7 @@ textarea.f-input{resize:vertical;min-height:90px;}
             {{-- Basic info --}}
             <div class="form-section">
                 <div class="section-title">
-                    <div class="section-icon" style="background:#fffdf0;color:#F7DF79;">
+                    <div class="section-icon" style="background:#F5F3FF;color:#6D28D9;">
                         <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
                     </div>
                     Package Details
@@ -183,7 +183,7 @@ textarea.f-input{resize:vertical;min-height:90px;}
             {{-- Services --}}
             <div class="form-section">
                 <div class="section-title">
-                    <div class="section-icon" style="background:#fffdf0;color:#F7DF79;">
+                    <div class="section-icon" style="background:#F5F3FF;color:#6D28D9;">
                         <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
                     </div>
                     Included Services

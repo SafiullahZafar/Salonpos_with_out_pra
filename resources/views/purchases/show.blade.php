@@ -5,10 +5,10 @@
 <style>
 .page-header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:24px;padding:16px;background:#fff;border:1px solid #e2e8f0;border-radius:12px;}
 .page-header h2{font-size:1.25rem;font-weight:700;color:#1e293b;margin:0;}
-.page-header .po-number{color:#2563eb;font-weight:600;}
-.btn-back,.btn-edit,.btn-receive{padding:8px 16px;background:#f1f5f9;color:#475569;border:1px solid #e2e8f0;border-radius:10px;text-decoration:none;font-weight:600;cursor:pointer;font-family:'Outfit',sans-serif;display:inline-block;}
-.btn-receive{background:#22c55e;color:#fff;border-color:#22c55e;}
-.btn-receive:hover{background:#16a34a;}
+.page-header .po-number{color:#6D28D9;font-weight:600;}
+.btn-back,.btn-edit,.btn-receive{padding:8px 16px;background:#f1f5f9;color:#475569;border:1px solid #e2e8f0;border-radius:10px;text-decoration:none;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;display:inline-block;}
+.btn-receive{background:#7C3AED;color:#fff;border-color:#7C3AED;}
+.btn-receive:hover{background:#6D28D9;}
 
 .details-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-bottom:24px;}
 .detail-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px;}
@@ -17,10 +17,10 @@
 .detail-label{color:#64748b;font-size:.85rem;}
 .detail-value{color:#1e293b;font-weight:500;}
 .status-badge{display:inline-block;padding:4px 10px;border-radius:99px;font-size:.75rem;font-weight:600;}
-.status-ordered{background:#dbeafe;color:#1e40af;}
-.status-partially{background:#fef3c7;color:#92400e;}
-.status-received{background:#dcfce7;color:#166534;}
-.status-cancelled{background:#fee2e2;color:#991b1b;}
+.status-ordered{background:#EDE9FE;color:#4C1D95;}
+.status-partially{background:#EDE9FE;color:#4C1D95;}
+.status-received{background:#EDE9FE;color:#4C1D95;}
+.status-cancelled{background:#EDE9FE;color:#3B0764;}
 
 .items-table{background:#fff;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden;margin-bottom:24px;}
 .items-head{background:#f8fafc;padding:12px 16px;border-bottom:1px solid #e2e8f0;display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr 1fr;gap:12px;font-size:.8rem;font-weight:700;color:#64748b;text-transform:uppercase;}
@@ -29,8 +29,8 @@
 
 .product-name{font-weight:500;color:#1e293b;}
 .quantity{font-size:.85rem;color:#64748b;}
-.received-badge{display:inline-block;padding:2px 6px;border-radius:4px;font-size:.7rem;font-weight:600;background:#dcfce7;color:#166534;}
-.pending-badge{background:#fee2e2;color:#991b1b;}
+.received-badge{display:inline-block;padding:2px 6px;border-radius:4px;font-size:.7rem;font-weight:600;background:#EDE9FE;color:#4C1D95;}
+.pending-badge{background:#EDE9FE;color:#3B0764;}
 
 .total-row{background:#f8fafc;padding:16px;border-top:2px solid #e2e8f0;display:flex;justify-content:flex-end;gap:20px;font-weight:700;color:#1e293b;}
 </style>
@@ -113,7 +113,7 @@
                 $history = $item->product->priceHistories->first();
             @endphp
             @if($history)
-                <div style="color: #f59e0b; font-size: 0.7rem; margin-top: 4px;">
+                <div style="color: #8B5CF6; font-size: 0.7rem; margin-top: 4px;">
                     Changed from: Cost <b>{{ $history->old_cost_price + 0 }}</b>, Sell <b>{{ $history->old_selling_price + 0 }}</b>
                 </div>
             @endif

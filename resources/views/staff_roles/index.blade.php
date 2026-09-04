@@ -4,11 +4,11 @@
 @section('content')
     <style>
         :root {
-            --y1: #F7DF79;
-            --y2: #FBEFBC;
-            --yd: #c9a800;
-            --yk: #a07800;
-            --ybg: #fffdf0;
+            --y1: #6D28D9;
+            --y2: #EDE9FE;
+            --yd: #6D28D9;
+            --yk: #4C1D95;
+            --ybg: #F5F3FF;
         }
 
         .page-header {
@@ -43,7 +43,7 @@
             font-size: .85rem;
             font-weight: 700;
             cursor: pointer;
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Inter', sans-serif;
             transition: .2s;
             box-shadow: 0 3px 10px rgba(199, 168, 0, .2);
             text-decoration: none;
@@ -67,7 +67,7 @@
 
         .role-card {
             background: #fff;
-            border: 1.5px solid #e9e0c0;
+            border: 1.5px solid #E7E1EC;
             border-radius: 16px;
             overflow: hidden;
             box-shadow: 0 1px 4px rgba(199, 168, 0, .08);
@@ -82,7 +82,7 @@
         .role-card-head {
             padding: 18px 20px;
             background: var(--ybg);
-            border-bottom: 1.5px solid #f0e8b0;
+            border-bottom: 1.5px solid #DDD6FE;
             display: flex;
             align-items: center;
             gap: 12px;
@@ -124,7 +124,7 @@
             justify-content: space-between;
             font-size: .82rem;
             padding: 7px 0;
-            border-bottom: 1px solid #faf6e8;
+            border-bottom: 1px solid #F8F7FA;
         }
 
         .role-stat:last-child {
@@ -151,7 +151,7 @@
 
         .role-card-foot {
             padding: 12px 20px;
-            border-top: 1.5px solid #f0e8b0;
+            border-top: 1.5px solid #DDD6FE;
             display: flex;
             gap: 8px;
         }
@@ -169,7 +169,7 @@
             cursor: pointer;
             text-align: center;
             transition: .2s;
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Inter', sans-serif;
         }
 
         .btn-sm:hover {
@@ -180,19 +180,19 @@
 
         .btn-sm-del {
             background: #fff;
-            border-color: #fca5a5;
-            color: #ef4444;
+            border-color: #A78BFA;
+            color: #6D28D9;
         }
 
         .btn-sm-del:hover {
-            background: #fef2f2;
-            border-color: #f87171;
-            color: #dc2626;
+            background: #F5F3FF;
+            border-color: #8B5CF6;
+            color: #4C1D95;
         }
 
         .empty-state {
             background: #fff;
-            border: 1.5px solid #e9e0c0;
+            border: 1.5px solid #E7E1EC;
             border-radius: 16px;
             padding: 60px 20px;
             text-align: center;
@@ -299,7 +299,7 @@
         <div style="margin-top:20px;">{{ $roles->links() }}</div>
     @else
         <div class="empty-state">
-            <svg width="52" height="52" fill="none" stroke="#c9a800" stroke-width="1.5" viewBox="0 0 24 24"
+            <svg width="52" height="52" fill="none" stroke="#6D28D9" stroke-width="1.5" viewBox="0 0 24 24"
                 style="margin:0 auto;opacity:.5;">
                 <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
                 <circle cx="9" cy="7" r="4" />
@@ -318,7 +318,7 @@
         <div
             style="background:#fff;padding:32px 28px;border-radius:20px;width:100%;max-width:400px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.15);animation:modalIn .2s ease-out;margin:16px;">
             <div
-                style="width:56px;height:56px;border-radius:50%;background:#fee2e2;color:#ef4444;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;">
+                style="width:56px;height:56px;border-radius:50%;background:#EDE9FE;color:#6D28D9;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;">
                 <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <polyline points="3 6 5 6 21 6" />
                     <path d="M19 6l-1 14a2 2 0 01-2 2H8a2 2 0 01-2-2L5 6" />
@@ -332,9 +332,9 @@
                     undone</strong>.</p>
             <div style="display:flex;gap:12px;">
                 <button type="button" onclick="closeDeleteModal()"
-                    style="flex:1;padding:11px;border:1.5px solid #e2e8f0;border-radius:10px;background:#fff;color:#64748b;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;font-size:.9rem;">Cancel</button>
+                    style="flex:1;padding:11px;border:1.5px solid #e2e8f0;border-radius:10px;background:#fff;color:#64748b;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;font-size:.9rem;">Cancel</button>
                 <button type="button" onclick="document.getElementById('delete-form').submit()"
-                    style="flex:1;padding:11px;border:none;border-radius:10px;background:#ef4444;color:#fff;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;font-size:.9rem;box-shadow:0 4px 14px rgba(239,68,68,.3);">Yes,
+                    style="flex:1;padding:11px;border:none;border-radius:10px;background:#6D28D9;color:#fff;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;font-size:.9rem;box-shadow:0 4px 14px rgba(109,40,217,.3);">Yes,
                     Delete</button>
             </div>
         </div>

@@ -14,12 +14,12 @@
 .product-name{font-weight:600;color:#1e293b;}
 .supplier-name{font-size:.85rem;color:#64748b;}
 .stock-badge{display:inline-block;padding:4px 10px;border-radius:99px;font-size:.75rem;font-weight:600;}
-.stock-low{background:#fef3c7;color:#b45309;}
-.stock-out{background:#fee2e2;color:#991b1b;}
+.stock-low{background:#EDE9FE;color:#4C1D95;}
+.stock-out{background:#EDE9FE;color:#3B0764;}
 
 .action-btns{display:flex;gap:6px;}
-.btn-restock{padding:5px 10px;background:#22c55e;color:#fff;border:none;border-radius:6px;cursor:pointer;font-weight:600;font-size:.75rem;font-family:'Outfit',sans-serif;}
-.btn-view{padding:5px 10px;background:#f1f5f9;color:#475569;border:1px solid #e2e8f0;border-radius:6px;text-decoration:none;font-weight:600;font-size:.75rem;font-family:'Outfit',sans-serif;}
+.btn-restock{padding:5px 10px;background:#7C3AED;color:#fff;border:none;border-radius:6px;cursor:pointer;font-weight:600;font-size:.75rem;font-family:'Inter',sans-serif;}
+.btn-view{padding:5px 10px;background:#f1f5f9;color:#475569;border:1px solid #e2e8f0;border-radius:6px;text-decoration:none;font-weight:600;font-size:.75rem;font-family:'Inter',sans-serif;}
 
 .empty-msg{text-align:center;padding:40px 20px;color:#94a3b8;font-size:.9rem;}
 </style>
@@ -47,9 +47,9 @@
             <div style="font-size:.75rem;color:#94a3b8;">SKU: {{ $product->sku }}</div>
             @endif
         </div>
-        <span style="font-weight:600;{{ $product->current_stock <= 0 ? 'color:#dc2626;' : 'color:#d97706;' }}">{{ $product->current_stock }}</span>
+        <span style="font-weight:600;{{ $product->current_stock <= 0 ? 'color:#4C1D95;' : 'color:#6D28D9;' }}">{{ $product->current_stock }}</span>
         <span>{{ $product->min_stock_level }}</span>
-        <span class="supplier-name">{{ $product->supplier ? $product->supplier->name : '—' }}</span>
+        <span class="supplier-name">{{ $product->supplier ? $product->supplier->name : 'â€”' }}</span>
         <span>{{ ucfirst(str_replace('_', ' ', $product->product_type)) }}</span>
         <span>
             <span class="stock-badge {{ $product->current_stock <= 0 ? 'stock-out' : 'stock-low' }}">
@@ -58,7 +58,7 @@
         </span>
         <span class="action-btns">
             <a href="{{ route('products.show', $product) }}" class="btn-view">View</a>
-            <a href="{{ route('products.adjust-stock.form', $product) }}" class="btn-restock" style="background:#f59e0b;">Adjust Stock</a>
+            <a href="{{ route('products.adjust-stock.form', $product) }}" class="btn-restock" style="background:#8B5CF6;">Adjust Stock</a>
         </span>
     </div>
     @endforeach

@@ -5,30 +5,30 @@
 .edit-wrap{max-width:680px;margin:0 auto;}
 .edit-header{display:flex;align-items:center;gap:14px;margin-bottom:28px;}
 .back-btn{width:38px;height:38px;border-radius:10px;border:1.5px solid #e2e8f0;background:#fff;display:flex;align-items:center;justify-content:center;color:#64748b;text-decoration:none;transition:.2s;flex-shrink:0;}
-.back-btn:hover{border-color:#F7DF79;color:#c9a800;background:#fffdf0;}
+.back-btn:hover{border-color:#6D28D9;color:#6D28D9;background:#F5F3FF;}
 .edit-title{font-size:1.4rem;font-weight:800;color:#0f172a;letter-spacing:-.02em;margin-bottom:3px;}
 .edit-sub{font-size:.85rem;color:#64748b;}
-.edit-card{background:#fff;border:1px solid #f0e8a0;border-radius:18px;box-shadow:0 2px 12px rgba(0,0,0,.05);overflow:hidden;}
+.edit-card{background:#fff;border:1px solid #DDD6FE;border-radius:18px;box-shadow:0 2px 12px rgba(0,0,0,.05);overflow:hidden;}
 .edit-card-head{padding:20px 28px;border-bottom:1px solid #f1f5f9;display:flex;align-items:center;gap:10px;}
-.edit-card-icon{width:36px;height:36px;border-radius:10px;background:#fffdf0;display:flex;align-items:center;justify-content:center;color:#F7DF79;}
+.edit-card-icon{width:36px;height:36px;border-radius:10px;background:#F5F3FF;display:flex;align-items:center;justify-content:center;color:#6D28D9;}
 .edit-card-title{font-size:.95rem;font-weight:700;color:#1e293b;}
 .edit-card-body{padding:28px;}
 .f-row{margin-bottom:20px;}
 .f-row-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px;}
 .f-label{display:block;font-size:.8rem;font-weight:600;color:#374151;margin-bottom:8px;}
-.f-input{width:100%;padding:11px 14px;border:1.5px solid #e5e7eb;border-radius:11px;font-size:.9rem;font-family:'Outfit',sans-serif;color:#1e293b;background:#fafafa;outline:none;transition:.2s;}
-.f-input:focus{border-color:#F7DF79;background:#fff;box-shadow:0 0 0 3px rgba(247,223,121,.1);}
+.f-input{width:100%;padding:11px 14px;border:1.5px solid #e5e7eb;border-radius:11px;font-size:.9rem;font-family:'Inter',sans-serif;color:#1e293b;background:#fafafa;outline:none;transition:.2s;}
+.f-input:focus{border-color:#6D28D9;background:#fff;box-shadow:0 0 0 3px rgba(109,40,217,.1);}
 textarea.f-input{resize:vertical;min-height:90px;}
 .form-footer{display:flex;gap:12px;justify-content:flex-end;padding-top:8px;border-top:1px solid #f1f5f9;margin-top:8px;}
-.btn-cancel{padding:10px 22px;border:1.5px solid #e2e8f0;background:#fff;border-radius:10px;color:#64748b;font-size:.875rem;font-weight:600;cursor:pointer;text-decoration:none;font-family:'Outfit',sans-serif;transition:.2s;}
-.btn-cancel:hover{border-color:#fca5a5;color:#dc2626;background:#fef2f2;}
-.btn-save{padding:10px 22px;border:none;background:linear-gradient(135deg,#F7DF79,#c9a800);border-radius:10px;color:#18181b;font-size:.875rem;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;transition:.2s;box-shadow:0 3px 10px rgba(247,223,121,.25);}
+.btn-cancel{padding:10px 22px;border:1.5px solid #e2e8f0;background:#fff;border-radius:10px;color:#64748b;font-size:.875rem;font-weight:600;cursor:pointer;text-decoration:none;font-family:'Inter',sans-serif;transition:.2s;}
+.btn-cancel:hover{border-color:#A78BFA;color:#4C1D95;background:#F5F3FF;}
+.btn-save{padding:10px 22px;border:none;background:linear-gradient(135deg,#6D28D9,#6D28D9);border-radius:10px;color:#18181b;font-size:.875rem;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;transition:.2s;box-shadow:0 3px 10px rgba(109,40,217,.25);}
 .btn-save:hover{transform:translateY(-1px);}
-.danger-zone{margin-top:20px;background:#fff;border:1px solid #fecaca;border-radius:14px;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
-.danger-title{font-size:.9rem;font-weight:700;color:#b91c1c;margin-bottom:3px;}
+.danger-zone{margin-top:20px;background:#fff;border:1px solid #DDD6FE;border-radius:14px;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.danger-title{font-size:.9rem;font-weight:700;color:#4C1D95;margin-bottom:3px;}
 .danger-sub{font-size:.8rem;color:#94a3b8;}
-.btn-danger{padding:9px 18px;border:1.5px solid #fca5a5;background:#fef2f2;border-radius:10px;color:#dc2626;font-size:.82rem;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;transition:.2s;}
-.btn-danger:hover{background:#fee2e2;}
+.btn-danger{padding:9px 18px;border:1.5px solid #A78BFA;background:#F5F3FF;border-radius:10px;color:#4C1D95;font-size:.82rem;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;transition:.2s;}
+.btn-danger:hover{background:#EDE9FE;}
 </style>
 <div class="edit-wrap">
   <div class="edit-header">
@@ -49,9 +49,9 @@ textarea.f-input{resize:vertical;min-height:90px;}
     </div>
     <div class="edit-card-body">
       @if ($errors->any())
-        <div style="background:#fef2f2; border:1px solid #fca5a5; border-radius:10px; padding:14px; margin-bottom:20px;">
-          <h4 style="color:#dc2626; margin-top:0; margin-bottom:8px; font-size:.9rem;">There were some problems with your input:</h4>
-          <ul style="color:#b91c1c; font-size:.85rem; margin:0; padding-left:20px;">
+        <div style="background:#F5F3FF; border:1px solid #A78BFA; border-radius:10px; padding:14px; margin-bottom:20px;">
+          <h4 style="color:#4C1D95; margin-top:0; margin-bottom:8px; font-size:.9rem;">There were some problems with your input:</h4>
+          <ul style="color:#4C1D95; font-size:.85rem; margin:0; padding-left:20px;">
             @foreach ($errors->all() as $error)
               <li>{{ $error }}</li>
             @endforeach

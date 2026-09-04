@@ -1,13 +1,13 @@
-﻿@extends('layouts.app')
+@extends('layouts.app')
 @section('title', 'Discount Rules')
 @section('content')
 <style>
 .promo-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:24px;gap:16px;}
 .promo-title{font-size:1.45rem;font-weight:800;color:#0f172a;letter-spacing:-.02em;margin-bottom:4px;}
 .promo-sub{font-size:.85rem;color:#64748b;}
-.btn-solid{padding:9px 18px;border:none;background:linear-gradient(135deg,#22c55e,#16a34a);border-radius:10px;color:#fff;font-size:.85rem;font-weight:600;cursor:pointer;font-family:'Outfit',sans-serif;transition:.2s;box-shadow:0 3px 10px rgba(34,197,94,.25);text-decoration:none;display:inline-flex;align-items:center;gap:6px;}
+.btn-solid{padding:9px 18px;border:none;background:linear-gradient(135deg,#7C3AED,#6D28D9);border-radius:10px;color:#fff;font-size:.85rem;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;transition:.2s;box-shadow:0 3px 10px rgba(124,58,237,.25);text-decoration:none;display:inline-flex;align-items:center;gap:6px;}
 .btn-solid:hover{transform:translateY(-1px);}
-.table-wrap{background:#fff;border:1px solid #e8f5e9;border-radius:16px;overflow:hidden;box-shadow:0 1px 6px rgba(0,0,0,.04);}
+.table-wrap{background:#fff;border:1px solid #DDD6FE;border-radius:16px;overflow:hidden;box-shadow:0 1px 6px rgba(0,0,0,.04);}
 .promo-table{width:100%;border-collapse:collapse;}
 .promo-table thead tr{background:#f8fafc;}
 .promo-table thead th{padding:12px 18px;font-size:.7rem;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.08em;text-align:left;border-bottom:1px solid #f1f5f9;}
@@ -16,14 +16,14 @@
 .promo-table tbody tr:last-child{border-bottom:none;}
 .promo-table td{padding:13px 18px;font-size:.875rem;color:#374151;vertical-align:middle;}
 .pill{display:inline-flex;align-items:center;gap:4px;padding:3px 9px;border-radius:99px;font-size:.7rem;font-weight:700;}
-.pill-green{background:#dcfce7;color:#15803d;}
+.pill-green{background:#EDE9FE;color:#4C1D95;}
 .pill-gray{background:#f1f5f9;color:#64748b;}
-.pill-blue{background:#dbeafe;color:#1d4ed8;}
+.pill-blue{background:#EDE9FE;color:#4C1D95;}
 .pill-purple{background:#f3e8ff;color:#7c3aed;}
-.action-link{color:#22c55e;font-size:.8rem;font-weight:600;text-decoration:none;padding:5px 9px;border-radius:7px;transition:.15s;}
-.action-link:hover{background:#f0fdf4;}
-.action-del{color:#ef4444;font-size:.8rem;font-weight:600;background:none;border:none;cursor:pointer;padding:5px 9px;border-radius:7px;font-family:'Outfit',sans-serif;transition:.15s;}
-.action-del:hover{background:#fef2f2;}
+.action-link{color:#7C3AED;font-size:.8rem;font-weight:600;text-decoration:none;padding:5px 9px;border-radius:7px;transition:.15s;}
+.action-link:hover{background:#F5F3FF;}
+.action-del{color:#6D28D9;font-size:.8rem;font-weight:600;background:none;border:none;cursor:pointer;padding:5px 9px;border-radius:7px;font-family:'Inter',sans-serif;transition:.15s;}
+.action-del:hover{background:#F5F3FF;}
 .empty-state{padding:60px 20px;text-align:center;color:#cbd5e1;}
 .empty-state svg{margin:0 auto 14px;display:block;opacity:.3;}
 .empty-state p{font-size:.9rem;font-weight:500;margin-bottom:16px;}
@@ -67,7 +67,7 @@
                 @elseif($rule->type === 'buy_x_get_y')
                     Buy {{ $rule->buy_quantity }}, Get {{ $rule->get_quantity }}
                 @else
-                    —
+                    â€”
                 @endif
             </td>
             <td>
@@ -79,7 +79,7 @@
             </td>
             <td style="font-size:.82rem;color:#64748b;">
                 @if($rule->valid_from && $rule->valid_until)
-                    {{ \Carbon\Carbon::parse($rule->valid_from)->format('M d') }} – {{ \Carbon\Carbon::parse($rule->valid_until)->format('M d, Y') }}
+                    {{ \Carbon\Carbon::parse($rule->valid_from)->format('M d') }} â€“ {{ \Carbon\Carbon::parse($rule->valid_until)->format('M d, Y') }}
                 @elseif($rule->valid_from)
                     From {{ \Carbon\Carbon::parse($rule->valid_from)->format('M d, Y') }}
                 @elseif($rule->valid_until)

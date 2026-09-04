@@ -1,5 +1,5 @@
 @if ($paginator->hasPages())
-<nav role="navigation" aria-label="Pagination" style="display:flex;align-items:center;justify-content:center;gap:5px;flex-wrap:wrap;font-family:'Outfit',sans-serif;">
+<nav role="navigation" aria-label="Pagination" style="display:flex;align-items:center;justify-content:center;gap:5px;flex-wrap:wrap;font-family:'Inter',sans-serif;">
 
     {{-- Prev arrow --}}
     @if ($paginator->onFirstPage())
@@ -20,7 +20,7 @@
         @if (is_array($element))
             @foreach ($element as $page => $url)
                 @if ($page == $paginator->currentPage())
-                    <span aria-current="page" style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:9px;border:1.5px solid #D4B800;background:#F5EFC0;color:#7A5C00;font-size:.82rem;font-weight:800;">{{ $page }}</span>
+                    <span aria-current="page" style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:9px;border:1.5px solid #7C3AED;background:#EDE9FE;color:#4C1D95;font-size:.82rem;font-weight:800;">{{ $page }}</span>
                 @else
                     <a href="{{ $url }}" style="display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:9px;border:1.5px solid #E8EAED;background:#fff;color:#3C4048;font-size:.82rem;font-weight:700;text-decoration:none;transition:.15s;" onmouseover="this.style.background='#F0F2F5';this.style.borderColor='#D8DBE0'" onmouseout="this.style.background='#fff';this.style.borderColor='#E8EAED'">{{ $page }}</a>
                 @endif

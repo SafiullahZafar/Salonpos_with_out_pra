@@ -15,41 +15,41 @@
 /* ── Tabs ── */
 .history-tabs{display:flex;gap:12px;margin-bottom:24px;border-bottom:1px solid #e2e8f0;padding-bottom:12px;}
 .tab-btn{padding:10px 20px;border-radius:12px;font-size:.85rem;font-weight:700;text-decoration:none;color:#64748b;background:#f8fafc;border:1.5px solid #e2e8f0;transition:.2s;display:flex;align-items:center;gap:8px;}
-.tab-btn.active{background:#F5EFC0;color:#7A5C00;border-color:#D4B800;box-shadow:0 2px 8px rgba(212,184,0,.15);}
+.tab-btn.active{background:#EDE9FE;color:#4C1D95;border-color:#7C3AED;box-shadow:0 2px 8px rgba(212,184,0,.15);}
 
 /* ── Header ── */
 .inv-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:24px;gap:16px;flex-wrap:wrap;}
 .inv-title{font-size:1.45rem;font-weight:800;color:#0f172a;letter-spacing:-.02em;margin-bottom:4px;}
 .inv-sub{font-size:.85rem;color:#64748b;}
 .header-actions{display:flex;gap:8px;flex-wrap:wrap;}
-.btn-export{padding:8px 14px;border-radius:10px;font-size:.8rem;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:.2s;font-family:'Outfit',sans-serif;cursor:pointer;border:1.5px solid #e2e8f0;background:#fff;color:#64748b;}
-.btn-export:hover{border-color:#F7DF79;color:#c9a800;background:#fffdf0;}
-.btn-export.pdf{border-color:#fca5a5;color:#dc2626;background:#fef2f2;}
-.btn-export.pdf:hover{background:#fee2e2;}
+.btn-export{padding:8px 14px;border-radius:10px;font-size:.8rem;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:.2s;font-family:'Inter',sans-serif;cursor:pointer;border:1.5px solid #e2e8f0;background:#fff;color:#64748b;}
+.btn-export:hover{border-color:#6D28D9;color:#6D28D9;background:#F5F3FF;}
+.btn-export.pdf{border-color:#A78BFA;color:#4C1D95;background:#F5F3FF;}
+.btn-export.pdf:hover{background:#EDE9FE;}
 
 /* ── Stats ── */
 .stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:20px;}
-.stat-card{background:#fff;border:1px solid #f0e8a0;border-radius:14px;padding:16px 18px;box-shadow:0 1px 4px rgba(0,0,0,.04);display:flex;align-items:center;gap:12px;}
+.stat-card{background:#fff;border:1px solid #DDD6FE;border-radius:14px;padding:16px 18px;box-shadow:0 1px 4px rgba(0,0,0,.04);display:flex;align-items:center;gap:12px;}
 .stat-icon{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .stat-val{font-size:1.4rem;font-weight:800;color:#0f172a;line-height:1;margin-bottom:3px;}
 .stat-label{font-size:.72rem;color:#64748b;font-weight:500;}
 
 /* ── Filter panel ── */
-.filter-panel{background:#fff;border:1px solid #f0e8a0;border-radius:14px;padding:18px 20px;margin-bottom:18px;box-shadow:0 1px 4px rgba(0,0,0,.04);}
+.filter-panel{background:#fff;border:1px solid #DDD6FE;border-radius:14px;padding:18px 20px;margin-bottom:18px;box-shadow:0 1px 4px rgba(0,0,0,.04);}
 .filter-title{font-size:.78rem;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.09em;margin-bottom:14px;display:flex;align-items:center;justify-content:space-between;}
 .filter-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:14px;}
 .filter-grid-2{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;}
 .f-label{display:block;font-size:.75rem;font-weight:600;color:#374151;margin-bottom:5px;}
-.f-input{width:100%;padding:8px 11px;border:1.5px solid #e5e7eb;border-radius:9px;font-size:.82rem;font-family:'Outfit',sans-serif;color:#1e293b;background:#fafafa;outline:none;transition:.2s;}
-.f-input:focus{border-color:#F7DF79;background:#fff;box-shadow:0 0 0 3px rgba(247,223,121,.1);}
+.f-input{width:100%;padding:8px 11px;border:1.5px solid #e5e7eb;border-radius:9px;font-size:.82rem;font-family:'Inter',sans-serif;color:#1e293b;background:#fafafa;outline:none;transition:.2s;}
+.f-input:focus{border-color:#6D28D9;background:#fff;box-shadow:0 0 0 3px rgba(109,40,217,.1);}
 .filter-footer{display:flex;align-items:center;justify-content:space-between;padding-top:12px;border-top:1px solid #f1f5f9;}
-.btn-apply{padding:8px 18px;border:none;background:linear-gradient(135deg,#F7DF79,#c9a800);border-radius:9px;color:#18181b;font-size:.82rem;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;transition:.2s;box-shadow:0 2px 8px rgba(247,223,121,.2);}
+.btn-apply{padding:8px 18px;border:none;background:linear-gradient(135deg,#6D28D9,#6D28D9);border-radius:9px;color:#18181b;font-size:.82rem;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;transition:.2s;box-shadow:0 2px 8px rgba(109,40,217,.2);}
 .btn-apply:hover{transform:translateY(-1px);}
 .btn-clear{font-size:.8rem;color:#94a3b8;text-decoration:none;font-weight:500;transition:.15s;}
-.btn-clear:hover{color:#ef4444;}
+.btn-clear:hover{color:#6D28D9;}
 
 /* ── Table ── */
-.table-wrap{background:#fff;border:1px solid #f0e8a0;border-radius:16px;overflow:hidden;box-shadow:0 1px 6px rgba(0,0,0,.04);}
+.table-wrap{background:#fff;border:1px solid #DDD6FE;border-radius:16px;overflow:hidden;box-shadow:0 1px 6px rgba(0,0,0,.04);}
 .inv-table{width:100%;border-collapse:collapse;}
 .inv-table thead tr{background:#f8fafc;}
 .inv-table thead th{padding:12px 18px;font-size:.7rem;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.08em;text-align:left;border-bottom:1px solid #f1f5f9;}
@@ -57,13 +57,13 @@
 .inv-table tbody tr:hover{background:#fafffe;}
 .inv-table tbody tr:last-child{border-bottom:none;}
 .inv-table td{padding:13px 18px;font-size:.875rem;color:#374151;vertical-align:middle;}
-.inv-no{font-family:monospace;font-size:.82rem;font-weight:700;color:#a07800;background:#fffdf0;border:1px solid #F7DF79;padding:3px 9px;border-radius:7px;}
+.inv-no{font-family:monospace;font-size:.82rem;font-weight:700;color:#4C1D95;background:#F5F3FF;border:1px solid #6D28D9;padding:3px 9px;border-radius:7px;}
 .pill{display:inline-flex;align-items:center;padding:3px 9px;border-radius:99px;font-size:.7rem;font-weight:700;}
-.pill-green{background:#FBEFBC;color:#a07800;}
-.pill-amber{background:#fef3c7;color:#92400e;}
-.pill-red{background:#fee2e2;color:#b91c1c;}
+.pill-green{background:#EDE9FE;color:#4C1D95;}
+.pill-amber{background:#EDE9FE;color:#4C1D95;}
+.pill-red{background:#EDE9FE;color:#4C1D95;}
 .pill-gray{background:#f1f5f9;color:#64748b;}
-.pill-blue{background:#dbeafe;color:#1d4ed8;}
+.pill-blue{background:#EDE9FE;color:#4C1D95;}
 .action-link{display:inline-flex;align-items:center;justify-content:center;gap:5px;color:#18181b;font-size:.78rem;font-weight:700;text-decoration:none;padding:6px 14px;border-radius:8px;transition:.15s;background:#F0F2F5;border:1.5px solid #E8EAED;white-space:nowrap;width:auto;}
 .action-link:hover{background:#E8EAED;color:#18181b;border-color:#D8DBE0;}
 
@@ -72,41 +72,18 @@
 .empty-state p{font-size:.9rem;font-weight:500;}
 .pagination-wrap{padding:16px 18px;border-top:1px solid #f1f5f9;display:flex;justify-content:center;}
 
-.date-group { background: #fff; border: 1.5px solid #f0e8b0; border-radius: 16px; margin-bottom: 12px; overflow: hidden; }
-.date-header { padding: 16px 24px; background: #fffdf0; cursor: pointer; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #f0e8b0; }
+.date-group { background: #fff; border: 1.5px solid #DDD6FE; border-radius: 16px; margin-bottom: 12px; overflow: hidden; }
+.date-header { padding: 16px 24px; background: #F5F3FF; cursor: pointer; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #DDD6FE; }
 .date-title { font-size: 1rem; font-weight: 800; color: #1e293b; }
-.date-summary { font-size: 0.75rem; color: #c9a800; font-weight: 700; }
+.date-summary { font-size: 0.75rem; color: #6D28D9; font-weight: 700; }
 .date-content { display: none; padding: 0; }
 .date-group.active .date-content { display: block; }
 .date-group.active .drop-arrow { transform: rotate(180deg); }
-.drop-arrow { transition: 0.3s; color: #c9a800; }
+.drop-arrow { transition: 0.3s; color: #6D28D9; }
 
 .toggle-group-wrap { display: flex; align-items: center; gap: 8px; background: #f8fafc; padding: 8px 16px; border-radius: 12px; border: 1px solid #e2e8f0; margin-bottom: 16px; width: fit-content; }
 .toggle-label-text { font-size: 0.8rem; font-weight: 700; color: #475569; }
 </style>
-
-{{-- Tabs --}}
-<div class="history-tabs">
-    <a href="{{ route('invoices.index', ['tab' => 'sales']) }}" class="tab-btn {{ $tab === 'sales' ? 'active' : '' }}">
-        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
-        Sales History
-    </a>
-
-    <a href="{{ route('invoices.index', ['tab' => 'purchases']) }}" class="tab-btn {{ $tab === 'purchases' ? 'active' : '' }}">
-        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
-        Purchase History
-    </a>
-
-    <a href="{{ route('invoices.index', ['tab' => 'reconciliation']) }}" class="tab-btn {{ $tab === 'reconciliation' ? 'active' : '' }}">
-        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
-        Reconciliation History
-    </a>
-
-    <a href="{{ route('invoices.index', ['tab' => 'expenses']) }}" class="tab-btn {{ $tab === 'expenses' ? 'active' : '' }}">
-        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
-        Expense History
-    </a>
-</div>
 
 {{-- Header --}}
 <div class="inv-header">
@@ -131,8 +108,8 @@
 {{-- Content Sections --}}
 @if($tab === 'sales')
     @if(!$canViewSales)
-        <div class="empty-state" style="background:#fff; border-radius:16px; border:2px dashed #fee2e2;">
-            <svg width="48" height="48" fill="none" stroke="#ef4444" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+        <div class="empty-state" style="background:#fff; border-radius:16px; border:2px dashed #EDE9FE;">
+            <svg width="48" height="48" fill="none" stroke="#6D28D9" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
             <h3 style="color:#1e293b; font-weight:800; margin-bottom:8px;">Access Denied</h3>
             <p style="color:#64748b;">You do not have permission to view Sales History. Please contact your administrator.</p>
         </div>
@@ -140,7 +117,7 @@
     {{-- Stats (Only for Sales for now) --}}
     <div class="stats-row">
         <div class="stat-card">
-            <div class="stat-icon" style="background:#eff6ff;color:#3b82f6;">
+            <div class="stat-icon" style="background:#F5F3FF;color:#7C3AED;">
                 <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
             </div>
             <div>
@@ -149,11 +126,11 @@
             </div>
         </div>
         <div class="stat-card">
-            <div class="stat-icon" style="background:#fffdf0;color:#F7DF79;">
+            <div class="stat-icon" style="background:#F5F3FF;color:#6D28D9;">
                 <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
             </div>
             <div>
-                <div class="stat-val" style="color:#c9a800;">PKR {{ number_format($totalSales, 2) }}</div>
+                <div class="stat-val" style="color:#6D28D9;">PKR {{ number_format($totalSales, 2) }}</div>
                 <div class="stat-label">Total Sales</div>
             </div>
         </div>
@@ -167,7 +144,7 @@
             </div>
         </div>
         <div class="stat-card">
-            <div class="stat-icon" style="background:#fffbeb;color:#f59e0b;">
+            <div class="stat-icon" style="background:#F5F3FF;color:#8B5CF6;">
                 <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
             </div>
             <div>
@@ -311,9 +288,9 @@
                                     {{ $invoice->staff_names ?? ($invoice->staff?->name ?? '-') }}
                                 </div>
                             </td>
-                            <td style="font-weight:800;color:#c9a800;">PKR {{ number_format($invoice->payable_amount, 2) }}</td>
+                            <td style="font-weight:800;color:#6D28D9;">PKR {{ number_format($invoice->payable_amount, 2) }}</td>
                             <td style="font-weight:600;color:#64748b;">PKR {{ number_format($totalCost, 2) }}</td>
-                            <td style="font-weight:800;color:{{ $profit >= 0 ? '#10b981' : '#ef4444' }};">PKR {{ number_format($profit, 2) }}</td>
+                            <td style="font-weight:800;color:{{ $profit > 0 ? '#16A34A' : '#17131F' }};">PKR {{ number_format($profit, 2) }}</td>
                             <td>
                                 <span class="pill pill-gray">{{ ucfirst($invoice->payment_method) }}</span>
                                 @if(in_array($invoice->payment_method, ['bank','split']) && $invoice->bank_name)
@@ -379,9 +356,9 @@
                                 {{ $invoice->staff_names ?? ($invoice->staff?->name ?? '-') }}
                             </div>
                         </td>
-                        <td style="font-weight:800;color:#c9a800;">PKR {{ number_format($invoice->payable_amount, 2) }}</td>
+                        <td style="font-weight:800;color:#6D28D9;">PKR {{ number_format($invoice->payable_amount, 2) }}</td>
                         <td style="font-weight:600;color:#64748b;">PKR {{ number_format($totalCost, 2) }}</td>
-                        <td style="font-weight:800;color:{{ $profit >= 0 ? '#10b981' : '#ef4444' }};">PKR {{ number_format($profit, 2) }}</td>
+                        <td style="font-weight:800;color:{{ $profit > 0 ? '#16A34A' : '#17131F' }};">PKR {{ number_format($profit, 2) }}</td>
                         <td>
                             <span class="pill pill-gray">{{ ucfirst($invoice->payment_method) }}</span>
                             @if(in_array($invoice->payment_method, ['bank','split']) && $invoice->bank_name)
@@ -404,8 +381,8 @@
     @endif
 @elseif($tab === 'purchases')
     @if(!$canViewPurchases)
-        <div class="empty-state" style="background:#fff; border-radius:16px; border:2px dashed #fee2e2;">
-            <svg width="48" height="48" fill="none" stroke="#ef4444" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+        <div class="empty-state" style="background:#fff; border-radius:16px; border:2px dashed #EDE9FE;">
+            <svg width="48" height="48" fill="none" stroke="#6D28D9" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
             <h3 style="color:#1e293b; font-weight:800; margin-bottom:8px;">Access Denied</h3>
             <p style="color:#64748b;">You do not have permission to view Purchase History. Please contact your administrator.</p>
         </div>
@@ -489,15 +466,15 @@
                         <div style="font-size:0.8rem; color:#475569; max-height: 60px; overflow-y: auto;">
                         @forelse($pur->purchaseItems as $item)
                             @php $quantity = $item->quantity_received ?? $item->quantity_ordered; @endphp
-                            <div>{{ $item->product->name ?? 'Unknown' }} <strong style="color:{{ $quantity < 0 ? '#ef4444' : '#10b981' }};">({{ $quantity > 0 ? '+' : '' }}{{ $quantity }})</strong></div>
+                            <div>{{ $item->product->name ?? 'Unknown' }} <strong style="color:{{ $quantity < 0 ? '#6D28D9' : '#8B5CF6' }};">({{ $quantity > 0 ? '+' : '' }}{{ $quantity }})</strong></div>
                         @empty
                             <span style="color:#94a3b8;">No items</span>
                         @endforelse
                         </div>
                     </td>
                     <td style="font-weight:700;color:#64748b;">PKR {{ number_format($pur->total_amount, 2) }}</td>
-                    <td style="font-weight:800;color:#c9a800;">PKR {{ number_format($revenue, 2) }}</td>
-                    <td style="font-weight:800;color:{{ $profit >= 0 ? '#10b981' : '#ef4444' }};">PKR {{ number_format($profit, 2) }}</td>
+                    <td style="font-weight:800;color:#6D28D9;">PKR {{ number_format($revenue, 2) }}</td>
+                    <td style="font-weight:800;color:{{ $profit > 0 ? '#16A34A' : '#17131F' }};">PKR {{ number_format($profit, 2) }}</td>
                     <td><span class="pill {{ $pur->status === 'received' ? 'pill-green' : 'pill-amber' }}">{{ ucfirst($pur->status) }}</span></td>
                     <td>
                         <a href="{{ route('purchases.show', $pur->id) }}" class="action-link">View</a>
@@ -514,8 +491,8 @@
 
 @elseif($tab === 'reconciliation')
     @if(!$canViewReconciliation)
-        <div class="empty-state" style="background:#fff; border-radius:16px; border:2px dashed #fee2e2;">
-            <svg width="48" height="48" fill="none" stroke="#ef4444" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+        <div class="empty-state" style="background:#fff; border-radius:16px; border:2px dashed #EDE9FE;">
+            <svg width="48" height="48" fill="none" stroke="#6D28D9" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
             <h3 style="color:#1e293b; font-weight:800; margin-bottom:8px;">Access Denied</h3>
             <p style="color:#64748b;">You do not have permission to view Reconciliation History. Please contact your administrator.</p>
         </div>
@@ -568,7 +545,7 @@
                     <td>{{ $rec->user->name }}</td>
                     <td>PKR {{ number_format($rec->expected_cash, 2) }}</td>
                     <td>PKR {{ number_format($rec->actual_cash, 2) }}</td>
-                    <td style="font-weight:700; color:{{ $rec->difference < 0 ? '#ef4444' : ($rec->difference > 0 ? '#10b981' : '#c9a800') }}">
+                    <td style="font-weight:700; color:{{ $rec->difference < 0 ? '#6D28D9' : ($rec->difference > 0 ? '#8B5CF6' : '#6D28D9') }}">
                         PKR {{ number_format($rec->difference, 2) }}
                     </td>
                     <td><span class="pill {{ $rec->status === 'balanced' ? 'pill-green' : 'pill-red' }}">{{ ucfirst($rec->status) }}</span></td>
@@ -583,8 +560,8 @@
     @endif
 @elseif($tab === 'expenses')
     @if(!$canViewExpenses)
-        <div class="empty-state" style="background:#fff; border-radius:16px; border:2px dashed #fee2e2;">
-            <svg width="48" height="48" fill="none" stroke="#ef4444" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+        <div class="empty-state" style="background:#fff; border-radius:16px; border:2px dashed #EDE9FE;">
+            <svg width="48" height="48" fill="none" stroke="#6D28D9" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
             <h3 style="color:#1e293b; font-weight:800; margin-bottom:8px;">Access Denied</h3>
             <p style="color:#64748b;">You do not have permission to view Expense History. Please contact your administrator.</p>
         </div>
@@ -655,12 +632,12 @@
                     <td style="font-weight:700; color:#1e293b;">{{ $exp->created_at->format('M d, Y h:i A') }}</td>
                     <td>
                         @if($exp->expense_type === 'daily')
-                            <span class="pill" style="background:#dbeafe;color:#0284c7;display:inline-flex;align-items:center;gap:5px;">
+                            <span class="pill" style="background:#EDE9FE;color:#6D28D9;display:inline-flex;align-items:center;gap:5px;">
                                 <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
                                 Daily
                             </span>
                         @elseif($exp->expense_type === 'fixed')
-                            <span class="pill" style="background:#fef3c7;color:#b45309;display:inline-flex;align-items:center;gap:5px;">
+                            <span class="pill" style="background:#EDE9FE;color:#4C1D95;display:inline-flex;align-items:center;gap:5px;">
                                 <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 1 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
                                 Fixed
                             </span>
@@ -682,7 +659,7 @@
                             <span class="pill pill-gray">No</span>
                         @endif
                     </td>
-                    <td style="font-weight:800; color:#ef4444;">PKR {{ number_format($exp->amount, 2) }}</td>
+                    <td style="font-weight:800; color:#6D28D9;">PKR {{ number_format($exp->amount, 2) }}</td>
                 </tr>
                 @empty
                 <tr><td colspan="8" class="empty-state">No expense records found.</td></tr>

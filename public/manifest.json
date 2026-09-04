@@ -1,14 +1,14 @@
 {
-    "name": "Crimpers Salon POS",
-    "short_name": "Crimpers POS",
+    "name": "Veloura Salon POS",
+    "short_name": "Veloura POS",
     "description": "Salon POS dashboard for appointments, sales, inventory, and staff operations.",
     "id": "/",
     "start_url": "/",
     "scope": "/",
     "display": "standalone",
     "orientation": "portrait",
-    "background_color": "#111827",
-    "theme_color": "#111827",
+    "background_color": "#F5F3FF",
+    "theme_color": "#4C1D95",
     "categories": ["business", "productivity", "shopping"],
     "icons": [
         {

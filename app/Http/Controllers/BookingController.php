@@ -48,14 +48,14 @@ class BookingController extends Controller
                 ];
             } else {
                 $product = Product::findOrFail($itemData['id']);
-                $subtotal = $product->price * $itemData['quantity'];
+                $subtotal = $product->selling_price * $itemData['quantity'];
                 $total += $subtotal;
 
                 $items[] = [
                     'itemizable_type' => Product::class,
                     'itemizable_id' => $product->id,
                     'quantity' => $itemData['quantity'],
-                    'unit_price' => $product->price,
+                    'unit_price' => $product->selling_price,
                     'subtotal' => $subtotal,
                 ];
             }

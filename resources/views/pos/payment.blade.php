@@ -2,7 +2,7 @@
 @section('title', 'Payment')
 @section('content')
   <style>
-    /* ─── Flexible layout — expands downward as needed ─── */
+    /* â”€â”€â”€ Flexible layout â€” expands downward as needed â”€â”€â”€ */
     .pay-wrap {
       display: flex;
       gap: 18px;
@@ -18,7 +18,7 @@
       flex-direction: column;
       background: #fff;
       border-radius: 18px;
-      border: 1.5px solid #f0e8a0;
+      border: 1.5px solid #DDD6FE;
       box-shadow: 0 4px 20px rgba(0, 0, 0, .04);
       min-height: 680px;
     }
@@ -42,13 +42,13 @@
     }
 
     .cust-pill {
-      background: #fffdf0;
-      color: #a07800;
+      background: #F5F3FF;
+      color: #4C1D95;
       padding: 3px 10px;
       border-radius: 99px;
       font-size: .68rem;
       font-weight: 700;
-      border: 1px solid #F7DF79;
+      border: 1px solid #6D28D9;
     }
 
     .items-list {
@@ -72,8 +72,8 @@
     }
 
     .pay-item:hover {
-      border-color: #F7DF79;
-      background: #fffdf0;
+      border-color: #6D28D9;
+      background: #F5F3FF;
       transform: scale(1.01);
     }
 
@@ -88,18 +88,18 @@
     }
 
     .pay-iicon.svc {
-      background: #fffdf0;
-      color: #c9a800;
+      background: #F5F3FF;
+      color: #6D28D9;
     }
 
     .pay-iicon.pkg {
-      background: #eef2ff;
-      color: #6366f1;
+      background: #F5F3FF;
+      color: #7C3AED;
     }
 
     .pay-iicon.prd {
-      background: #fefce8;
-      color: #ca8a04;
+      background: #F5F3FF;
+      color: #6D28D9;
     }
 
     .pay-iinfo {
@@ -148,7 +148,7 @@
     }
 
     .qty-btn:hover {
-      background: #F7DF79;
+      background: #6D28D9;
       color: #18181b;
     }
 
@@ -163,14 +163,14 @@
     .pay-iprice {
       font-size: 1.1rem;
       font-weight: 900;
-      color: #c9a800;
+      color: #6D28D9;
       min-width: 100px;
       text-align: right;
       flex-shrink: 0;
     }
 
     .pay-item.pkg-item .pay-iprice {
-      color: #6366f1;
+      color: #7C3AED;
     }
 
     .totals-strip {
@@ -197,8 +197,8 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: #fffdf0;
-      border: 1.5px solid #F7DF79;
+      background: #F5F3FF;
+      border: 1.5px solid #6D28D9;
       border-radius: 10px;
       padding: 9px 13px;
       margin-top: 6px;
@@ -213,7 +213,7 @@
     .t-total-val {
       font-size: 1.3rem;
       font-weight: 800;
-      color: #c9a800;
+      color: #6D28D9;
     }
 
     /* RIGHT */
@@ -222,7 +222,7 @@
       min-width: 420px;
       background: #fff;
       border-radius: 18px;
-      border: 1.5px solid #f0e8a0;
+      border: 1.5px solid #DDD6FE;
       box-shadow: 0 4px 20px rgba(0, 0, 0, .04);
       display: flex;
       flex-direction: column;
@@ -296,16 +296,16 @@
     }
 
     .f-input:focus {
-      border-color: #F7DF79;
+      border-color: #6D28D9;
       background: #fff;
-      box-shadow: 0 0 0 4px rgba(247, 223, 121, .15);
+      box-shadow: 0 0 0 4px rgba(109,40,217, .15);
     }
 
     .f-input.pl {
       padding-left: 54px;
     }
 
-    /* Method grid — single row, 3 buttons */
+    /* Method grid â€” single row, 3 buttons */
     .method-grid {
       display: flex;
       gap: 8px;
@@ -338,9 +338,9 @@
     }
 
     .method-btn:hover {
-      border-color: #F7DF79;
-      background: #fffdf0;
-      color: #c9a800;
+      border-color: #6D28D9;
+      background: #F5F3FF;
+      color: #6D28D9;
       transform: translateY(-2px);
     }
 
@@ -349,10 +349,10 @@
     }
 
     .method-btn.active {
-      background: #FBEFBC;
-      border-color: #c9a800;
-      color: #7a5c00;
-      box-shadow: 0 4px 12px rgba(201, 168, 0, .15);
+      background: #EDE9FE;
+      border-color: #6D28D9;
+      color: #4C1D95;
+      box-shadow: 0 4px 12px rgba(76,29,149, .15);
     }
 
     .method-btn.active svg {
@@ -360,16 +360,16 @@
     }
 
     .method-btn.split-btn.active {
-      background: #eef2ff;
-      border-color: #6366f1;
-      color: #4338ca;
+      background: #F5F3FF;
+      border-color: #7C3AED;
+      color: #4C1D95;
       box-shadow: 0 4px 12px rgba(99, 102, 241, .15);
     }
 
     /* Split panel */
     .split-panel {
       background: #f5f3ff;
-      border: 1.5px solid #e0e7ff;
+      border: 1.5px solid #DDD6FE;
       border-radius: 10px;
       padding: 10px;
       margin-bottom: 10px;
@@ -398,7 +398,7 @@
     .split-inp {
       flex: 1;
       padding: 7px 10px;
-      border: 1.5px solid #e0e7ff;
+      border: 1.5px solid #DDD6FE;
       border-radius: 7px;
       font-size: .82rem;
       font-family: inherit;
@@ -409,7 +409,7 @@
     }
 
     .split-inp:focus {
-      border-color: #6366f1;
+      border-color: #7C3AED;
       box-shadow: 0 0 0 3px rgba(99, 102, 241, .1);
     }
 
@@ -421,19 +421,19 @@
     }
 
     .split-rem.ok {
-      color: #c9a800;
+      color: #6D28D9;
     }
 
     .split-rem.warn {
-      color: #ef4444;
+      color: #6D28D9;
     }
 
     /* Change box */
     .chg-box {
       margin-top: 7px;
       padding: 9px 12px;
-      background: #fffdf0;
-      border: 1.5px dashed #F7DF79;
+      background: #F5F3FF;
+      border: 1.5px dashed #6D28D9;
       border-radius: 9px;
       display: none;
       align-items: center;
@@ -447,7 +447,7 @@
     .chg-lbl {
       font-size: .65rem;
       font-weight: 700;
-      color: #c9a800;
+      color: #6D28D9;
       text-transform: uppercase;
       letter-spacing: .06em;
     }
@@ -455,7 +455,7 @@
     .chg-val {
       font-size: 1rem;
       font-weight: 800;
-      color: #a07800;
+      color: #4C1D95;
     }
 
     /* Footer */
@@ -492,7 +492,7 @@
 
     .btn-confirm {
       flex: 1;
-      background: linear-gradient(135deg, #F7DF79, #c9a800);
+      background: linear-gradient(135deg, #6D28D9, #6D28D9);
       color: #18181b;
       padding: 12px;
       border-radius: 12px;
@@ -502,14 +502,14 @@
       cursor: pointer;
       transition: .25s;
       font-family: inherit;
-      box-shadow: 0 6px 20px rgba(201, 168, 0, .3);
+      box-shadow: 0 6px 20px rgba(76,29,149, .3);
       text-transform: uppercase;
       letter-spacing: .02em;
     }
 
     .btn-confirm:hover {
       transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(201, 168, 0, .45);
+      box-shadow: 0 10px 30px rgba(76,29,149, .45);
     }
 
     .btn-confirm:active {
@@ -550,8 +550,8 @@
       width: 56px;
       height: 56px;
       border-radius: 50%;
-      background: #FBEFBC;
-      color: #c9a800;
+      background: #EDE9FE;
+      color: #6D28D9;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -589,13 +589,13 @@
     }
 
     .modal-btn-print {
-      background: #fffdf0;
-      color: #c9a800;
-      border: 1.5px solid #F7DF79 !important;
+      background: #F5F3FF;
+      color: #6D28D9;
+      border: 1.5px solid #6D28D9 !important;
     }
 
     .modal-btn-print:hover {
-      background: #FBEFBC;
+      background: #EDE9FE;
     }
 
     .modal-done {
@@ -613,6 +613,17 @@
     .modal-done:hover {
       color: #71717a;
     }
+    /* Focused transaction summary + payment workspace */
+    .pay-wrap{display:grid;grid-template-columns:minmax(0,1fr) 420px;align-items:start;gap:20px;}
+    .pay-left,.pay-right{border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow-card);}
+    .pay-right{width:auto;min-width:0;position:sticky;top:92px;max-height:calc(100vh - 116px);}
+    .pay-right-body{padding:18px;}
+    .pay-foot{position:sticky;bottom:0;background:#fff;border-color:var(--border);padding:12px;}
+    .method-btn.active,.method-btn.split-btn.active{background:var(--brand-100);border-color:var(--brand-600);color:var(--brand-800);box-shadow:0 4px 14px rgba(109,40,217,.12);}
+    .btn-confirm{background:var(--brand-700);color:#fff;box-shadow:0 6px 18px rgba(109,40,217,.24);}
+    .btn-confirm:hover{background:var(--brand-600);box-shadow:0 9px 24px rgba(109,40,217,.28);}
+    @media(max-width:1024px){.pay-wrap{grid-template-columns:1fr}.pay-right{position:static;max-height:none}.pay-left,.pay-right{min-height:auto}}
+    @media(max-width:640px){.pay-wrap{gap:14px;padding-bottom:20px}.pay-item{padding:12px;gap:10px}.method-grid{display:grid;grid-template-columns:1fr 1fr}.pay-foot{bottom:0;z-index:3}.btn-confirm{min-height:48px}}
   </style>
 
   <div class="pay-wrap">
@@ -637,11 +648,11 @@
       <div class="totals-strip">
         <div class="t-row"><span>Original Total (Services)</span><span class="v" id="t-sub">PKR 0.00</span></div>
         {{-- Tax row hidden - No GST --}}
-        <div class="t-row" id="t-disc-row" style="display:none;"><span style="color:#22c55e; font-weight:700;">🏷 Package Savings / Discount</span><span class="v"
-            style="color:#22c55e;" id="t-disc">-PKR 0.00</span></div>
+        <div class="t-row" id="t-disc-row" style="display:none;"><span style="color:#7C3AED; font-weight:700;">ðŸ· Package Savings / Discount</span><span class="v"
+            style="color:#7C3AED;" id="t-disc">-PKR 0.00</span></div>
         <div class="t-row" id="t-prev-bal-row" style="display:none;">
-          <span style="color:#ef4444; font-weight:700;">⚠ Previous Balance</span>
-          <span class="v" style="color:#ef4444; font-weight:700;" id="t-prev-bal">+PKR 0.00</span>
+          <span style="color:#6D28D9; font-weight:700;">âš  Previous Balance</span>
+          <span class="v" style="color:#6D28D9; font-weight:700;" id="t-prev-bal">+PKR 0.00</span>
         </div>
         <div class="t-total">
           <span class="t-total-lbl">Total Payable</span>
@@ -658,7 +669,7 @@
 
       <div class="pay-right-body">
         <div id="pos-error-alert"
-          style="display:none; background: #fee2e2; border: 1px solid #ef4444; color: #b91c1c; padding: 12px; border-radius: 12px; margin-bottom: 15px; font-weight: 600; font-size: 0.85rem; align-items: center; gap: 10px;">
+          style="display:none; background: #EDE9FE; border: 1px solid #6D28D9; color: #4C1D95; padding: 12px; border-radius: 12px; margin-bottom: 15px; font-weight: 600; font-size: 0.85rem; align-items: center; gap: 10px;">
           <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <circle cx="12" cy="12" r="10" />
             <line x1="12" y1="8" x2="12" y2="12" />
@@ -668,12 +679,12 @@
         </div>
 
         <div class="f-grp" id="staff-section">
-          <span class="f-lbl">Performed By (Staff) <span style="color:#ef4444; font-size:0.7rem; font-weight:800;">* Required</span></span>
+          <span class="f-lbl">Performed By (Staff) <span style="color:#6D28D9; font-size:0.7rem; font-weight:800;">* Required</span></span>
           <div style="background:#fafafa; border:1.5px solid #e2e8f0; border-radius:12px; padding:10px; max-height: 200px; overflow-y: auto;">
             @foreach($staff as $s)
               <div class="staff-allocation-row" style="display:flex; align-items:center; justify-content:space-between; margin-bottom:8px; padding-bottom:8px; border-bottom:1px solid #f1f5f9;">
                 <label style="display:flex; align-items:center; gap:8px; cursor:pointer; font-size:.9rem; font-weight:600; color:#334155; flex:1;">
-                  <input type="checkbox" class="staff-checkbox" value="{{ $s->id }}" style="width:16px; height:16px; accent-color:#c9a800;">
+                  <input type="checkbox" class="staff-checkbox" value="{{ $s->id }}" style="width:16px; height:16px; accent-color:#6D28D9;">
                   {{ $s->name }}
                 </label>
                 <div class="staff-amt-wrap" style="display:none; width:130px;">
@@ -690,19 +701,19 @@
         <div class="f-grp">
           <span class="f-lbl">Customer Rating</span>
           <div
-            style="display:flex; gap:10px; padding:10px; background:#fffdf8; border:1.5px solid #F7DF79; border-radius:10px; justify-content:center;">
+            style="display:flex; gap:10px; padding:10px; background:#F8F7FA; border:1.5px solid #6D28D9; border-radius:10px; justify-content:center;">
             @for($i = 1; $i <= 5; $i++)
               <label style="cursor:pointer; display:flex; flex-direction:column; align-items:center;">
                 <input type="radio" name="pay-rating" value="{{ $i }}" {{ $i == 5 ? 'checked' : '' }}
                   style="margin-bottom:4px;">
-                <span style="font-size:0.8rem; font-weight:700; color:#c9a800;">{{ $i }}★</span>
+                <span style="font-size:0.8rem; font-weight:700; color:#6D28D9;">{{ $i }}â˜…</span>
               </label>
             @endfor
           </div>
         </div>
 
         <div class="f-grp">
-          <span class="f-lbl">Discount Amount (PKR) <span id="pkg-disc-badge" style="display:none; background:#dcfce7; color:#15803d; padding:2px 7px; border-radius:99px; font-size:0.6rem; font-weight:800; text-transform:uppercase;">Auto from Package</span></span>
+          <span class="f-lbl">Discount Amount (PKR) <span id="pkg-disc-badge" style="display:none; background:#EDE9FE; color:#4C1D95; padding:2px 7px; border-radius:99px; font-size:0.6rem; font-weight:800; text-transform:uppercase;">Auto from Package</span></span>
           <div class="f-prewrap">
             <span class="f-pre">PKR</span>
             <input type="number" id="pay-disc" class="f-input pl" placeholder="0.00" min="0" step="1">
@@ -711,7 +722,7 @@
 
         <div class="f-grp">
           <label style="display:flex; align-items:center; gap:10px; cursor:pointer; font-size:1rem; font-weight:700; color:#334155; padding:15px; background:#f8fafc; border:2px solid #e2e8f0; border-radius:12px;">
-            <input type="checkbox" id="cb-credit-bill" style="width:20px; height:20px; accent-color:#ef4444;">
+            <input type="checkbox" id="cb-credit-bill" style="width:20px; height:20px; accent-color:#6D28D9;">
             Credit Bill (Pay Later)
           </label>
         </div>
@@ -787,8 +798,8 @@
         </div>
 
         {{-- Credit group --}}
-        <div class="f-grp" id="credit-group" style="display:none; padding:15px; background:#fef2f2; border-radius:12px; border:1.5px solid #fca5a5; margin-bottom:15px;">
-          <div style="font-size:0.85rem; color:#b91c1c; font-weight:600; margin-bottom:15px; display:flex; align-items:center; gap:8px;">
+        <div class="f-grp" id="credit-group" style="display:none; padding:15px; background:#F5F3FF; border-radius:12px; border:1.5px solid #A78BFA; margin-bottom:15px;">
+          <div style="font-size:0.85rem; color:#4C1D95; font-weight:600; margin-bottom:15px; display:flex; align-items:center; gap:8px;">
             <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
             Credit Bill Active. Payment methods below represent the upfront paid amount.
           </div>
@@ -798,16 +809,16 @@
             <span class="f-lbl">Customer Phone (Required)</span>
             <input type="text" id="credit-cust-phone" class="f-input" placeholder="Enter Phone Number">
           </div>
-          <div class="chg-box show" style="background:#fff1f2; border:1px solid #fecdd3; padding:12px; border-radius:8px;">
-            <span class="chg-lbl" style="color:#e11d48; font-weight:700;">Pending Balance</span>
-            <span class="chg-val" id="credit-pending" style="color:#e11d48; font-size:1.1rem;">PKR 0.00</span>
+          <div class="chg-box show" style="background:#F5F3FF; border:1px solid #DDD6FE; padding:12px; border-radius:8px;">
+            <span class="chg-lbl" style="color:#4C1D95; font-weight:700;">Pending Balance</span>
+            <span class="chg-val" id="credit-pending" style="color:#4C1D95; font-size:1.1rem;">PKR 0.00</span>
           </div>
         </div>
 
         {{-- Split group --}}
         <div class="split-panel" id="split-panel">
           <div
-            style="font-size:.7rem;font-weight:700;color:#6366f1;text-transform:uppercase;letter-spacing:.07em;margin-bottom:10px;">
+            style="font-size:.7rem;font-weight:700;color:#7C3AED;text-transform:uppercase;letter-spacing:.07em;margin-bottom:10px;">
             Split Payment</div>
           <div class="split-row">
             <span class="split-lbl">Cash</span>
@@ -904,15 +915,15 @@
       // Show previous balance alert banner
       if (previousBalance > 0) {
         var banner = document.createElement('div');
-        banner.style.cssText = 'background:#fef2f2;border:1.5px solid #fca5a5;border-radius:12px;padding:12px 16px;margin-bottom:12px;display:flex;align-items:center;gap:10px;font-size:.85rem;color:#b91c1c;font-weight:700;';
+        banner.style.cssText = 'background:#F5F3FF;border:1.5px solid #A78BFA;border-radius:12px;padding:12px 16px;margin-bottom:12px;display:flex;align-items:center;gap:10px;font-size:.85rem;color:#4C1D95;font-weight:700;';
         banner.innerHTML = '<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>' +
-          '<span>Previous Outstanding Balance: <strong>PKR ' + previousBalance.toFixed(2) + '</strong> — This will be added to total.</span>';
+          '<span>Previous Outstanding Balance: <strong>PKR ' + previousBalance.toFixed(2) + '</strong> â€” This will be added to total.</span>';
         document.getElementById('items-list').parentNode.insertBefore(banner, document.getElementById('items-list'));
       }
 
-      // ─── Helpers ───────────────────────────────────────────
+      // â”€â”€â”€ Helpers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
       function getSubtotal() {
-        // Subtotal is the ORIGINAL price sum (what services are worth) — shown for reference
+        // Subtotal is the ORIGINAL price sum (what services are worth) â€” shown for reference
         return cart.reduce(function (s, i) {
           return s + (i.origSub || i.sub);
         }, 0);
@@ -924,8 +935,8 @@
       }
 
       function getPayable() {
-        var origSub = getSubtotal();         // original full-price total (e.g. 6400) — display only
-        var actualSub = getActualSubtotal();  // package-price total (e.g. 5000) — already discounted
+        var origSub = getSubtotal();         // original full-price total (e.g. 6400) â€” display only
+        var actualSub = getActualSubtotal();  // package-price total (e.g. 5000) â€” already discounted
         var tax = 0; // No GST
 
         // The packageDiscount (1400) is already baked into the package price (5000).
@@ -1028,7 +1039,7 @@
         }
       }
 
-      // ─── Render items ───────────────────────────────────────
+      // â”€â”€â”€ Render items â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
       function svgFor(type) {
         if (type === 'package') return '<svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>';
         if (type === 'service') return '<svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>';
@@ -1094,7 +1105,7 @@
 
       renderItems();
 
-      // ─── Discount ───────────────────────────────────────────
+      // â”€â”€â”€ Discount â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
       document.getElementById('pay-disc').addEventListener('input', function (e) {
         var typed = parseFloat(e.target.value) || 0;
         // Never allow discount below the auto package savings
@@ -1109,7 +1120,7 @@
         }
       });
 
-      // ─── Payment method ─────────────────────────────────────
+      // â”€â”€â”€ Payment method â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
       document.getElementById('cb-credit-bill').addEventListener('change', function() {
           var isCredit = this.checked;
           document.getElementById('credit-group').style.display = isCredit ? 'block' : 'none';
@@ -1148,7 +1159,7 @@
       document.getElementById('split-cash').addEventListener('input', updateTotals);
       document.getElementById('split-card').addEventListener('input', updateTotals);
 
-      // ─── Staff Allocations ────────────────────────────────────
+      // â”€â”€â”€ Staff Allocations â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
       function getAvailableCommissionPool() {
           // Commission is ALWAYS based on original full service prices (not discounted package price)
           return cart.filter(function(i) { return i.type === 'service' || i.type === 'package'; })
@@ -1236,14 +1247,14 @@
           });
       });
 
-      // ─── Confirm ────────────────────────────────────────────
+      // â”€â”€â”€ Confirm â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
       document.getElementById('btn-confirm').addEventListener('click', async function () {
         var r = getPayable();
 
-        // ── MANDATORY: At least one employee must be selected ──
+        // â”€â”€ MANDATORY: At least one employee must be selected â”€â”€
         var checkedStaff = document.querySelectorAll('.staff-checkbox:checked');
         if (checkedStaff.length === 0) {
-            showPosError('⚠️ Please select at least one employee (Performed By) before completing the payment!');
+            showPosError('âš ï¸ Please select at least one employee (Performed By) before completing the payment!');
             document.getElementById('staff-section').scrollIntoView({ behavior: 'smooth', block: 'center' });
             return;
         }

@@ -3,7 +3,7 @@
 
 @section('content')
 <style>
-:root{--y1:#F7DF79;--y2:#FBEFBC;--yd:#c9a800;--ydark:#a07800;--ybg:#fffdf0;}
+:root{--y1:#6D28D9;--y2:#EDE9FE;--yd:#6D28D9;--ydark:#4C1D95;--ybg:#F5F3FF;}
 
 .pg-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:24px;gap:16px;flex-wrap:wrap;}
 .pg-title{font-size:1.45rem;font-weight:800;color:#18181b;letter-spacing:-.02em;margin-bottom:3px;}

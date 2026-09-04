@@ -4,15 +4,15 @@
 @section('content')
 <style>
 /* Accordion Styles */
-.date-group { background: #fff; border: 1.5px solid #f0e8b0; border-radius: 16px; margin-bottom: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(199,168,0,0.05); }
-.date-header { padding: 16px 24px; background: #fffdf0; cursor: pointer; display: flex; align-items: center; justify-content: space-between; transition: 0.2s; user-select: none; }
-.date-header:hover { background: #fff9db; }
+.date-group { background: #fff; border: 1.5px solid #DDD6FE; border-radius: 16px; margin-bottom: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(76,29,149,0.05); }
+.date-header { padding: 16px 24px; background: #F5F3FF; cursor: pointer; display: flex; align-items: center; justify-content: space-between; transition: 0.2s; user-select: none; }
+.date-header:hover { background: #F5F3FF; }
 .date-info { display: flex; align-items: center; gap: 16px; }
 .date-title { font-size: 1rem; font-weight: 800; color: #1e293b; }
 .date-summary { font-size: 0.75rem; color: #94a3b8; font-weight: 600; display: flex; gap: 12px; }
-.drop-arrow { transition: 0.3s; color: #c9a800; }
+.drop-arrow { transition: 0.3s; color: #6D28D9; }
 .date-group.active .drop-arrow { transform: rotate(180deg); }
-.date-content { display: none; padding: 0 24px 24px; border-top: 1.5px solid #f0e8b0; }
+.date-content { display: none; padding: 0 24px 24px; border-top: 1.5px solid #DDD6FE; }
 .date-group.active .date-content { display: block; }
 
 .attendance-row { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid #f1f5f9; }
@@ -22,15 +22,15 @@
 .staff-phone { font-size: 0.7rem; color: #94a3b8; }
 .time-box { text-align: right; font-size: 0.8rem; color: #64748b; font-weight: 600; }
 
-.hrms-search-box { background: #fff; border: 1.5px solid #f0e8a0; border-radius: 16px; padding: 6px 6px 6px 24px; margin-bottom: 24px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; align-items: center; gap: 12px; }
+.hrms-search-box { background: #fff; border: 1.5px solid #DDD6FE; border-radius: 16px; padding: 6px 6px 6px 24px; margin-bottom: 24px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; align-items: center; gap: 12px; }
 .hrms-search-input { flex: 1; border: none; font-size: 0.95rem; font-family: inherit; color: #1e293b; outline: none; background: transparent; height: 48px; }
-.hrms-search-icon { color: #c9a800; }
-.btn-search-trigger { background: #c9a800; color: #fff; border: none; padding: 0 24px; height: 44px; border-radius: 12px; font-weight: 700; font-size: 0.85rem; cursor: pointer; display: flex; align-items: center; gap: 8px; }
+.hrms-search-icon { color: #6D28D9; }
+.btn-search-trigger { background: #6D28D9; color: #fff; border: none; padding: 0 24px; height: 44px; border-radius: 12px; font-weight: 700; font-size: 0.85rem; cursor: pointer; display: flex; align-items: center; gap: 8px; }
 
 .date-filter-group { display: flex; align-items: center; gap: 8px; border-left: 1px solid #e2e8f0; padding-left: 16px; }
 .date-label { font-size: 0.7rem; font-weight: 700; color: #94a3b8; text-transform: uppercase; }
 .f-date-input { border: 1.5px solid #e2e8f0; border-radius: 10px; padding: 8px 12px; font-size: 0.85rem; font-family: inherit; color: #1e293b; outline: none; transition: 0.2s; }
-.f-date-input:focus { border-color: #c9a800; box-shadow: 0 0 0 3px rgba(199,168,0,0.1); }
+.f-date-input:focus { border-color: #6D28D9; box-shadow: 0 0 0 3px rgba(76,29,149,0.1); }
 .page-header { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; }
 .page-title { font-size: 1.4rem; font-weight: 800; color: #0f172a; margin: 0 0 3px; }
 .page-sub { font-size: .85rem; color: #64748b; margin: 0; }
@@ -52,7 +52,7 @@
     <div class="hrms-search-icon">
         <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
     </div>
-    <input type="text" id="attendance-search" class="hrms-search-input" placeholder="Search by staff name or phone number…">
+    <input type="text" id="attendance-search" class="hrms-search-input" placeholder="Search by staff name or phone numberâ€¦">
     
     <div class="date-filter-group">
         <div style="display:flex; flex-direction:column; gap:2px;">
@@ -79,8 +79,8 @@
             <div class="date-info">
                 <div class="date-title">{{ \Carbon\Carbon::parse($date)->format('M d, Y') }}</div>
                 <div class="date-summary">
-                    <span style="color:#16a34a;">Present: {{ $dailyRecords->where('status','present')->count() }}</span>
-                    <span style="color:#ef4444;">Absent: {{ $dailyRecords->where('status','absent')->count() }}</span>
+                    <span style="color:#6D28D9;">Present: {{ $dailyRecords->where('status','present')->count() }}</span>
+                    <span style="color:#6D28D9;">Absent: {{ $dailyRecords->where('status','absent')->count() }}</span>
                 </div>
             </div>
             <div class="drop-arrow">
@@ -93,7 +93,7 @@
                  data-name="{{ strtolower($record->staff->name) }}" 
                  data-phone="{{ $record->staff->phone }}">
                 <div class="staff-meta">
-                    <div class="staff-avatar-sm" style="width:34px; height:34px; border-radius:10px; background:#fffdf0; border:1px solid #f0e8b0; color:#c9a800; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:0.8rem;">
+                    <div class="staff-avatar-sm" style="width:34px; height:34px; border-radius:10px; background:#F5F3FF; border:1px solid #DDD6FE; color:#6D28D9; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:0.8rem;">
                         {{ strtoupper(substr($record->staff->name, 0, 1)) }}
                     </div>
                     <div class="staff-info-box">
@@ -103,10 +103,10 @@
                 </div>
                 <div style="display:flex; align-items:center; gap:24px;">
                     <div class="time-box">
-                        <div>IN: {{ $record->check_in_time?->format('H:i') ?? '—' }}</div>
-                        <div style="color:#94a3b8; font-size:0.65rem;">OUT: {{ $record->check_out_time?->format('H:i') ?? '—' }}</div>
+                        <div>IN: {{ $record->check_in_time?->format('H:i') ?? 'â€”' }}</div>
+                        <div style="color:#94a3b8; font-size:0.65rem;">OUT: {{ $record->check_out_time?->format('H:i') ?? 'â€”' }}</div>
                     </div>
-                    <span class="badge" style="background:{{ $record->status === 'present' ? '#dcfce7' : '#fee2e2' }}; color:{{ $record->status === 'present' ? '#166534' : '#991b1b' }};">
+                    <span class="badge" style="background:{{ $record->status === 'present' ? '#EDE9FE' : '#EDE9FE' }}; color:{{ $record->status === 'present' ? '#4C1D95' : '#3B0764' }};">
                         {{ ucfirst($record->status) }}
                     </span>
                 </div>

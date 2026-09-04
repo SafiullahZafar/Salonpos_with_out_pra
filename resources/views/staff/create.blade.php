@@ -4,11 +4,11 @@
 @section('content')
     <style>
         :root {
-            --y1: #F7DF79;
-            --y2: #FBEFBC;
-            --yd: #c9a800;
-            --yk: #a07800;
-            --ybg: #fffdf0;
+            --y1: #6D28D9;
+            --y2: #EDE9FE;
+            --yd: #6D28D9;
+            --yk: #4C1D95;
+            --ybg: #F5F3FF;
         }
 
         .page-header {
@@ -57,7 +57,7 @@
 
         .form-card {
             background: #fff;
-            border: 1.5px solid #e9e0c0;
+            border: 1.5px solid #E7E1EC;
             border-radius: 18px;
             overflow: hidden;
             box-shadow: 0 2px 12px rgba(199, 168, 0, .08);
@@ -67,7 +67,7 @@
         .form-card-head {
             padding: 16px 22px;
             background: var(--ybg);
-            border-bottom: 1.5px solid #f0e8b0;
+            border-bottom: 1.5px solid #DDD6FE;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -139,7 +139,7 @@
             padding: 10px 13px;
             border: 1.5px solid #e2e8f0;
             border-radius: 10px;
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Inter', sans-serif;
             font-size: .9rem;
             color: #18181b;
             background: #fff;
@@ -217,8 +217,8 @@
         }
 
         .error-box {
-            background: #fef2f2;
-            border: 1.5px solid #fecaca;
+            background: #F5F3FF;
+            border: 1.5px solid #DDD6FE;
             border-radius: 10px;
             padding: 12px 16px;
             margin-bottom: 20px;
@@ -227,7 +227,7 @@
         .error-box ul {
             margin: 0;
             padding-left: 18px;
-            color: #ef4444;
+            color: #6D28D9;
             font-size: .85rem;
         }
 
@@ -246,7 +246,7 @@
             color: #64748b;
             font-weight: 700;
             text-decoration: none;
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Inter', sans-serif;
             font-size: .9rem;
             transition: .2s;
             background: #fff;
@@ -267,7 +267,7 @@
             color: #18181b;
             font-weight: 700;
             cursor: pointer;
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Inter', sans-serif;
             font-size: .9rem;
             box-shadow: 0 3px 12px rgba(199, 168, 0, .25);
             transition: .2s;
@@ -293,7 +293,7 @@
             height: 42px;
             border-radius: 10px;
             background: var(--ybg);
-            border: 1.5px solid #e9e0c0;
+            border: 1.5px solid #E7E1EC;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -396,7 +396,7 @@
                     <span class="form-card-head-title">Commission Settings</span>
                 </div>
                 <div class="form-card-body">
-                    <div style="background:#fffbeb; border:1.5px solid #fde68a; border-radius:10px; padding:10px 14px; margin-bottom:16px; font-size:.82rem; color:#92400e;">
+                    <div style="background:#F5F3FF; border:1.5px solid #DDD6FE; border-radius:10px; padding:10px 14px; margin-bottom:16px; font-size:.82rem; color:#4C1D95;">
                         <strong>ℹ️ Commission Info:</strong> Commission is earned as a <strong>% of each service/package</strong> amount. If a discount is given, commission is reduced proportionally. Default is <strong>10%</strong>. Admin can change this anytime from HRMS settings.
                     </div>
                     <div class="f-group">

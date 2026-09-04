@@ -16,23 +16,23 @@
 .action-row { display: flex; gap: 8px; margin-top: 16px; }
 .btn-hrms { flex: 1; padding: 8px; border-radius: 8px; font-size: 0.75rem; font-weight: 700; cursor: pointer; border: 1px solid #e2e8f0; background: #fff; transition: 0.2s; }
 .btn-hrms:hover { background: #f8fafc; }
-.btn-present { background: #dcfce7; color: #166534; border-color: #bbf7d0; }
-.btn-absent { background: #fee2e2; color: #991b1b; border-color: #fecaca; }
+.btn-present { background: #EDE9FE; color: #4C1D95; border-color: #DDD6FE; }
+.btn-absent { background: #EDE9FE; color: #3B0764; border-color: #DDD6FE; }
 
-.rating-stars { color: #fbbf24; font-size: 0.9rem; }
-.hrms-search-box { background: #fff; border: 1.5px solid #f0e8a0; border-radius: 16px; padding: 6px 6px 6px 24px; margin-bottom: 24px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; align-items: center; gap: 12px; max-width: 100%; }
+.rating-stars { color: #8B5CF6; font-size: 0.9rem; }
+.hrms-search-box { background: #fff; border: 1.5px solid #DDD6FE; border-radius: 16px; padding: 6px 6px 6px 24px; margin-bottom: 24px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: flex; align-items: center; gap: 12px; max-width: 100%; }
 .hrms-search-input { flex: 1; border: none; font-size: 1rem; font-family: inherit; color: #1e293b; outline: none; background: transparent; height: 48px; }
 .hrms-search-input::placeholder { color: #94a3b8; }
-.hrms-search-icon { color: #c9a800; flex-shrink: 0; }
-.btn-search-trigger { background: #c9a800; color: #fff; border: none; padding: 0 24px; height: 44px; border-radius: 12px; font-weight: 700; font-size: 0.85rem; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: 0.2s; }
-.btn-search-trigger:hover { background: #b09400; transform: translateY(-1px); }
+.hrms-search-icon { color: #6D28D9; flex-shrink: 0; }
+.btn-search-trigger { background: #6D28D9; color: #fff; border: none; padding: 0 24px; height: 44px; border-radius: 12px; font-weight: 700; font-size: 0.85rem; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: 0.2s; }
+.btn-search-trigger:hover { background: #4C1D95; transform: translateY(-1px); }
 </style>
 
 <div class="hrms-search-box">
     <div class="hrms-search-icon">
         <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
     </div>
-    <input type="text" id="staff-search" class="hrms-search-input" placeholder="Search employee by name or phone number…">
+    <input type="text" id="staff-search" class="hrms-search-input" placeholder="Search employee by name or phone numberâ€¦">
     <button type="button" class="btn-search-trigger" onclick="triggerSearch()">
         <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
         Search
@@ -84,7 +84,7 @@
         </div>
         <div style="display:flex; gap:10px;">
             <button class="btn-hrms" style="background:#f1f5f9;" onclick="document.getElementById('shift-modal').style.display='none'">Cancel</button>
-            <button class="btn-hrms" style="background:#c9a800; color:#fff; border:none;" onclick="saveQuickShift()">Apply Shift</button>
+            <button class="btn-hrms" style="background:#6D28D9; color:#fff; border:none;" onclick="saveQuickShift()">Apply Shift</button>
         </div>
     </div>
 </div>
@@ -120,7 +120,7 @@
         </div>
         <div style="display:flex; gap:10px;">
             <button class="btn-hrms" style="background:#f1f5f9;" onclick="document.getElementById('salary-modal').style.display='none'">Cancel</button>
-            <button class="btn-hrms" style="background:#c9a800; color:#fff; border:none;" onclick="saveSalary()">Save Changes</button>
+            <button class="btn-hrms" style="background:#6D28D9; color:#fff; border:none;" onclick="saveSalary()">Save Changes</button>
         </div>
     </div>
 </div>

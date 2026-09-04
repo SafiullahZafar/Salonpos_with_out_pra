@@ -2,13 +2,13 @@
 @section('title', 'Edit Product')
 @section('content')
 <style>
-:root{--y1:#F7DF79;--y2:#FBEFBC;--yd:#c9a800;--ydark:#a07800;--ybg:#fffdf0;}
+:root{--y1:#6D28D9;--y2:#EDE9FE;--yd:#6D28D9;--ydark:#4C1D95;--ybg:#F5F3FF;}
 .pg-header{display:flex;align-items:center;gap:12px;margin-bottom:22px;}
 .back-btn{width:36px;height:36px;border-radius:9px;border:1.5px solid #e4e4e7;background:#fff;display:flex;align-items:center;justify-content:center;color:#71717a;text-decoration:none;transition:.2s;flex-shrink:0;}
 .back-btn:hover{border-color:var(--y1);color:var(--ydark);background:var(--ybg);}
 .pg-title{font-size:1.4rem;font-weight:800;color:#18181b;letter-spacing:-.02em;margin-bottom:3px;}
 .pg-sub{font-size:.85rem;color:#71717a;}
-.form-card{background:#fff;border:1.5px solid #f0e8a0;border-radius:16px;overflow:hidden;box-shadow:0 1px 6px rgba(0,0,0,.04);margin-bottom:16px;}
+.form-card{background:#fff;border:1.5px solid #DDD6FE;border-radius:16px;overflow:hidden;box-shadow:0 1px 6px rgba(0,0,0,.04);margin-bottom:16px;}
 .form-section{padding:20px 24px;border-bottom:1px solid #f4f4f5;}
 .section-title{font-size:.72rem;font-weight:700;color:#a1a1aa;text-transform:uppercase;letter-spacing:.1em;margin-bottom:14px;display:flex;align-items:center;gap:7px;}
 .section-icon{width:22px;height:22px;border-radius:6px;background:var(--y2);display:flex;align-items:center;justify-content:center;color:var(--ydark);}
@@ -17,22 +17,22 @@
 .f-grid-4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:14px;margin-bottom:14px;}
 .f-row{margin-bottom:14px;}
 .f-label{display:block;font-size:.75rem;font-weight:600;color:#374151;margin-bottom:6px;}
-.f-input,.f-select,.f-textarea{width:100%;padding:9px 12px;border:1.5px solid #f0e8a0;border-radius:9px;font-size:.875rem;font-family:'Outfit',sans-serif;color:#18181b;background:var(--ybg);outline:none;transition:.2s;box-sizing:border-box;}
-.f-input:focus,.f-select:focus,.f-textarea:focus{border-color:var(--y1);background:#fff;box-shadow:0 0 0 3px rgba(247,223,121,.15);}
+.f-input,.f-select,.f-textarea{width:100%;padding:9px 12px;border:1.5px solid #DDD6FE;border-radius:9px;font-size:.875rem;font-family:'Inter',sans-serif;color:#18181b;background:var(--ybg);outline:none;transition:.2s;box-sizing:border-box;}
+.f-input:focus,.f-select:focus,.f-textarea:focus{border-color:var(--y1);background:#fff;box-shadow:0 0 0 3px rgba(109,40,217,.15);}
 .f-textarea{resize:vertical;min-height:80px;}
 .check-row{display:flex;align-items:center;gap:8px;cursor:pointer;}
 .check-row input[type=checkbox]{width:15px;height:15px;accent-color:var(--ydark);cursor:pointer;}
 .check-lbl{font-size:.85rem;font-weight:600;color:#374151;}
 .form-footer{padding:16px 24px;display:flex;gap:10px;justify-content:flex-end;}
-.btn-cancel{padding:9px 20px;border:1.5px solid #e4e4e7;background:#fff;border-radius:9px;color:#71717a;font-size:.875rem;font-weight:600;cursor:pointer;text-decoration:none;font-family:'Outfit',sans-serif;transition:.2s;}
-.btn-cancel:hover{border-color:#fca5a5;color:#dc2626;background:#fef2f2;}
-.btn-save{padding:9px 22px;border:none;background:linear-gradient(135deg,var(--y1),var(--yd));border-radius:9px;color:#18181b;font-size:.875rem;font-weight:800;cursor:pointer;font-family:'Outfit',sans-serif;transition:.2s;box-shadow:0 3px 10px rgba(247,223,121,.3);}
+.btn-cancel{padding:9px 20px;border:1.5px solid #e4e4e7;background:#fff;border-radius:9px;color:#71717a;font-size:.875rem;font-weight:600;cursor:pointer;text-decoration:none;font-family:'Inter',sans-serif;transition:.2s;}
+.btn-cancel:hover{border-color:#A78BFA;color:#4C1D95;background:#F5F3FF;}
+.btn-save{padding:9px 22px;border:none;background:linear-gradient(135deg,var(--y1),var(--yd));border-radius:9px;color:#18181b;font-size:.875rem;font-weight:800;cursor:pointer;font-family:'Inter',sans-serif;transition:.2s;box-shadow:0 3px 10px rgba(109,40,217,.3);}
 .btn-save:hover{transform:translateY(-1px);}
-.danger-zone{background:#fff;border:1px solid #fecaca;border-radius:14px;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
-.danger-title{font-size:.875rem;font-weight:700;color:#b91c1c;margin-bottom:2px;}
+.danger-zone{background:#fff;border:1px solid #DDD6FE;border-radius:14px;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.danger-title{font-size:.875rem;font-weight:700;color:#4C1D95;margin-bottom:2px;}
 .danger-sub{font-size:.75rem;color:#a1a1aa;}
-.btn-danger{padding:8px 16px;border:1.5px solid #fca5a5;background:#fef2f2;border-radius:9px;color:#dc2626;font-size:.8rem;font-weight:700;cursor:pointer;font-family:'Outfit',sans-serif;transition:.2s;}
-.btn-danger:hover{background:#fee2e2;}
+.btn-danger{padding:8px 16px;border:1.5px solid #A78BFA;background:#F5F3FF;border-radius:9px;color:#4C1D95;font-size:.8rem;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;transition:.2s;}
+.btn-danger:hover{background:#EDE9FE;}
 </style>
 
 <div class="pg-header">
@@ -49,8 +49,8 @@
     @csrf @method('PUT')
 
     @if($errors->any())
-    <div style="background:#fef2f2;border:1px solid #fecaca;border-radius:12px;padding:14px;margin-bottom:16px;">
-        <ul style="margin:0;padding-left:20px;color:#ef4444;font-size:0.85rem;">
+    <div style="background:#F5F3FF;border:1px solid #DDD6FE;border-radius:12px;padding:14px;margin-bottom:16px;">
+        <ul style="margin:0;padding-left:20px;color:#6D28D9;font-size:0.85rem;">
             @foreach($errors->all() as $error)
                 <li>{{ $error }}</li>
             @endforeach
@@ -67,7 +67,7 @@
             </div>
             <div class="f-grid-4">
                 <div>
-                    <label class="f-label">Product Name <span style="color:#ef4444;">*</span></label>
+                    <label class="f-label">Product Name <span style="color:#6D28D9;">*</span></label>
                     <input type="text" name="name" value="{{ $product->name }}" required class="f-input">
                 </div>
                 <div>
@@ -75,7 +75,7 @@
                     <input type="text" name="sku" value="{{ $product->sku }}" class="f-input" placeholder="Auto-generated if blank">
                 </div>
                 <div>
-                    <label class="f-label">Product Type <span style="color:#ef4444;">*</span></label>
+                    <label class="f-label">Product Type <span style="color:#6D28D9;">*</span></label>
                     <select name="product_type" id="product_type" required class="f-select">
                         <option value="retail" {{ $product->product_type==='retail'?'selected':'' }}>For Sale</option>
                         <option value="service_supply" {{ $product->product_type==='service_supply'?'selected':'' }}>Shop Use</option>
@@ -116,7 +116,7 @@
                     <input type="number" name="cost_price" min="0" step="0.01" value="{{ $product->cost_price }}" class="f-input" placeholder="Purchase cost">
                 </div>
                 <div>
-                    <label class="f-label">Current Stock <span style="color:#ef4444;">*</span></label>
+                    <label class="f-label">Current Stock <span style="color:#6D28D9;">*</span></label>
                     <input type="number" name="current_stock" min="0" step="1" value="{{ $product->current_stock }}" required class="f-input">
                 </div>
             </div>

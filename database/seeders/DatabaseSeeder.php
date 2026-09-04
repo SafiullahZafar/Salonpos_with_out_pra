@@ -96,7 +96,7 @@ class DatabaseSeeder extends Seeder
     private function seedBranches(): Branch
     {
         $this->saveModel(Branch::class, 1, [
-            'name' => 'Green Avenue Branch',
+            'name' => 'Aurora Avenue',
             'address' => 'Faisalabad City',
             'phone' => '03000000001',
             'opening_time' => '09:00:00',
@@ -105,7 +105,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         $this->saveModel(Branch::class, 2, [
-            'name' => 'Pearl City Branch',
+            'name' => 'Violet Courtyard',
             'address' => 'Faisalabad City',
             'phone' => '03000000002',
             'opening_time' => '10:00:00',
@@ -348,16 +348,16 @@ class DatabaseSeeder extends Seeder
     private function seedStaff(Branch $branch, array $roles, array $services): array
     {
         $staffRows = [
-            ['Amina Siddiqui', 'amina.siddiqui@crimpers.test', '03070010001', 'Salon Manager', 1],
-            ['Zara Mahmood', 'zara.mahmood@crimpers.test', '03070010002', 'Senior Stylist', 2],
-            ['Mariam Sheikh', 'mariam.sheikh@crimpers.test', '03070010003', 'Color Specialist', 3],
-            ['Noor Fatima', 'noor.fatima@crimpers.test', '03070010004', 'Stylist', 2],
-            ['Hira Javed', 'hira.javed@crimpers.test', '03070010005', 'Nail Technician', 4],
-            ['Sana Qureshi', 'sana.qureshi@crimpers.test', '03070010006', 'Nail Technician', 4],
-            ['Iqra Saleem', 'iqra.saleem@crimpers.test', '03070010007', 'Spa Therapist', 5],
-            ['Mehwish Rauf', 'mehwish.rauf@crimpers.test', '03070010008', 'Skin Therapist', 5],
-            ['Laiba Anwar', 'laiba.anwar@crimpers.test', '03070010009', 'Makeup Artist', 2],
-            ['Kinza Ali', 'kinza.ali@crimpers.test', '03070010010', 'Receptionist', 6],
+            ['Amina Siddiqui', 'amina.siddiqui@veloura.test', '03070010001', 'Salon Manager', 1],
+            ['Zara Mahmood', 'zara.mahmood@veloura.test', '03070010002', 'Senior Stylist', 2],
+            ['Mariam Sheikh', 'mariam.sheikh@veloura.test', '03070010003', 'Color Specialist', 3],
+            ['Noor Fatima', 'noor.fatima@veloura.test', '03070010004', 'Stylist', 2],
+            ['Hira Javed', 'hira.javed@veloura.test', '03070010005', 'Nail Technician', 4],
+            ['Sana Qureshi', 'sana.qureshi@veloura.test', '03070010006', 'Nail Technician', 4],
+            ['Iqra Saleem', 'iqra.saleem@veloura.test', '03070010007', 'Spa Therapist', 5],
+            ['Mehwish Rauf', 'mehwish.rauf@veloura.test', '03070010008', 'Skin Therapist', 5],
+            ['Laiba Anwar', 'laiba.anwar@veloura.test', '03070010009', 'Makeup Artist', 2],
+            ['Kinza Ali', 'kinza.ali@veloura.test', '03070010010', 'Receptionist', 6],
         ];
 
         $saved = [];
@@ -378,7 +378,7 @@ class DatabaseSeeder extends Seeder
                 'current_shift' => $index % 2 === 0 ? 'morning' : 'evening',
                 'shift_start' => $index % 2 === 0 ? '09:00:00' : '13:00:00',
                 'shift_end' => $index % 2 === 0 ? '17:00:00' : '21:00:00',
-                'bio' => $name . ' is part of the Crimpers professional salon team.',
+                'bio' => $name . ' is part of the Veloura Salon professional team.',
                 'staff_role_id' => $roles[$roleId]->id,
                 'rating' => 4,
                 'rating_total' => 90 + ($index * 7),

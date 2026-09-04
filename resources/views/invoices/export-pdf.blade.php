@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -8,6 +8,7 @@
             font-family: 'DejaVu Sans', sans-serif;
             margin: 20px;
             color: #333;
+            background: #FFFFFF;
         }
         .header {
             text-align: center;
@@ -17,7 +18,7 @@
         }
         .header h1 {
             margin: 0;
-            color: #2563eb;
+            color: #111827;
         }
         .header p {
             margin: 5px 0;
@@ -42,7 +43,7 @@
             background-color: #f8f9fa;
         }
         .total-row {
-            background-color: #e3f2fd !important;
+            background-color: #F5F3FF !important;
             font-weight: bold;
         }
         .summary {
@@ -67,7 +68,7 @@
         .summary-item .value {
             font-size: 24px;
             font-weight: bold;
-            color: #2563eb;
+            color: #111827;
         }
         .summary-item .label {
             font-size: 12px;

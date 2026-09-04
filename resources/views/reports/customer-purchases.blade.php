@@ -56,8 +56,8 @@
     }
 
     .f-input:focus {
-        border-color: #c9a800;
-        box-shadow: 0 0 0 3px rgba(201, 168, 0, 0.1);
+        border-color: #6D28D9;
+        box-shadow: 0 0 0 3px rgba(76,29,149, 0.1);
     }
 
     .btn-filter {
@@ -125,8 +125,8 @@
     }
 
     .amt-billed { font-weight: 800; color: #1e293b; }
-    .amt-paid { font-weight: 700; color: #16a34a; }
-    .amt-pending { font-weight: 800; color: #ef4444; }
+    .amt-paid { font-weight: 700; color: #6D28D9; }
+    .amt-pending { font-weight: 800; color: #6D28D9; }
 
     .empty-state {
         padding: 60px 20px;

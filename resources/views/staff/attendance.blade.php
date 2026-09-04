@@ -4,7 +4,7 @@
 @section('content')
 <style>
 .staff-att-header{display:flex;align-items:center;gap:16px;margin-bottom:24px;padding:16px;background:#fff;border:1px solid #e2e8f0;border-radius:12px;}
-.staff-avatar{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,#22c55e,#16a34a);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;}
+.staff-avatar{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,#7C3AED,#6D28D9);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;}
 .staff-info h2{font-size:1.1rem;font-weight:700;color:#1e293b;margin:0;}
 .staff-info p{font-size:.85rem;color:#94a3b8;margin:3px 0 0;}
 
@@ -14,10 +14,10 @@
 .table-row:last-child{border-bottom:none;}
 
 .status-badge{display:inline-block;padding:4px 10px;border-radius:99px;font-size:.75rem;font-weight:600;}
-.status-present{background:#dcfce7;color:#166534;}
-.status-absent{background:#fecaca;color:#7f1d1d;}
-.status-late{background:#fef3c7;color:#92400e;}
-.status-halfday{background:#dbeafe;color:#0c4a6e;}
+.status-present{background:#EDE9FE;color:#4C1D95;}
+.status-absent{background:#DDD6FE;color:#3B0764;}
+.status-late{background:#EDE9FE;color:#4C1D95;}
+.status-halfday{background:#EDE9FE;color:#3B0764;}
 .status-leave{background:#f3e8ff;color:#5b21b6;}
 
 .empty-msg{text-align:center;padding:40px 20px;color:#94a3b8;font-size:.9rem;}
@@ -26,8 +26,8 @@
 .form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:12px;}
 .form-group{display:flex;flex-direction:column;}
 .form-group label{font-size:.8rem;font-weight:600;color:#334155;margin-bottom:4px;}
-.form-group input, .form-group select{padding:8px;border:1px solid #e2e8f0;border-radius:8px;font-family:'Outfit',sans-serif;font-size:.9rem;}
-.btn-submit{padding:8px 16px;background:#22c55e;color:#fff;border:none;border-radius:8px;font-weight:600;cursor:pointer;font-family:'Outfit',sans-serif;}
+.form-group input, .form-group select{padding:8px;border:1px solid #e2e8f0;border-radius:8px;font-family:'Inter',sans-serif;font-size:.9rem;}
+.btn-submit{padding:8px 16px;background:#7C3AED;color:#fff;border:none;border-radius:8px;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;}
 </style>
 
 <div class="staff-att-header">
@@ -69,7 +69,7 @@
         </div>
         <div style="margin-bottom:12px;">
             <label style="display:block;font-size:.8rem;font-weight:600;color:#334155;margin-bottom:4px;">Notes</label>
-            <textarea name="notes" rows="2" style="width:100%;padding:8px;border:1px solid #e2e8f0;border-radius:8px;font-family:'Outfit',sans-serif;resize:none;"></textarea>
+            <textarea name="notes" rows="2" style="width:100%;padding:8px;border:1px solid #e2e8f0;border-radius:8px;font-family:'Inter',sans-serif;resize:none;"></textarea>
         </div>
         <button type="submit" class="btn-submit">Save Attendance</button>
     </form>

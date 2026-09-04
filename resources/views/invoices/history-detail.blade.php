@@ -22,7 +22,7 @@
             display: flex;
             flex-direction: column;
             gap: 24px;
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Inter', sans-serif;
         }
 
         .history-header {
@@ -146,7 +146,7 @@
         .h-total-val {
             font-size: 22px;
             font-weight: 900;
-            color: #c9a800;
+            color: #6D28D9;
         }
 
         .btn-h-back {
@@ -200,7 +200,7 @@
             </div>
             <div class="h-stat-card">
                 <span class="h-stat-label">Status</span>
-                <span class="h-stat-val" style="color:#16a34a">PAID</span>
+                <span class="h-stat-val" style="color:#6D28D9">PAID</span>
             </div>
         </div>
 
@@ -248,7 +248,7 @@
                         <div class="h-sum-row"><span>Subtotal (Services & Products)</span><b>PKR
                                 {{ number_format($invoice->total_amount, 2) }}</b></div>
                         @if($invoice->discount > 0)
-                            <div class="h-sum-row"><span>Discount</span><b style="color:#ef4444;">- PKR
+                            <div class="h-sum-row"><span>Discount</span><b style="color:#6D28D9;">- PKR
                                     {{ number_format($invoice->discount, 2) }}</b></div>
                         @endif
                         
@@ -259,7 +259,7 @@
                         @if($derivedPreviousBalance > 0.001)
                             <div class="h-sum-row">
                                 <span>Previous Outstanding Balance Added</span>
-                                <b style="color:#ef4444;">+ PKR {{ number_format($derivedPreviousBalance, 2) }}</b>
+                                <b style="color:#6D28D9;">+ PKR {{ number_format($derivedPreviousBalance, 2) }}</b>
                             </div>
                         @endif
 
@@ -286,7 +286,7 @@
                             <br><span style="font-weight:600">Included Bank: {{ $invoice->bank_name }}</span>
                         @endif
                         @if($invoice->pending_amount > 0)
-                            <br><span style="font-weight:800; color:#ef4444;">Pending: PKR {{ number_format($invoice->pending_amount, 2) }}</span>
+                            <br><span style="font-weight:800; color:#6D28D9;">Pending: PKR {{ number_format($invoice->pending_amount, 2) }}</span>
                         @endif
                     </div>
                 </div>
@@ -296,7 +296,7 @@
         {{-- Staff Commission Breakdown --}}
         @if($invoice->staffCommissions->count() > 0)
         <div class="history-main-card">
-            <div class="h-card-head" style="background: linear-gradient(90deg,#1a1a1a,#2d2d2d); color:#F7DF79;">
+            <div class="h-card-head" style="background:#F5F3FF;color:#4C1D95;border-bottom:1px solid #DDD6FE;">
                 <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" style="display:inline;vertical-align:middle;margin-right:6px;"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"/></svg>
                 Staff Commission Breakdown
             </div>
@@ -315,7 +315,7 @@
                         <tr>
                             <td style="padding-left:24px">
                                 <div style="font-weight:700; color:#111827; display:flex; align-items:center; gap:8px;">
-                                    <div style="width:32px; height:32px; border-radius:9px; background:linear-gradient(135deg,#F7DF79,#c9a800); display:flex; align-items:center; justify-content:center; font-weight:800; font-size:.8rem; color:#18181b; flex-shrink:0;">
+                                    <div style="width:32px; height:32px; border-radius:9px; background:linear-gradient(135deg,#6D28D9,#6D28D9); display:flex; align-items:center; justify-content:center; font-weight:800; font-size:.8rem; color:#18181b; flex-shrink:0;">
                                         {{ strtoupper(substr($sc->staff_name, 0, 1)) }}
                                     </div>
                                     {{ $sc->staff_name }}
@@ -329,20 +329,20 @@
                                     {{ number_format($sc->commission_rate, 1) }}%
                                 </span>
                             </td>
-                            <td style="text-align:right; padding-right:24px; font-weight:800; font-size:1rem; color:#c9a800;">
+                            <td style="text-align:right; padding-right:24px; font-weight:800; font-size:1rem; color:#6D28D9;">
                                 PKR {{ number_format($sc->commission_earned, 0) }}
                             </td>
                         </tr>
                         @endforeach
                     </tbody>
                     <tfoot>
-                        <tr style="background:#fffdf0; border-top:2px solid #f0e8a0;">
+                        <tr style="background:#F5F3FF; border-top:2px solid #DDD6FE;">
                             <td style="padding:14px 24px; font-weight:800; font-size:.85rem; color:#18181b;">Total Commission Paid Out</td>
                             <td style="text-align:right; font-weight:700;">
                                 PKR {{ number_format($invoice->staffCommissions->sum('allocated_amount'), 0) }}
                             </td>
                             <td></td>
-                            <td style="text-align:right; padding-right:24px; font-weight:900; font-size:1.1rem; color:#c9a800;">
+                            <td style="text-align:right; padding-right:24px; font-weight:900; font-size:1.1rem; color:#6D28D9;">
                                 PKR {{ number_format($invoice->staffCommissions->sum('commission_earned'), 0) }}
                             </td>
                         </tr>

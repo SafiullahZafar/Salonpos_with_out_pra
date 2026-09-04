@@ -60,6 +60,17 @@ Route::get('/reset-password/{token}', function (string $token) {
 Route::post('/reset-password', [App\Http\Controllers\Auth\ResetPasswordController::class , 'reset'])
     ->middleware('guest')->name('password.update');
 
+// Public customer booking flow
+Route::get('/booking', [BookingController::class, 'index'])->name('booking.index');
+Route::post('/booking', [BookingController::class, 'store'])->name('booking.store');
+Route::get('/booking/{id}/receipt', [BookingController::class, 'show'])->name('booking.show');
+
+// Two-factor verification flow used by privileged accounts
+Route::middleware('auth')->group(function () {
+    Route::get('/verify', [TwoFactorController::class, 'index'])->name('verify.index');
+    Route::post('/verify', [TwoFactorController::class, 'verify'])->name('verify.store');
+});
+
 Route::middleware(['auth'])->group(function () {
     // Dashboard / Landing
     Route::get('/', function() {
@@ -303,9 +314,34 @@ Route::middleware(['auth'])->group(function () {
             Route::get('/coupons/{coupon}/edit', [PromotionController::class, 'editCoupon'])->name('coupons.edit');
             Route::put('/coupons/{coupon}', [PromotionController::class, 'updateCoupon'])->name('coupons.update');
             Route::delete('/coupons/{coupon}', [PromotionController::class, 'destroyCoupon'])->name('coupons.destroy');
+
+            Route::get('/gift-cards', [PromotionController::class, 'giftCards'])->name('gift-cards');
+            Route::get('/gift-cards/create', [PromotionController::class, 'createGiftCard'])->name('gift-cards.create');
+            Route::post('/gift-cards', [PromotionController::class, 'storeGiftCard'])->name('gift-cards.store');
+            Route::get('/gift-cards/{giftCard}', [PromotionController::class, 'showGiftCard'])->name('gift-cards.show');
+            Route::get('/gift-cards/{giftCard}/edit', [PromotionController::class, 'editGiftCard'])->name('gift-cards.edit');
+            Route::put('/gift-cards/{giftCard}', [PromotionController::class, 'updateGiftCard'])->name('gift-cards.update');
+            Route::delete('/gift-cards/{giftCard}', [PromotionController::class, 'destroyGiftCard'])->name('gift-cards.destroy');
+
+            Route::get('/package-sessions', [PromotionController::class, 'packageSessions'])->name('package-sessions');
+            Route::get('/package-sessions/create', [PromotionController::class, 'createPackageSession'])->name('package-sessions.create');
+            Route::post('/package-sessions', [PromotionController::class, 'storePackageSession'])->name('package-sessions.store');
+            Route::get('/package-sessions/{packageSession}', [PromotionController::class, 'showPackageSession'])->name('package-sessions.show');
+            Route::get('/package-sessions/{packageSession}/edit', [PromotionController::class, 'editPackageSession'])->name('package-sessions.edit');
+            Route::put('/package-sessions/{packageSession}', [PromotionController::class, 'updatePackageSession'])->name('package-sessions.update');
+            Route::delete('/package-sessions/{packageSession}', [PromotionController::class, 'destroyPackageSession'])->name('package-sessions.destroy');
+
+            Route::get('/membership-alerts', [PromotionController::class, 'membershipAlerts'])->name('membership-alerts');
+            Route::get('/membership-alerts/create', [PromotionController::class, 'createMembershipAlert'])->name('membership-alerts.create');
+            Route::post('/membership-alerts', [PromotionController::class, 'storeMembershipAlert'])->name('membership-alerts.store');
+            Route::get('/membership-alerts/{membershipAlert}', [PromotionController::class, 'showMembershipAlert'])->name('membership-alerts.show');
+            Route::get('/membership-alerts/{membershipAlert}/edit', [PromotionController::class, 'editMembershipAlert'])->name('membership-alerts.edit');
+            Route::put('/membership-alerts/{membershipAlert}', [PromotionController::class, 'updateMembershipAlert'])->name('membership-alerts.update');
+            Route::delete('/membership-alerts/{membershipAlert}', [PromotionController::class, 'destroyMembershipAlert'])->name('membership-alerts.destroy');
         });
 
         Route::get('/whatsapp', [WhatsAppController::class, 'index'])->name('whatsapp.index');
         Route::post('/whatsapp/promotion', [WhatsAppController::class, 'sendPromotion'])->name('whatsapp.promotion');
+        Route::post('/whatsapp/reengagement', [WhatsAppController::class, 'sendReengagement'])->name('whatsapp.reengagement');
     });
 });

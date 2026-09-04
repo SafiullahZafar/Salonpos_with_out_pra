@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Select Branch — The Crimpers</title>
+    <title>Select Branch — Veloura Salon</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <style>
         :root {
@@ -14,8 +14,8 @@
         }
 
         body {
-            font-family: 'Outfit', sans-serif;
-            background: linear-gradient(135deg, #fefce8 0%, #f3f4f6 100%);
+            font-family: 'Inter', sans-serif;
+            background: #fff;
             color: #111827;
             margin: 0;
             min-height: 100vh;
@@ -39,8 +39,8 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(247, 223, 121, 0.22);
-            color: #7a5c00;
+            background: rgba(109,40,217, 0.22);
+            color: #4C1D95;
             font-weight: 700;
             font-size: 0.78rem;
             letter-spacing: 0.12em;
@@ -97,7 +97,7 @@
         .card:focus-within {
             transform: translateY(-4px);
             box-shadow: 0 18px 38px rgba(15, 23, 42, 0.12);
-            border-color: #f7df79;
+            border-color: #6D28D9;
         }
 
         .card::before {
@@ -105,14 +105,14 @@
             position: absolute;
             inset: 0 0 auto 0;
             height: 5px;
-            background: linear-gradient(90deg, #f5efc0, #f7df79);
+            background: linear-gradient(90deg, #EDE9FE, #6D28D9);
         }
 
         .icon-wrap {
             width: 56px;
             height: 56px;
-            background: #fef3c7;
-            color: #92400e;
+            background: #EDE9FE;
+            color: #4C1D95;
             border-radius: 16px;
             display: flex;
             align-items: center;
@@ -141,7 +141,7 @@
 
         .card .meta {
             margin-top: 14px;
-            color: #7a5c00;
+            color: #4C1D95;
             font-size: 0.82rem;
             font-weight: 700;
             letter-spacing: 0.04em;
@@ -177,7 +177,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <div class="eyebrow">Crimpers POS</div>
+            <div class="eyebrow">Veloura POS</div>
             <h1>Welcome, {{ auth()->user()->name }}</h1>
             <p>Select the branch you want to work in, then you’ll be taken straight to your dashboard.</p>
         </div>

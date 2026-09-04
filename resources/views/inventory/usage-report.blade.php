@@ -9,9 +9,9 @@
 .filters{display:flex;gap:12px;margin-bottom:20px;flex-wrap:wrap;background:#fff;padding:16px;border-radius:12px;border:1px solid #e2e8f0;align-items:flex-end;}
 .filter-group{display:flex;flex-direction:column;gap:4px;}
 .filter-label{font-size:.8rem;font-weight:600;color:#64748b;text-transform:uppercase;}
-.filter-input{padding:8px 12px;border:1px solid #e2e8f0;border-radius:8px;font-size:.9rem;font-family:'Outfit',sans-serif;}
+.filter-input{padding:8px 12px;border:1px solid #e2e8f0;border-radius:8px;font-size:.9rem;font-family:'Inter',sans-serif;}
 
-.btn-primary{background:#18181b;color:#fff;border:none;padding:10px 20px;border-radius:10px;font-weight:600;cursor:pointer;font-family:'Outfit',sans-serif;}
+.btn-primary{background:#18181b;color:#fff;border:none;padding:10px 20px;border-radius:10px;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;}
 .btn-primary:hover{background:#27272a;}
 
 .table-wrap{background:#fff;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden;margin-bottom:24px;}
@@ -23,7 +23,7 @@
 .sku{font-size:.75rem;color:#94a3b8;}
     
 .btn-export-csv {
-    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    background: linear-gradient(135deg, #7C3AED 0%, #6D28D9 100%);
     color: #ffffff;
     border: none;
     border-radius: 10px;
@@ -45,7 +45,7 @@
 }
 
 .btn-export-xls {
-    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    background: linear-gradient(135deg, #8B5CF6 0%, #4C1D95 100%);
     color: #ffffff;
     border: none;
     border-radius: 10px;
@@ -110,7 +110,7 @@
         <div>
             <div style="font-weight:500; color:#475569;">{{ $usage->service->name ?? 'Direct Usage / Unknown' }}</div>
         </div>
-        <div style="text-align: right; font-weight:700; color:#ef4444; font-size: 1.1rem;">
+        <div style="text-align: right; font-weight:700; color:#6D28D9; font-size: 1.1rem;">
             {{ number_format($usage->total_used, 2) }}
         </div>
     </div>
