@@ -123,6 +123,22 @@
 .customer-table tr:last-child td{border-bottom:none;}.customer-table tbody tr:hover{background:#F5F3FF;}
 .customer-cell{display:flex;align-items:center;gap:10px;}.customer-avatar{width:36px;height:36px;border-radius:9px;background:linear-gradient(135deg,var(--y1),var(--yd));display:flex;align-items:center;justify-content:center;font-weight:800;color:#18181b;overflow:hidden;flex-shrink:0;}.customer-avatar img{width:100%;height:100%;object-fit:cover;}.customer-name{font-weight:800;color:#18181b;}.customer-email{font-size:.7rem;color:#a1a1aa;margin-top:2px;}.visits-badge{background:var(--y2);border:1px solid var(--y1);color:var(--ydark);border-radius:99px;padding:3px 9px;font-weight:800;font-size:.7rem;}.amount-cell{font-weight:800;color:var(--ydark)!important;}.table-actions{display:flex;gap:5px;justify-content:flex-end;}.table-actions .btn-act{flex:none;padding:7px 9px;}
 .cust-grid{display:none;}
+
+/* Customer directory visual refresh — structure and behaviour stay unchanged. */
+.pg-header{position:relative;align-items:center;padding:24px 26px;margin-bottom:16px;background:#fff;border:1px solid #E7E1EC;border-radius:16px;box-shadow:0 7px 24px rgba(59,7,100,.055);overflow:hidden}
+.pg-header::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,#4C1D95,#8B5CF6)}
+.pg-title{color:#3B0764;font-size:1.65rem;letter-spacing:-.045em}.pg-sub{margin-top:5px;color:#7B7381;font-size:.78rem}
+.header-right{gap:9px}.header-right form{padding:4px;background:#fff;border:1px solid #E7E1EC;border-radius:11px}
+.search-input{width:min(270px,30vw);height:38px;padding-left:38px;background:#fff!important;border:0!important;border-radius:8px;font-family:'Inter',sans-serif}.search-input:focus{box-shadow:none!important}.search-wrap svg{left:13px;color:#7C3AED}
+.btn-search{height:38px;margin-left:2px!important;padding:0 15px!important;background:#F5F3FF!important;color:#4C1D95!important;border:1px solid #DDD6FE!important;border-radius:8px!important;box-shadow:none!important;font-family:'Inter',sans-serif}.btn-search:hover{background:#EDE9FE!important}
+.btn-add{min-height:48px;padding:0 18px!important;color:#fff!important;background:#6D28D9!important;border-radius:11px!important;box-shadow:0 7px 17px rgba(109,40,217,.2)!important;font-family:'Inter',sans-serif}.btn-add:hover{background:#7C3AED!important}
+.customer-table-wrap{border:1px solid #E7E1EC;border-radius:16px;box-shadow:0 8px 28px rgba(59,7,100,.06)}
+.customer-table th{height:48px;padding:0 16px;background:#fff;color:#6F6676;border-bottom:1px solid #DDD6FE;font-size:.63rem;letter-spacing:.095em}
+.customer-table td{height:68px;padding:12px 16px;border-bottom:1px solid #EEEAF1;color:#5F5766}.customer-table tbody tr{transition:background .16s}.customer-table tbody tr:hover{background:#FAF8FC}.customer-table tbody tr:last-child td{border-bottom:0}
+.customer-avatar{width:42px;height:42px;color:#fff;background:linear-gradient(145deg,#3B0764,#7C3AED);border-radius:12px;box-shadow:0 4px 11px rgba(109,40,217,.16)}.customer-name{color:#271D2E;font-size:.82rem}.customer-email{color:#918997}.visits-badge{padding:4px 9px;color:#4C1D95;background:#F5F3FF;border:1px solid #DDD6FE}.amount-cell{color:#3B0764!important;font-size:.82rem;white-space:nowrap}
+.table-actions{gap:6px}.table-actions .btn-act{min-width:46px;padding:7px 10px!important;background:#fff;border:1px solid #E7E1EC;border-radius:8px;font-family:'Inter',sans-serif}.table-actions .btn-view{color:#4C1D95;border-color:#C4B5FD}.table-actions .btn-edit{color:#5F5766}.table-actions .btn-del{color:#6D28D9!important;border-color:#DDD6FE!important}.table-actions .btn-act:hover{background:#F5F3FF;transform:translateY(-1px)}
+@media(max-width:850px){.pg-header{align-items:stretch;flex-direction:column}.header-right,.header-right form{width:100%}.search-wrap{flex:1}.search-input{width:100%}.btn-add{justify-content:center}}
+@media(max-width:560px){.pg-header{padding:20px}.header-right{align-items:stretch;flex-direction:column}.header-right form{display:grid!important;grid-template-columns:1fr auto}.btn-add{width:100%}}
 </style>
 
 <div class="pg-header">

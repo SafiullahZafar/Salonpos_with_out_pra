@@ -29,6 +29,13 @@ class SupplierController extends Controller
         return view('suppliers.create');
     }
 
+    public function show(Supplier $supplier)
+    {
+        $supplier->load(['products', 'purchases']);
+
+        return view('suppliers.show', compact('supplier'));
+    }
+
     public function store(Request $request)
     {
         $validated = $request->validate([

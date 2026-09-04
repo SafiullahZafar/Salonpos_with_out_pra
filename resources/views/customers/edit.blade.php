@@ -1,166 +1,29 @@
 @extends('layouts.app')
 @section('title', 'Edit Client Profile')
-
 @section('content')
 <style>
-.form-wrap{max-width:640px;margin:0 auto;}
-.form-header{display:flex;align-items:center;gap:16px;margin-bottom:32px;}
-.back-btn{width:40px;height:40px;border-radius:12px;border:1.5px solid #e2e8f0;display:flex;align-items:center;justify-content:center;color:#64748b;text-decoration:none;transition:.2s;background:#fff;}
-.back-btn:hover{border-color:#6D28D9;color:#3B0764;background:#EDE9FE;}
-
-.form-card{background:#fff;border-radius:24px;border:1px solid #f1f5f9;box-shadow:0 4px 20px rgba(0,0,0,0.03);overflow:hidden;}
-.form-body{padding:32px;}
-
-.img-upload-wrap{display:flex;flex-direction:column;align-items:center;margin-bottom:32px;text-align:center;}
-.img-preview-box{width:120px;height:120px;border-radius:50%;background:#f8fafc;border:2px solid #6D28D9;display:flex;align-items:center;justify-content:center;overflow:hidden;margin-bottom:12px;cursor:pointer;transition:.2s;position:relative;}
-.img-preview-box img{width:100%;height:100%;object-fit:cover;}
-.upload-btn{font-size:.78rem;font-weight:700;color:#3B0764;cursor:pointer;padding:6px 12px;background:#EDE9FE;border-radius:99px;}
-
-/* Image Modal */
-.img-modal{position:fixed;inset:0;background:rgba(0,0,0,.85);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;z-index:2000;padding:20px;cursor:zoom-out;}
-.img-modal-content{max-width:90%;max-height:90vh;border-radius:16px;box-shadow:0 25px 50px rgba(0,0,0,.5);object-fit:contain;background:#fff;}
-
-.f-group{margin-bottom:20px;}
-.f-label{display:block;font-size:.8rem;font-weight:700;color:#334155;margin-bottom:8px;text-transform:uppercase;letter-spacing:.05em;}
-.f-input{width:100%;padding:12px 16px;border:1.5px solid #e2e8f0;border-radius:12px;font-size:.95rem;font-family:inherit;outline:none;transition:.2s;background:#fcfcfc;}
-.f-input:focus{border-color:#6D28D9;background:#fff;box-shadow:0 0 0 4px rgba(109,40,217,.1);}
-
-.social-item{display:flex;gap:10px;margin-bottom:10px;}
-.btn-remove-social{padding:12px;color:#6D28D9;background:#F5F3FF;border-radius:12px;display:flex;align-items:center;justify-content:center;cursor:pointer;border:none;}
-
-.btn-add-social{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:700;color:#64748b;cursor:pointer;background:#f1f5f9;padding:6px 16px;border-radius:99px;margin-top:4px;transition:.2s;}
-.btn-add-social:hover{background:#e2e8f0;color:#1e293b;}
-
-.form-footer{padding:20px 32px;background:#f8fafc;display:flex;justify-content:flex-end;gap:12px;border-top:1px solid #f1f5f9;}
-.btn-save{padding:12px 28px;background:linear-gradient(135deg,#6D28D9,#6D28D9);color:#18181b;border-radius:14px;font-weight:800;font-size:.95rem;border:none;cursor:pointer;box-shadow:0 4px 12px rgba(109,40,217,.2);transition:.2s;}
-.btn-save:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(109,40,217,.3);}
+.profile-editor{--purple:#6D28D9;--deep:#3B0764;--soft:#F5F3FF;--line:#E7E1EC;max-width:1080px;margin:0 auto;background:#fff}.editor-header{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;padding:5px 2px 22px;border-bottom:1px solid var(--line);margin-bottom:20px}.back-link{display:inline-flex;align-items:center;gap:7px;color:#6F6676;text-decoration:none;font-size:.72rem;font-weight:800}.header-kicker{margin-top:14px;color:var(--purple);font-size:.65rem;font-weight:850;letter-spacing:.13em;text-transform:uppercase}.editor-header h1{margin:5px 0 0;color:#271D2E;font-size:clamp(1.8rem,3vw,2.35rem);letter-spacing:-.055em}.updated-for{max-width:280px;color:#8B8390;font-size:.72rem;line-height:1.55;text-align:right}.updated-for strong{display:block;color:var(--deep);font-size:.8rem}
+.editor-shell{display:grid;grid-template-columns:300px minmax(0,1fr);overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 12px 38px rgba(59,7,100,.08)}.identity-panel{position:relative;padding:34px 28px;background:#F7F3FB;border-right:1px solid var(--line);overflow:hidden}.panel-label{color:var(--purple);font-size:.62rem;font-weight:850;letter-spacing:.12em;text-transform:uppercase}.portrait-input{display:none}.portrait{width:142px;height:166px;display:grid;place-items:center;overflow:hidden;margin:34px auto 15px;color:var(--purple);background:#fff;border:1.5px solid #C4B5FD;border-radius:71px 71px 17px 17px;cursor:pointer;box-shadow:0 9px 26px rgba(59,7,100,.1)}.portrait img{width:100%;height:100%;object-fit:cover}.photo-action{display:block;text-align:center;color:var(--deep);font-size:.73rem;font-weight:850;cursor:pointer}.view-photo{display:block;margin:8px auto 0;padding:0;color:#7C3AED;background:none;border:0;font-size:.65rem;font-weight:750;cursor:pointer}.client-snapshot{margin-top:29px;padding-top:23px;border-top:1px solid #DDD6E2}.snapshot-label{color:#99909F;font-size:.58rem;font-weight:850;letter-spacing:.08em;text-transform:uppercase}.snapshot-name{margin-top:7px;color:#2E2335;font-size:1rem;font-weight:850}.snapshot-copy{margin-top:5px;color:#817987;font-size:.68rem;line-height:1.5}
+.details-panel{padding:32px 36px;background:#fff}.form-section{padding-bottom:26px;margin-bottom:25px;border-bottom:1px solid var(--line)}.section-heading{display:flex;align-items:center;gap:10px;margin-bottom:19px}.section-number{width:27px;height:27px;display:grid;place-items:center;color:var(--deep);background:var(--soft);border:1px solid #DDD6FE;border-radius:8px;font-size:.62rem;font-weight:850}.section-heading h2{margin:0;color:#312637;font-size:.92rem}.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}.field.full{grid-column:1/-1}.field label{display:block;margin-bottom:7px;color:#574E5E;font-size:.66rem;font-weight:850;letter-spacing:.055em;text-transform:uppercase}.field input,.field textarea{width:100%;padding:11px 13px;color:#261D2D;background:#fff!important;border:1px solid #E3DDE7;border-radius:9px;outline:none}.field input:focus,.field textarea:focus{border-color:var(--purple);box-shadow:0 0 0 3px rgba(109,40,217,.09)}.field textarea{min-height:100px;resize:vertical}.field-error{display:block;margin-top:5px;color:var(--purple);font-size:.68rem}.social-item{display:flex;gap:8px;margin-bottom:8px}.social-item input{flex:1}.remove-social{width:42px;display:grid;place-items:center;color:var(--purple);background:#fff;border:1px solid #DDD6FE;border-radius:9px;cursor:pointer}.add-social{display:inline-flex;align-items:center;gap:5px;padding:4px 0;color:var(--purple);background:none;border:0;font-size:.7rem;font-weight:850;cursor:pointer}.editor-actions{display:flex;align-items:center;justify-content:flex-end;gap:10px}.cancel-action{padding:11px 15px;color:#6E6674;text-decoration:none;font-size:.74rem;font-weight:800}.save-action{min-height:44px;padding:0 20px;color:#fff!important;background:var(--purple)!important;border:0;border-radius:9px;font-size:.76rem;font-weight:850;cursor:pointer;box-shadow:0 7px 18px rgba(109,40,217,.2)}.img-modal{position:fixed;inset:0;z-index:2000;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(23,19,31,.86);backdrop-filter:blur(7px);cursor:zoom-out}.img-modal img{max-width:90%;max-height:88vh;object-fit:contain;border-radius:16px;box-shadow:0 25px 60px rgba(0,0,0,.45)}
+@media(max-width:760px){.editor-header{align-items:flex-start;flex-direction:column}.updated-for{text-align:left}.editor-shell{grid-template-columns:1fr}.identity-panel{padding:27px 22px;border-right:0;border-bottom:1px solid var(--line)}.portrait{margin-top:24px}.client-snapshot{text-align:center}.details-panel{padding:27px 21px}.field-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.editor-actions{align-items:stretch;flex-direction:column-reverse}.cancel-action{text-align:center}.save-action{width:100%}}
 </style>
 
-<div class="form-wrap">
-    <div class="form-header">
-        <a href="{{ route('customers.index') }}" class="back-btn">
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
-        </a>
-        <div>
-            <div style="font-size:1.4rem;font-weight:800;color:#0f172a;">Edit Client Profile</div>
-            <div style="font-size:.85rem;color:#64748b;">Updating info for {{ $customer->name }}</div>
-        </div>
-    </div>
-
-    <form action="{{ route('customers.update', $customer) }}" method="POST" enctype="multipart/form-data" class="form-card">
-        @csrf
-        @method('PUT')
-        
-        <div class="form-body">
-            
-            <div class="img-upload-wrap">
-                <input type="file" name="image" id="imageInput" accept="image/*" style="display:none;">
-                <div class="img-preview-box" id="imgPreview" onclick="previewLoadedImage()">
-                    @if($customer->image_path)
-                    <img src="{{ asset('storage/' . $customer->image_path) }}" alt="{{ $customer->name }}" id="currentImg">
-                    @else
-                    <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4"/></svg>
-                    @endif
-                </div>
-                <label for="imageInput" class="upload-btn">Change Photo</label>
-            </div>
-
-            <div class="f-group">
-                <label class="f-label">Full Name</label>
-                <input type="text" name="name" value="{{ old('name', $customer->name) }}" class="f-input" placeholder="e.g. John Doe" required>
-            </div>
-
-            <div class="f-group">
-                <label class="f-label">Phone Number</label>
-                <input type="text" name="phone" value="{{ old('phone', $customer->phone) }}" class="f-input" placeholder="e.g. +92 300 1234567" required>
-            </div>
-
-            <div class="f-group">
-                <label class="f-label">Email Address <span style="font-weight:400;color:#94a3b8;">(Opt)</span></label>
-                <input type="email" name="email" value="{{ old('email', $customer->email) }}" class="f-input" placeholder="e.g. john@example.com">
-            </div>
-
-            <div class="f-group">
-                <label class="f-label">Social Media Handles</label>
-                <div id="social_list">
-                    @if($customer->social_media && is_array($customer->social_media))
-                        @foreach($customer->social_media as $id)
-                        <div class="social-item">
-                            <input type="text" name="social_media[]" value="{{ $id }}" class="f-input" placeholder="e.g. Social Handle">
-                            <button type="button" class="btn-remove-social" onclick="this.parentElement.remove()">
-                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"/></svg>
-                            </button>
-                        </div>
-                        @endforeach
-                    @else
-                    <div class="social-item">
-                        <input type="text" name="social_media[]" class="f-input" placeholder="e.g. Instagram ID">
-                        <span class="btn-remove-social" onclick="this.parentElement.remove()" style="opacity:0;pointer-events:none;">
-                            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"/></svg>
-                        </span>
-                    </div>
-                    @endif
-                </div>
-                <div class="btn-add-social" onclick="addSocialField()">
-                    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
-                    Add Another Handle
-                </div>
-            </div>
-
-            <div class="f-group" style="margin-bottom:0;">
-                <label class="f-label">Internal Notes</label>
-                <textarea name="notes" class="f-input" rows="3" placeholder="Any special preferences or hair history...">{{ old('notes', $customer->notes) }}</textarea>
-            </div>
-
-        </div>
-
-        <div class="form-footer">
-            <a href="{{ route('customers.index') }}" style="color:#64748b;text-decoration:none;font-size:.9rem;font-weight:700;margin-right:12px;">Cancel</a>
-            <button type="submit" class="btn-save">Update Profile</button>
+<div class="profile-editor">
+    <header class="editor-header"><div><a class="back-link" href="{{ route('customers.show',$customer) }}">← Back to client profile</a><div class="header-kicker">Profile editor</div><h1>Update client details</h1></div><div class="updated-for">Editing profile for<strong>{{ $customer->name }}</strong></div></header>
+    <form class="editor-shell" action="{{ route('customers.update',$customer) }}" method="POST" enctype="multipart/form-data">@csrf @method('PUT')
+        <aside class="identity-panel"><div class="panel-label">Client identity</div><input class="portrait-input" type="file" name="image" id="imageInput" accept="image/*"><label class="portrait" for="imageInput" id="imgPreview">@if($customer->image_path)<img src="{{ asset('storage/'.$customer->image_path) }}" alt="{{ $customer->name }}" id="currentImg">@else<svg width="38" height="38" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/><path d="M19 3v4m-2-2h4"/></svg>@endif</label><label class="photo-action" for="imageInput">Change client photo</label>@if($customer->image_path)<button class="view-photo" type="button" onclick="previewLoadedImage()">View current photo</button>@endif<div class="client-snapshot"><div class="snapshot-label">Profile on file</div><div class="snapshot-name">{{ $customer->name }}</div><div class="snapshot-copy">Client since {{ $customer->created_at->format('M Y') }}. Changes are applied after saving.</div></div></aside>
+        <div class="details-panel">
+            <section class="form-section"><div class="section-heading"><span class="section-number">01</span><h2>Contact essentials</h2></div><div class="field-grid"><div class="field"><label>Full name *</label><input type="text" name="name" value="{{ old('name',$customer->name) }}" placeholder="Client's full name" required>@error('name')<span class="field-error">{{ $message }}</span>@enderror</div><div class="field"><label>Phone number *</label><input type="text" name="phone" value="{{ old('phone',$customer->phone) }}" placeholder="+92 300 1234567" required>@error('phone')<span class="field-error">{{ $message }}</span>@enderror</div><div class="field full"><label>Email address</label><input type="email" name="email" value="{{ old('email',$customer->email) }}" placeholder="client@example.com">@error('email')<span class="field-error">{{ $message }}</span>@enderror</div></div></section>
+            <section class="form-section"><div class="section-heading"><span class="section-number">02</span><h2>Social profiles</h2></div><div id="social_list">@if($customer->social_media && is_array($customer->social_media))@foreach($customer->social_media as $id)<div class="social-item"><input type="text" name="social_media[]" value="{{ $id }}" placeholder="Social profile or handle"><button class="remove-social" type="button" onclick="this.parentElement.remove()">×</button></div>@endforeach @else<div class="social-item"><input type="text" name="social_media[]" placeholder="Instagram, Facebook or another handle"><button class="remove-social" type="button" style="visibility:hidden">×</button></div>@endif</div><button type="button" class="add-social" onclick="addSocialField()">＋ Add another handle</button></section>
+            <section class="form-section"><div class="section-heading"><span class="section-number">03</span><h2>Salon notes</h2></div><div class="field"><label>Private notes</label><textarea name="notes" placeholder="Preferences, sensitivities, formulas or useful context...">{{ old('notes',$customer->notes) }}</textarea></div></section>
+            <div class="editor-actions"><a class="cancel-action" href="{{ route('customers.show',$customer) }}">Cancel</a><button class="save-action" type="submit">Save profile changes</button></div>
         </div>
     </form>
 </div>
-
-{{-- Image Preview Modal --}}
-<div class="img-modal" id="imgModal" onclick="this.style.display='none'">
-    <img src="" alt="Preview" class="img-modal-content" id="modalImg">
-</div>
-
+<div class="img-modal" id="imgModal" onclick="this.style.display='none'"><img src="" alt="Client preview" id="modalImg"></div>
 <script>
-function addSocialField() {
-    const list = document.getElementById('social_list');
-    const div = document.createElement('div');
-    div.className = 'social-item';
-    div.innerHTML = `
-        <input type="text" name="social_media[]" class="f-input" placeholder="e.g. Social Handle">
-        <button type="button" class="btn-remove-social" onclick="this.parentElement.remove()">
-            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"/></svg>
-        </button>
-    `;
-    list.appendChild(div);
-}
-
-document.getElementById('imageInput').addEventListener('change', function(e) {
-    const file = e.target.files[0];
-    if (file) {
-        const reader = new FileReader();
-        reader.onload = function(evt) {
-            const preview = document.getElementById('imgPreview');
-            preview.innerHTML = `<img src="${evt.target.result}">`;
-            preview.style.borderStyle = 'solid';
-        }
-        reader.readAsDataURL(file);
-    }
-});
-
-function previewLoadedImage() {
-    const previewImg = document.querySelector('#imgPreview img');
-    if (previewImg && previewImg.src) {
-        const modal = document.getElementById('imgModal');
-        const modalImg = document.getElementById('modalImg');
-        modalImg.src = previewImg.src;
-        modal.style.display = 'flex';
-    }
-}
+function addSocialField(){const row=document.createElement('div');row.className='social-item';row.innerHTML='<input type="text" name="social_media[]" placeholder="Social profile or handle"><button type="button" class="remove-social" onclick="this.parentElement.remove()">×</button>';document.getElementById('social_list').appendChild(row)}
+document.getElementById('imageInput').addEventListener('change',function(){const file=this.files[0];if(!file)return;const reader=new FileReader();reader.onload=e=>document.getElementById('imgPreview').innerHTML=`<img src="${e.target.result}" alt="Client preview">`;reader.readAsDataURL(file)})
+function previewLoadedImage(){const image=document.querySelector('#imgPreview img');if(!image)return;document.getElementById('modalImg').src=image.src;document.getElementById('imgModal').style.display='flex'}
 </script>
 @endsection
